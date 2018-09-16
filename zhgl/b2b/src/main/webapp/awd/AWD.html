@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AWD.html</title>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  </head>
+  
+  <body>
+    <div id="content-tabs" class="easyui-tabs"  data-options="border:false,plain:true,fit:true">
+    	<!-- <div class="w12" id="mainDiv" name="detailsDiv" title="运单查询" style="padding:10px">
+    		<div id="d_AWD"></div>
+    	</div> -->
+    	<div class="w12" id="detailsDiv" name="detailsDiv" title="运单录入" style="padding:10px;">
+    		<form id="AWD">
+    		<div class="w08" algin="left">    			
+    			<input type="hidden" id="bjje" name="bjje" value="0"></input>
+				<dl class="public_form w12">
+					<dt class="w01">运单号</dt>
+					<dd class="w02"><input class="easyui-textbox" id="billno" name="billno" style="width:100%;" data-options="required:true,missingMessage:'该输入项为必输项'"></input></dd>
+					<dt class="w01">客户</dt>
+					<dd class="w02"><input id="cus_code" name="cus_code" style="width:100%" data-options="required:true"></input></dd>
+					<input id="fhdw" name="fhdw" value="" type="hidden"></input>
+					<input id="fhdz" name="fhdz" value="" type="hidden"></input>
+					<input id="fhdh" name="fhdh" value="" type="hidden"></input>
+					<dt class="w01">客户单号</dt>
+					<dd class="w02"><input class="easyui-textbox" id="cusno" name="cusno" style="width:100%;"></input></dd>
+				</dl>
+				<dl class="public_form w12">
+					<dt class="w01">托运日期</dt>
+					<dd class="w02"><input class="easyui-datebox" id="postdate"  name="postdate" style="width:100%;" data-options="required:true"></input></dd>
+					<dt class="w01">属性</dt>
+					<dd class="w02">
+						<input id="flag" name="flag" class="easyui-combobox" style="width:50%;" data-options="
+							valueField: 'code',
+							textField: 'name',
+							data: [{
+									code: '0',
+									name: '调拨'
+								},{
+									code: '1',
+									name: '发货',
+									selected:true
+								},{
+									code: '2',
+									name: '退货'
+								}],required:true"></input>
+						<span><input type="checkbox" id="jj_flag" name="jj_flag" style="vertical-align: middle" value="1"></input></span>加急
+					</dd>			
+					<dt class="w01">收款公司</dt>
+					<dd class="w02"><input class="easyui-textbox" id="skgs_cn" name="skgs_cn" style="width:100%"   data-options="editable:false"></input></dd>
+					<dt class="w01">付款方式</dt>
+					<dd class="w02"><input id="fkfs" name="fkfs" style="width:100%;" data-options="required:true"></input></dd>
+				</dl>
+				<dl class="public_form w12">
+					<dt class="w01">始发地</dt>
+					<dd class="w02"><input class="dqxx" id="postzone" name="postzone" style="width:100%;" data-options="required:true"></input></dd>
+					<dt class="w01">始发网点</dt>
+					<dd class="w02"><input id="postnet" name="postnet" style="width:100%;" class="easyui-textbox" name="dept"   
+    				data-options="valueField:'code',textField:'name',required:true,editable:false"></input></dd>
+					<dt class="w01">结算网点</dt>
+					<dd class="w02"><input id="jswd" name="jswd" style="width:100%;" data-options="editable:false"></input></dd>
+					<dt class="w01">规格</dt>
+					<dd class="w02"><input class="easyui-textbox" id="gg" name="gg" style="width:100%;" data-options="required:true"></input></dd>
+				</dl>
+				<dl class="public_form w12">
+					<dt class="w01">发货人</dt>
+					<dd class="w02"><input class="easyui-textbox" id="postman" name="postman" style="width:100%;"></input></dd>
+					<dt class="w01">发货电话</dt>
+					<dd class="w02"><input class="easyui-textbox" id="posttel" name="posttel" style="width:100%;"></input></dd>
+					<dt class="w01">声明价值</dt>
+					<dd class="w02"><input type="text" class="easyui-numberbox" data-options="min:0,precision:2" id="smjz" name="smjz" style="width:100%;"></input></dd>
+					<dt class="w01">保价费率(%)</dt>
+					<dd class="w02"><input type="text" class="easyui-numberbox" data-options="min:0" id="bjfl" name="bjfl" style="width:100%;"></dd>
+				</dl>
+				<dl class="public_form w12">
+					<dt class="w01">发货单位</dt>
+					<dd class="w05"><input class="easyui-textbox"  id="postdw" name="postdw" style="width:100%;" data-options="required:true,missingMessage:'该输入项为必输项',novalidate:true"></input></dd>
+					<dt class="w01">运费</dt>
+					<dd class="w02"><input type="text" class="easyui-numberbox w12" data-options="min:0,precision:2,required:true,missingMessage:'该输入项为必输项',novalidate:true" id="postfee" name="postfee" style="width:100%;"></input></dd>
+					<dt class="w01">保价费</dt>
+					<dd class="w02"><input type="text" class="easyui-numberbox" data-options="min:0,precision:2,editable:false" id="bjfee" name="bjfee"  style="width:100%;"></input></dd>
+				</dl>
+				<dl class="public_form w12">
+					<dt class="w01">发货地址</dt>
+					<dd class="w05"><input class="easyui-textbox"  id="postaddr" name="postaddr" style="width:100%;" data-options="required:true,missingMessage:'该输入项为必输项',novalidate:true"></input></dd>
+					<dt class="w01">上楼费</dt>
+					<dd class="w02"><input class="easyui-numberbox" data-options="min:0,precision:2" id="slfee" name="slfee" style="width:100%;"></input></dd>
+					<dt class="w01">提货费</dt>
+					<dd class="w02"><input class="easyui-numberbox" data-options="min:0,precision:2" id="thfee" name="thfee" style="width:100%;"></input></dd>
+				</dl>
+				<dl class="public_form w12">
+					<dt class="w01">到达地</dt>
+					<dd class="w02"><input class="dqxx" id="acceptzone" name="acceptzone" style="width:100%;" data-options="required:true"></input></dd>
+					<dt class="w01">到达网点</dt>
+					<dd class="w02"><input class="easyui-textbox" id="acceptnet" name="acceptnet" style="width:100%;" 
+					data-options="required:true"></input></dd>
+					
+					<dt class="w01">仓储费</dt>
+					<dd class="w02"><input class="easyui-numberbox" data-options="min:0,precision:2" id="ccfee" name="ccfee" style="width:100%;"></input></dd>
+					<dt class="w01">送货费</dt>
+					<dd class="w02"><input class="easyui-numberbox" data-options="min:0,precision:2" id="shfee" name="shfee" style="width:100%;"></input></dd>
+				</dl>
+				<dl class="public_form w12">
+					<dt class="w01">收货人</dt>
+					<dd class="w02"><input class="easyui-textbox" id="acceptman" name="acceptman" style="width:100%;" data-options="required:true,missingMessage:'该输入项为必输项',novalidate:true"> </input></dd>
+					<dt class="w01">收货电话</dt>
+					<dd class="w02"><input class="easyui-textbox" id="accepttel" name="accepttel" style="width:100%;" data-options="required:true,missingMessage:'该输入项为必输项',novalidate:true" ></input></dd>
+					<dt class="w01">合计</dt>
+					<dd class="w02"><input class="easyui-numberbox" data-options="min:0,precision:2,editable:false" id="totalprice" name="totalprice" style="width:100%;"></input></dd>
+				</dl>
+				<dl class="public_form w12">
+					<dt class="w01">收货单位</dt>
+					<dd class="w05"><input class="easyui-textbox" id="acceptdw" name="acceptdw" style="width:100%;" data-options="required:true,missingMessage:'该输入项为必输项'"></input></dd>
+					<dt class="w01">备注</dt>
+					<dd class="w05"><input class="easyui-textbox" id="memo" name="memo" style="width:100%;" ></input></dd>
+				</dl>
+				<dl class="public_form w12">
+					<dt class="w01">收货地址</dt>
+					<dd class="w05"><input class="easyui-textbox" id="acceptaddr" name="acceptaddr" style="width:100%;" data-options="required:true,missingMessage:'该输入项为必输项'"></input></dd>
+				</dl>
+				<dl class="public_form w12">
+					<dt class="w01">货物类别</dt>
+					<dd class="w02"><input id="hwlb" name="hwlb" style="width:100%;" data-options="required:true"></input></dd>
+					<dt class="w01">计价方式</dt>
+					<dd class="w02">
+						<input id="jjfs" name="jjfs" class="easyui-combobox" style="width:100%;" data-options="required:true"></input>
+		    		</dd>
+				</dl>
+				<dl class="public_form w12">
+					<dt class="w01">箱数</dt>
+					<dd class="w02"><input type="text" class="easyui-numberbox" data-options="min:0,required:true" id="boxes" name="boxes" style="width:100%;" value="0"></input></dd>
+					<dt class="w01">双数</dt>
+					<dd class="w02"><input class="easyui-numberbox" data-options="min:0,required:true" id="duals" name="duals" style="width:100%;" value="0"></input></dd>
+									</dl>
+				<dl class="public_form w12">
+					<dt class="w01">体积</dt>
+					<dd class="w02"><input class="easyui-numberbox" data-options="min:0,precision:3" id="volume" name="volume" style="width:100%;" value="0"></input></dd>
+					<dt class="w01">包</dt>
+					<dd class="w02"><input class="easyui-numberbox" data-options="min:0,required:true" id="package" name="package" style="width:100%;" value="0"></input></dd>
+				</dl>
+				
+			</div>
+				<div class="w04" algin="left">
+					<table  id="queryYD" class="easyui-datagrid" style="width:100%;height:500px"    
+						data-options="singleSelect:true">   
+					    <thead>   
+					        <tr>   
+					            <th data-options="field:'billno',width:100">运单号</th>
+					            <th data-options="field:'postdate',width:100,hidden:true">托运日期</th>
+					            <th data-options="field:'flag',width:100,hidden:true">属性</th>
+					            <th data-options="field:'jj_flag',width:100,hidden:true">加急标记</th>
+					            <th data-options="field:'cus_code',width:100,hidden:true">客户代码</th>
+					            <th data-options="field:'cus_name',width:100">客户名称</th>
+					            <th data-options="field:'fkfs',width:100,hidden:true">付款方式</th>
+					            <th data-options="field:'postzone_cn',width:100">始发地</th>
+					            <th data-options="field:'postzone',width:100,hidden:true">postzone</th>   
+					            <th data-options="field:'postnet',width:100,hidden:true">postnet</th>
+					            <th data-options="field:'postnet_cn',width:100">始发网点</th>
+					            <th data-options="field:'jswd',width:100,hidden:true">结算网点</th>
+					            <th data-options="field:'gg',width:100,hidden:true">规格</th>
+					            <th data-options="field:'postman',width:100,hidden:true">发货人</th>
+					            <th data-options="field:'posttel',width:100,hidden:true">发货电话</th>
+					            <th data-options="field:'hwlb',width:100,hidden:true">货物类别</th>
+					            <th data-options="field:'jjfs',width:100,hidden:true">计价方式</th>
+					            <th data-options="field:'postdw',width:100,hidden:true">发货单位</th>
+					            <th data-options="field:'postaddr',width:100,hidden:true">发货地址</th>
+					            <th data-options="field:'bj_flag',width:100,hidden:true">报价标记</th>
+					            <th data-options="field:'smjz',width:100,hidden:true">声明价值</th>
+					            <th data-options="field:'bjfl',width:100,hidden:true">保价费率(%)</th>
+					            <th data-options="field:'acceptzone',width:100,hidden:true">acceptzone</th>
+					            <th data-options="field:'acceptnet',width:100,hidden:true">acceptnet</th>
+					            <th data-options="field:'acceptzone_cn',width:100">到达地</th>
+					            <th data-options="field:'acceptnet_cn',width:100">到达网点</th>
+					            <th data-options="field:'postfee',width:100,hidden:true">运费</th>
+					            <th data-options="field:'bjfee',width:100,hidden:true">保价费</th>
+					            <th data-options="field:'acceptman',width:100,hidden:true">收货人</th>
+					            <th data-options="field:'accepttel',width:100,hidden:true">收货电话</th>
+					            <th data-options="field:'slfee',width:100,hidden:true">上楼费</th>
+					            <th data-options="field:'thfee',width:100,hidden:true">提货费</th>
+					            <th data-options="field:'acceptdw',width:100,hidden:true">收货单位</th>
+					            <th data-options="field:'acceptaddr',width:100">收货地址</th>
+					            <th data-options="field:'ccfee',width:100,hidden:true">仓储费</th>
+					            <th data-options="field:'shfee',width:100,hidden:true">上楼费</th>
+					            <th data-options="field:'boxes',width:100">箱数</th>
+					            <th data-options="field:'volume',width:100">体积</th>
+					            <th data-options="field:'weight',width:100,hidden:true">重量</th>
+					            <th data-options="field:'totalprice',width:100,hidden:true">合计</th>
+					            <th data-options="field:'memo',width:100,hidden:true">备注</th>
+					        </tr>   
+					    </thead>   
+					</table> 
+				</div>
+			</form>
+		</div>
+	</div>
+  </body>
+</html>

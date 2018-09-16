@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Pub" >
+	<!--查询部门列表  -->
+	<select id="selectRYXX" parameterType="map" resultType="map">
+	<!-- SELECT peop_code person_id,peop_name person_name,dept_code,
+	(SELECT c.dept_name FROM dept_tab c WHERE c.dept_code = a.dept_code ) dept_name,
+	p_code,(select b.p_name from position_tab b where b.p_code=a.p_code) p_name,
+	net_code,(select d.net_name from net_tab d where d.net_code=a.net_code) net_name	
+	FROM peop_tab a-->
+		select a.peop_code "person_id",a.peop_name "person_name",a.dept_code "dept_code",a.p_code "p_code",a.net_code "net_code",a.tel "tel",
+			to_char(a.birthday,'yyyy-MM-dd') "birthday",a.age "age",
+			a.edu "edu",a.addr "addr",a.sfzh "sfzh",to_char(a.lyrq,'yyyy-MM-dd') "lyrq",to_char(a.czrq,'yyyy-MM-dd') "czrq",
+			a.intro_code "intro_code",a.bc "bc",a.cblx "cblx",a.sfzyxq "sfzyxq",a.rylx "rylx",
+	    a.yhkh "yhkh",a.zz_flag "zz_flag",a.photo "photo",
+	    (select b.name from position_tab b where b.code=a.p_code) "p_name",
+	    (select c.dept_name from dept_tab c where c.dept_code=a.dept_code) "dept_name",
+	    (select d.net_name from net_tab d where d.net_code=a.net_code) "net_name",
+	    (select e.peop_name from peop_tab e where e.peop_code=a.intro_code) "intro_name",
+	    zz_flag "zz_flag_cn",bc "bc_cn",cblx "cblx_cn"
+	    from peop_tab a
+	    where 1 = 1
+		<if test="person_id != '' and person_id != null">AND a.peop_code LIKE '%'||#{person_id}||'%'</if>
+		<if test="person_name != '' and person_name != null">AND a.peop_name LIKE '%'||#{person_name}||'%'</if>
+		<if test="bm01 != '' and bm01 != null">AND a.dept_code LIKE '%'||#{bm01})||'%'</if>
+ 	</select>
+ 	
+ 	<select id="selectTreeMenu" parameterType="map" resultType="map">
+ 		<!-- select code,name,s_code _parentId,LENGTH(RTRIM(CODE)) / 2 level from menu where code in(select cd from bm_menu where bm01=#{BM01}) order by code --> 
+ 		 
+		<!--select code "code",name "name",s_code "_parentId",LENGTH(RTRIM(CODE)) / 2 "level" from menu m 
+		where(select count(a.CODE) from menu a, bm_menu b 
+		where 1=1 
+		<if test="BM01 !='' and BM01 !=null"> and b.bm01= #{BM01} </if>
+		  and a.yxbj = 1 and a.code 
+		like CONCAT(rtrim(b.cd),'%') and a.code like CONCAT(m.code,'%'))>0 order by code--> 
+		
+		select code "code",name "name",s_code "_parentId",LENGTH(RTRIM(CODE)) / 2 "level" from user_cd m 
+		where yxbj = 1 order by code   
+ 	</select>
+ 	
+ 	<select id="selectTreeMenus" parameterType="map" resultType="map">
+		
+		select code "code",name "name",s_code "_parentId",LENGTH(RTRIM(CODE)) / 2 "level" from user_cd m 
+		where yxbj = 1 order by code   
+ 	</select>
+ 	<select id="selectTreeBMMenu" parameterType="map" resultType="map">
+ 		select code "code",name "name",s_code "_parentId",LENGTH(RTRIM(CODE)) / 2 "level" from user_cd
+ 		order by code
+ 	</select>
+ 	
+ 	
+ 	<select id="selectComGrid" parameterType="map" resultType="map">
+ 		select a.userid "code",a.username "name",a.khgsid "bm01",
+		a.username "bm02"
+		from user_info a 
+		where 1=1
+		<if test="q != '' and q != null"> AND (a.userid like '%'||#{q}||'%' OR a.username like '%'||#{q}||'%')</if>
+ 	</select>
+ 	
+ 	<select id="selectMenuQx" parameterType="map" resultType="map">
+ 		select CD,person_id CFRY01,alqx "alqx"
+ 		from user_cdqx where person_id=#{CFRY01}
+ 	</select>
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	<select id="selectBMQX" parameterType="map" resultType="map">
+ 		select dept_code "code",dept_name "name",s_code "s_code",dept_lv "lv" from dept_tab 
+ 		<if test="BM01 != '' and BM01 != null">
+ 			where dept_code=#{BM01}
+ 		</if>
+ 		order by s_code
+ 	</select>
+ 	
+ 	<select id="selectBMQXMENU" parameterType="map" resultType="map">
+ 		select cd "cd",alqx "alqx" 
+ 		from bm_menu 
+ 		<if test="BM01 != '' and BM01 != null">
+ 			where bm01=#{BM01}
+ 		</if>
+ 	</select>
+ 	
+ 	<select id="selectFBZX" parameterType="map" resultType="map">
+ 		select count(1) "sl"
+ 		from net_tab
+ 		where net_code=#{net_code} and NVL(fbzx,0)=1
+ 	</select>
+ 	
+ 	<select id="selectPEOPNAME" parameterType="Map" resultType="java.util.Map">
+  		select peop_name||'('||peop_code||')' "peop_name"
+ 		from peop_tab
+ 		where peop_code=#{CFRY01}
+  </select>
+ 	
+ 	<select id="selectFormPrint" parameterType="Map" resultType="java.util.Map">
+ 		select dymc "dymc",mbbh "mbbh",defaultprint "defaultprint",dyym "dyym" 
+		from formprint_tab
+		where dybh=#{dybh}
+ 	</select>
+ 	
+ 	<select id="selectAD" parameterType="Map" resultType="java.util.Map">
+ 		select a.id "id",a.title "title",a.main "main",b.peop_name "peop_name",a.lrwd "lrwd",
+	       		c.net_name "net_name",to_char(a.lrrq,'yyyy-MM-dd HH24:mi:ss') "lrrq"
+		from xtgg_tab a,peop_tab b,net_tab c
+	    where a.lrr=b.peop_code and a.lrwd = c.net_code 
+	    and scbj=0
+ 	</select>
+ 	
+ 	<select id="selectTSQX" parameterType="Map" resultType="java.util.Map">
+ 		select a.qxcode "qxcode",a.qxname "qxname",b.code "code",b.name "name"
+ 		from qx_tab a,menu b where a.menu=b.code
+ 		<if test="qxcode !=null and qxcode !=''"> and a.menu=#{qxcode}</if>
+ 	</select>
+ 	
+ 	<select id="selectRYTSQX" parameterType="Map" resultType="java.util.Map">
+ 		select qxcode "qxcode"
+ 		from tsqx_tab 
+ 		where peop_code=#{CFRY01}
+ 		<if test="qxcode != '' and qxcode != null">
+ 			and qxcode=#{qxcode}
+ 		</if>
+ 	</select>
+ 	
+ 	<select id="selectGXLine" parameterType="Map" resultType="java.util.Map">
+ 		select line_code "line_code",line_name "line_name",fhwd  "fhwd"
+ 		from line_tab a 
+ 		where flag=0 
+ 		<if test="qxcode != '' and qxcode != null">
+ 			and  EXISTS(select * from xlkhsj_tab  where line_code = a.line_code)
+ 		</if>
+ 		<if test="line_name != '' and line_name != null">
+ 			and  a.line_name LIKE CONCAT(#{line_name}, '%')
+ 		</if>
+ 	</select>
+ 	
+ 	<select id="selectXLKHBZ" parameterType="Map" resultType="java.util.Map">
+ 		select a.line_code "line_code",
+			b.line_name "line_name",
+			a.pzsj "pzsj",a.fcsj "fcsj",a.dcsj "dcsj",
+			a.yxsj "yxsj",a.kh_flag "flag",
+			(case when a.kh_flag=1 THEN '是' else '否' end) "flag_zh" 
+			from xlkhsj_tab a,line_tab b where a.line_code=b.line_code and b.flag=0 and b.khbj = 1
+ 		<if test="line_name != '' and line_name != null">
+ 			and EXISTS (select line_code from line_tab where line_code=a.line_code and line_name  LIKE '%'||#{line_name}||'%')
+ 		</if>
+ 	</select>
+</mapper>

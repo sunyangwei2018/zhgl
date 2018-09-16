@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>车辆位置</title>
+	
+    <meta charset="UTF-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+   <!--  <link rel="stylesheet" type="text/css" href="/cflib/form/css/ligerui_"> -->
+	<script type="text/javascript" src="/lib/JQuery/js/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="/lib/JQuery/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/lib/JQuery/js/json2.js"></script>
+	<script type='text/javascript' src='/cflib/form/js/commons.js'></script>
+	<script type='text/javascript' src='/cflib/form/js/ui-all.js'></script>
+  </head>
+  
+  <body >
+
+        <iframe id="map" scrolling="no" width="1000" height="800" ></iframe>
+
+</div>
+ 
+  </body>
+</html>
+<script>
+	var XmlData = [];
+	var queryField={};
+	var url;
+	queryField["dataType"] = "Json";
+	queryField["sqlid"] = "YDGZ.selectCarNum";
+	queryField["DataBaseType"] = "tms";
+	queryField["taskno"] = $.getUrlParam("taskno");
+	XmlData.push(queryField);
+	var ajaxJson = {};
+	ajaxJson["src"] = "/jlquery/select.do";
+	ajaxJson["data"] = {"json":JSON.stringify(XmlData)};
+	var resultData = ui.ajax(ajaxJson).data;
+	if(ui.isNull(resultData)){
+		url=''
+	}else{
+	
+		url=encodeURI("http://61.129.66.212/interface/locationServiceInfo.jsp?vehicleNo="+resultData[0].car_num+"&userName=SHCFHY&password=760843");
+	}
+ 	$("#map").attr("src",url);
+
+
+</script>

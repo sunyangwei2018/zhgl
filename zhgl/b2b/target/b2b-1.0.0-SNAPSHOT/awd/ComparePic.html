@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ComparePic.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type"  charset="UTF-8">
+	
+  </head>
+  
+  <body style="width:100%">
+  	<div id = "picdb_tab" class="easyui-tabs" data-options="fit:true,border:false,plain:true">
+		<div title="图片对比扫描" style="padding:5px" style="width:100%">
+			<form id="hdcx" method="post" style="width:100%">
+	    	<table cellpadding="5" style="width:100%">
+	    		<tr>
+	    			<td align="right">运单号</td>
+	    			<td align="left" rowspan="3">
+	    				 <textarea rows=4 id="billno" name="billno" style="resize: none;"></textarea> 
+	    			</td>
+	    			<td align="right">错误信息</td>
+	    			<td align="left" rowspan="3">
+	    				 <textarea rows=4 id="errorinfo" name="errorinfo" readonly="readonly" style="resize: none;width:80%;color:red"></textarea> 
+	    			</td>
+	    			<td align="right">
+						<select id="rq" editable="false" class="easyui-combobox" name="rq" style="width:120px;" panelHeight=158px;>   
+    						<option value="1">录单日期</option>   
+   							<option value="2">托运日期</option>     
+						</select> 
+					</td>
+	    			<td align="left">
+	    				<input class="easyui-datebox" id="rq_S" name="rq_S" type="text">
+	    				</input>
+	    			</td>
+	    			<td align="right">至</td>
+	    			<td align="left">
+	    				<input class="easyui-datebox" id="rq_E" name="rq_E" type="text">
+	    				</input>
+	    			</td>
+	    		</tr>
+	    		<tr>
+	    			<td align="right">
+	    				<a id="qk" name="qk" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">清空</a> 
+	    			</td>
+	    			<td align="right">
+
+	    			</td>
+	    			<td align="right">发货网点</td>
+	    			<td align="left">
+	    				<input class="easyui-combobox" id="postnet" name="postnet" type="text">
+	    				</input>
+	    			</td>
+	    			<td align="right">到达网点</td>
+	    			<td align="left">
+	    				<input class="easyui-combobox" id="acceptnet" name="acceptnet" type="text">
+	    				</input>
+	    			</td>
+	    		</tr>
+	    	</table> 
+	    </form>
+		<div class="easyui-layout" style="width:100%;height:82%;">   
+    		<div data-options="region:'north'" style="width:98%;height:50%;">
+    	 		<div id="d_SYSCPIC" style="height:100%"></div> 
+    		</div>   
+    		<div data-options="region:'south'" style="width:95%;height:50%;">
+    		 	<div id="d_SWSCPIC" style="height:100%"></div>
+    		</div>   
+    	</div>
+		</div>
+	</div>
+  </body>
+</html>

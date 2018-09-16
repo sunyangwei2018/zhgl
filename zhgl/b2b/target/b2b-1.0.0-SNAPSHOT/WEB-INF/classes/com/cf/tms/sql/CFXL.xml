@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CFXL" >
+	<!-- 查询服务套餐列表 --> 
+ 	<select id="selectXL" parameterType="map" resultType="map">
+		select a.line_code AS "line_code",a.line_name AS "line_name",a.flag AS "flag",
+	       a.fhwd AS "fhwd",a.dxr AS "dxr",a.tel AS "tel",
+	    (select b.net_name from net_tab b where a.fhwd=b.net_code)  AS "net_name",
+	    (case when flag=0 then '干线'
+	      when flag=1 then '市内'
+	    END)  AS "flag_cn"
+	    from line_tab a
+	    where 1 = 1
+		<if test="line_code != '' and line_code != null">AND line_code LIKE '%'||#{line_code}||'%'</if>
+		<if test="line_name != '' and line_name != null">AND line_name LIKE '%'||#{line_name}||'%'</if>
+		<if test="fhwd != '' and fhwd != null">AND fhwd=#{fhwd}</if>
+		<if test="flag != '' and flag != null">AND a.flag=#{flag}</if>
+		<if test="fhwd != '' and fhwd != null">AND a.fhwd=#{fhwd}</if>
+	</select> 
+	<select id="selectXLITEM" parameterType="map" resultType="map">
+		select a.ddwd_code AS "ddwd_code",a.jhsx AS "jhsx",a.line_code AS "line_code",
+		(select b.net_name from net_tab b where a.ddwd_code=b.net_code)  AS "net_name",
+		(select c.line_name from line_tab c where a.line_code=c.line_code)  AS "line_name"
+		from lineitem_tab a
+		where 1 = 1
+		<if test="line_code != '' and line_code != null">AND line_code LIKE '%'||#{line_code}||'%'</if>
+	</select> 
+	<select id="selectxlCode" parameterType="map" resultType="map">
+ 		select NVL(max(line_code)+1,'100001') AS "xlCode"
+		from line_tab
+ 	</select>
+</mapper> 

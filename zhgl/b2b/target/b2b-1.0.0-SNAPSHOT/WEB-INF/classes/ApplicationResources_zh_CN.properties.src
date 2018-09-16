@@ -1,0 +1,3752 @@
+## base ##
+
+## global label
+prompt.selected = 必须选择!
+prompt.required = 必须输入!
+prompt.inputerr = 格式错误!
+prompt.pgsuccess = 派工成功！
+prompt.pgfailed  = 派工失败！
+prompt.gpsuccess = 改派成功！
+prompt.gpfailed  = 改派失败！
+prompt.xgsuccess = 修改成功！
+prompt.xgfailed  = 修改失败！
+prompt.xjsuccess = 新建成功！
+prompt.xjfailed  = 新建失败！
+prompt.show     = 查询结果显示
+prompt.partnerid = 伙伴代码
+prompt.partnername  = 伙伴名称
+prompt.format   = 只能输入{0},长度不能小于{1}或者大于{2}!
+prompt.notempty = 请至少输入一个查询条件!
+prompt.lowdate  = 查询时间段请限制在{0}天之内!
+prompt.lowtime  = 查询时间段请限制在{0}-{1}点之内!
+prompt.uplowtime = 上传时间段请限制在{0}-{1}点之内!
+prompt.chkall   = 全选
+prompt.success  = 操作成功!
+prompt.error    = 操作失败!
+prompt.refresh  = 请不要重复刷新!
+prompt.notie    = 请使用IE浏览器!
+prompt.notievn  = 请使用IE6浏览器!
+prompt.fherror    = 该单已经发货!
+button.print    = 打 印
+button.insert   = 新 增
+button.search   = 查 询
+button.delete   = 删 除
+button.cancel   = 取 消
+button.submit   = 确 定
+button.update   = 修 改
+button.modify   = 修 改
+
+
+pub.added            = 新增
+pub.update           = 修改
+pub.delete           = 删除
+pub.ok               = 确定
+pub.cancel           = 取消
+pub.all              = 全部
+pub.select           = 搜索
+
+##error page
+error.nopage    = 您所访问的页面不存在!
+error.serbusy   = 服务器繁忙,请稍候访问!
+error.warning   = 非法访问, 请确认您是否有访问权限!
+error.reset     = 服务器只保留您最近3次的查询结果, 请重新查询!
+
+## page label
+page.loading     = 数据载入中...
+page.totalcount  = 总记录
+page.totalpage   = 总页数
+page.currpage    = 当前页
+page.firstpage   = 第一页
+page.nextpage    = 下一页
+page.prevpage    = 上一页
+page.lastpage    = 最后一页
+page.savedata    = 数据另存为Excel
+page.yj          = 页计
+page.hj          = 合计
+page.excel.off   = IE工具->Internet选项->安全->自定义级别->启用所有ActiveX控制和插件!
+
+## login
+login.copyright = &copy; Copyright 2005 - 2009 版权所有 武汉金力软件有限公司
+login.title     = 用户登录
+login.username  = 用户名
+login.password  = 密　码
+login.nullpass  = 密码必须输入!
+login.enter     = 登　录
+login.error     = 用户名或密码错误,请核对后再输入!
+login.unlogin   = 非法请求,请先登录!
+login.success   = 正在登录,请稍候...
+login.hello     = 你好!
+login.currdate  = 当前时间：
+login.currfb    = 当前位置：
+login.gsname    = 所属公司：
+login.sysmenu   = 系统菜单
+login.please    = 请选择
+login.branch    = 分部
+prompt.czydays  = 帐号已过期,请同金力软件公司联系
+prompt.czytimes = 此帐号当前时段禁止访问,请同公司管理员联系
+prompt.loginlxerr = 此帐号登陆类型错误
+prompt.czyspfl  = 所在公司无商品分类约束,请同相关联的公司主体管理员联系
+prompt.czypp    = 所在公司无品牌约束,请同相关联的公司主体管理员联系
+prompt.czydw    = 所在公司无往来单位约束,请同相关联的公司主体管理员联系
+prompt.czywd    = 所在公司无网点约束,请同相关联的公司主体管理员联系
+
+
+## roles
+select.all          = 全部
+select.allbm        = 全部部门
+select.allpl        = 全部品类
+select.bm           = 请选择部门
+select.jhbm         = 请选择进货部门
+select.xsbm         = 请选择销售部门
+select.spfl         = 请选择商品分类
+select.ck           = 请选择仓库
+select.checkbox.all = 全选
+select.main         = 请选择公司主体
+select.srbm         = 请选择收入部门
+
+## define
+define.operator   = 定义内部操作员
+define.operator1  = 定义外部操作员
+define.exist.ry   = 此ID已经被使用!
+define.role.unnull= 请先删除此操作员的操作权限!
+prompt.ryid       = 人员代码
+prompt.name       = 人员名称
+prompt.pass       = 人员密码
+prompt.phone      = 电话
+prompt.azrbxh     = 保 险 号
+
+define.partner.wd   = 定义公司伙伴网点
+define.partner.pp   = 定义公司伙伴品牌
+define.partner.spfl = 定义公司伙伴品类
+define.partner.dw   = 定义公司伙伴单位
+define.operator.wd   = 定义操作员网点
+define.operator.cd   = 定义操作员菜单
+define.operator.dw   = 定义操作员单位
+define.operator.bm   = 定义操作员部门
+define.operator.pp   = 定义操作员品牌
+define.operator.spfl = 定义操作员商品分类
+define.operator.wdinfo   = 只能选一个网点
+
+define.wdry.az       = 网点定义安装工
+define.wdry.phone    = 电话
+define.wdry.wd       = 网点
+
+## DataInfo label
+dataInfo.operator.title = 查询操作员
+dataInfo.wdry.title  = 查询网点人员
+dataInfo.ryxx.title  = 查询人员
+dataInfo.wldw.title  = 查询单位
+dataInfo.pp.title    = 查询品牌
+dataInfo.ryid        = 人员代码
+dataInfo.ryname      = 人员名称
+dataInfo.ppid        = 品牌代码
+dataInfo.ppname      = 品牌名称
+dataInfo.dwid        = 单位代码
+dataInfo.dwname      = 单位名称
+dataInfo.partner.title = 查询公司伙伴
+dataInfo.partnerid     = 伙伴代码
+dataInfo.partnername   = 伙伴名称
+dataInfo.id            = 代码
+dataInfo.name          = 名称
+
+## 用户修改密码
+user.setpass.title  = 用户修改密码
+user.password0      = 原 密 码
+user.password1      = 新 密 码
+user.passnull       = 密码不能为空!
+user.password2      = 重复密码
+user.oldpasserr     = 原密码输入错误!
+user.newpasserr     = 两次密码输入不一致!
+user.errlength      = 密码长度必须大于{0},小于{1}!
+
+## 注册公司查询
+zcshgs.title   = 注册公司查询
+zcshgs.detail  = 增加使用期限或帐号
+zcshgs.gsid    = 公司编码
+zcshgs.yhzh    = 用户帐号
+zcshgs.passwd  = 用户密码
+zcshgs.gslx    = 用户类型
+zcshgs.gsmc    = 公司名称
+zcshgs.address = 公司地址
+zcshgs.pubid   = 公共IP
+zcshgs.vpn     = 代理IP
+zcshgs.regdate = 注册日期
+zcshgs.modifypw = 重设主账号密码
+zcshgs.addqxzh = 增加使用期限或帐号
+zcshgs.wd     = 伙伴网点
+zcshgs.wdname     = 网点名称
+zcshgs.gsqx     = 公司有效期
+zcshgs.ryqx     = 账号有效期
+zcshgs.person_id     = 操作员账号
+zcshgs.ztname     = 公司主体
+zcshgs.userid      = 公司账号
+zcshgs.rymccf      = 人员名称重复
+
+khbz.khxmcf        = 考核项目重复
+khbz.wdkssjcf      = 该网点本月已考核
+khbz.idnotexist    = 该工单号不存在
+khbz.idyjf         = 该工单号已奖罚
+
+##公司下载审核
+audi.xzsh         = 公司下载审核
+audi.gsid         = 公司代码
+audi.gsname       = 公司名称
+audi.client       = V7客户端型号
+audi.zhxzrq       = 最后下载日期
+audi.xzcs         = 下载次数
+audi.sqrq         = 申请日期
+audi.notempty     = 请至少选择一个！
+audi.suredelete   = 确认要删除该公司吗?
+##V7下载
+v7down.title         = JL SaaS金力产品服务平台下载
+v7down.bbxx          = JL SaaS金力产品服务平台信息
+v7down.gsxzxx        = 公司下载信息
+v7down.no_requistion = 贵公司还没申请下载该版本，请先申请！
+v7down.no_auditing   = 贵公司申请下载的版本还未通过审核！
+v7down.disposal      = 贵公司申请下载的版本在处理中！
+v7down.xzshing       = 贵公司申请下载的版本在审核中！
+v7down.success       = 贵公司申请下载的版本已通过审核，可以下载！
+v7down.alert.ysqbxysq = 该版本贵公司已经申请过，不需要重新申请！
+v7down.alert.qatscz   = 请按提示进行相应操作！
+
+v7down.bbname        = 版本名称
+v7down.bbid          = 版本号
+v7down.jlcp          = 产品名称
+v7down.explain       = 说明
+v7down.khdxzxx       = JL SaaS金力产品服务平台下载信息
+v7down.downdate      = 下载日期
+
+v7down.sylx             = 申请使用类型
+v7down.sqsysj           = 申请使用时间
+v7down.sqsyrs           = 申请使用人数
+v7down.sqsyksrq         = 申请使用开始日期
+v7down.sqsyjzrq         = 申请使用截止日期
+v7down.sjsyrs           = 实际使用人数
+v7down.sjsyksrq         = 实际使用开始日期
+v7down.sjsyjzrq         = 实际使用截止日期
+v7down.sszxrs           = 实时在线人数
+v7down.showgsqxmx       = 查看公司明细
+v7down.showgsqxrsmx     = 查看公司期限人数明细
+v7down.alert.qxzsylx    = 申请使用时间不能为空
+v7down.alert.jzrqdksrq  = 截止日期要大于开始日期
+v7down.alert.sqsyrsgsbd = 申请使用人数格式不对
+
+v7down.jlasyqk          = “金力舟B2B-S”运营平台使用情况
+v7down.jlssyqk          = JL SaaS金力产品服务平台使用情况
+v7down.sfsyV7client     = 是否使用JLS
+V7CLIENT_0              = 未用
+V7CLIENT_1              = 使用
+
+v7down.sqxzsrch         = JL SaaS金力产品服务平台下载查询
+v7down.sqxzrq           = 申请下载日期
+v7down.glsqshxz         = JL SaaS金力产品服务平台下载管理
+v7down.downkq           = 下载连接库区
+v7down.jlsgsid          = JLS公司编码
+DownKQ_1                = 家电零售
+DownKQ_2                = IT零售
+DownKQ_3                = 汽车配件
+v7down.downkqnull       = 下载连接库区不能为空
+v7down.jlsgsidnull      = JLS公司编码不能为空
+
+SYLX_0                  = 试用
+SYLX_1                  = 付费
+
+##button img
+button.message.srch     = 查询
+button.checkbox = 选择
+button.print    = 打印
+button.message.qx_v7  = 全选
+button.message.create_V7 = 新建
+button.message.cancel_v7 = 取消
+button.message.save_v7   = 保存
+button.message.modify_v7 = 修改
+button.img.delete     = delete.gif
+button.img.save       = save.gif
+button.img.insert     = insert.gif
+button.img.search     = search.gif
+button.img.print      = print.gif
+button.img.srch       = srch.gif
+button.img.send       = send.gif
+button.img.submit     = submit.gif
+button.img.update     = update.gif
+button.img.modify     = Audit.gif
+button.img.audit     = Audit.gif
+button.img.upload     = upload.gif
+button.img.cancel     = cancel.gif
+button.img.download   = download.gif
+button.img.first      = first.gif
+button.img.last       = last.gif
+button.img.postfix    = postfix.gif
+button.img.prefix     = prefix.gif
+button.img.pubsearch  = search_1.gif
+button.img.Processing = Processing.gif
+button.img.search_dw  = search_dw.gif
+button.img.search_pp  = search_pp.gif
+button.img.reset      = reset.gif
+button.img.Application = Application.gif
+
+
+##查询
+
+main.title      = 金力舟商务平台系统JL-A
+mian.wxTitle    = 运营服务平台
+srch.spxx       = 查找商品信息
+spxx.spdm       = 商品代码
+spxx.spname     = 商品名称
+spxx.spdesc     = 商品描述
+spxx.spck       = 商品库存
+spxx.spdmcf     = 商品种类重复
+spxx.spmccf     = 商品名称重复
+
+invalide.dataformate    = 对不起，你输入了非法数据！
+select.date             = 对不起，请输入日期
+select.datetype         = 对不起，请选择表现形式
+zt.yp                   = 已派
+zt.wp                   = 未派
+zt.qx                   = 全选
+select.ryhm             = 对不起，请输入服务人员号码！
+select.dj               = 对不起，请先选择单据！
+select.djall            = 对不起，请先选择所有单据！
+prompt.insert           = 确定新建信息？
+prompt.update           = 确定修改信息？
+prompt.editor           = 编辑
+prompt.reprint          = 已打印
+prompt.ypg              = 已派工
+prompt.ecpg             = 二次派工
+prompt.azd.count        = 当前有{0}张单据可打印
+select.condition        = 对不起，请输入条件！
+prompt.wdry.wdhry       = 对不起，网点名称和人员姓名必须输入！
+
+define.azwd.allazwd     = 请选择安装网点
+define.azwd.all         = 全部
+define.fwqy.allfwqy     = 请选择服务区域
+prompt.invalide.azwd    = 无效的安装网点
+
+##页脚说明
+main.readme                     = readme.htm
+include.b2b.oper_fpdjd_v7       = Oper_FPDJD_V7.jsp
+include.b2b.srch_jsdzd_v7       = Srch_JSDZD_V7.jsp
+include.b2b.srch_jssrd_v7       = Srch_JSSRD_V7.jsp
+include.b2b.srch_jsd_v7         = Srch_JSD_V7.jsp
+include.b2b.srch_dhazhd_v7      = Srch_DHAZHD_V7.jsp
+include.b2b.srch_dhd_v7         = Srch_DHD_V7.jsp
+include.b2b.srch_ysd_v7         = Srch_YSD_V7.jsp
+include.b2b.srch_txsspz_v7      = Srch_TXSSPZ_V7.jsp
+include.b2b.srch_spjjb_v7       = Srch_SPJJB_V7.jsp
+include.b2b.srch_wdzmx_v7       = Srch_WDZMX_V7.jsp
+include.b2b.srch_spjxcbb_v7     = Srch_SPJXCBB_V7.jsp
+include.b2b.srch_bmjxcbb_v7     = Srch_BMJXCBB_V7.jsp
+include.b2b.srch_ghsjxcbb_v7    = Srch_GHSJXCBB_V7.jsp
+include.b2b.srch_spjxcrtgbb_v7  = Srch_SPJXCRTGBB_V7.jsp
+include.b2b.srch_spsjb_v7       = Srch_SPSJB_V7.jsp
+include.b2b.srch_shd_v7         = Srch_SHD_V7.jsp
+include.b2b.srch_cksp           = Srch_CKSP.jsp
+
+include.scm.oper_azpg_v7        = Oper_AZPG_V7.jsp
+include.scm.oper_wdry_v7        = Oper_WDRY_V7.jsp
+include.scm.oper_azhz_v7        = Oper_AZHZ_V7.jsp
+include.scm.prt_azd_v7          = Prt_AZD_V7.jsp
+include.scm.prt_shd_v7          = Prt_SHD_V7.jsp
+include.scm.srch_azd_v7         = Srch_AZD_V7.jsp
+include.scm.def_byg_v7       = Oper_BYG_V7.jsp
+include.scm.def_shryxx_v7    = Oper_SHRYXX_V7.jsp
+include.scm.def_ch_v7        = Oper_CH_V7.jsp
+include.scm.oper_shpg_v7     = Oper_SHPG_V7.jsp
+include.scm.oper_shpggp_v7   = Oper_SHPGGP_V7.jsp
+include.scm.oper_shhz_v7     = Oper_SHHZ_V7.jsp
+
+
+include.franchiser.srch_ryxx_v7     = Srch_LSSKD_V7.jsp
+include.franchiser.srch_gyswlmxz_v7  = Srch_GYSWLMXZ_V7.jsp
+include.franchiser.srch_gyswlzz_v7  = Srch_GYSWLZZ_V7.jsp
+include.franchiser.srch_wlkhmxz_v7  = Srch_WLKHMXZ_V7.jsp
+include.franchiser.srch_fxd_v7      = Srch_FXD_V7.jsp
+include.franchiser.srch_spxsbb_v7   = Srch_SPXSBB_V7.jsp
+
+
+##image (b2b中所插入的图片)
+image.logo_auto_v9   = logo_auto_v9.gif
+image.a1_b1_c1       = a1_b1_c1.gif
+image.a1_b1_c1_1     = a1_b1_c1_1.gif
+image.head1          = head1.gif
+
+image.khxx           = khxx.gif
+image.jlsaas         = jlsaas.gif
+image.user1          = user1.gif
+image.name           = name.gif
+image.pwd            = pwd.gif
+image.submit1        = submit1.gif
+image.regedit        = regedit.gif
+
+##head,head_2
+head_2.setfistpage   = 设为首页
+head_2.fk            = 反馈
+head_2.addscj        = 添加到收藏夹
+head_2.freereg       = 免费注册
+head_2.jlsoftsaas    = 武汉金力软件SaaS
+
+head_2.chinese       = 中文
+head_2.english       = 英语
+head_2.yny           = 越南语
+
+##foot,foot_2
+foot_2.firstpage     = 首页
+foot_2.aboutjsv      = 关于“金力舟”
+foot_2.khgxt         = 客户关系图
+foot_2.fwtk          = 服务条款
+foot_2.touchus       = 联系我们
+foot_2.cjqwt         = 常见问题
+foot_2.ljto          = 链接到
+foot_2.jsc           = jl-soft.com
+foot_2.jicpz         = 京ICP证 070008号
+
+##pub
+login.title          = 企业商务平台JL SaaS V7
+pub.gszt             = 公司主体
+pub.gshb             = 公司伙伴
+pub.scsjgys          = 上游企业
+pub.jxsjlss          = 下游企业
+pub.dsfffs           = 第三方企业
+pub.jlsaas           = JL SaaS金力产品服务平台
+pub.wxyy             = JL MOBILE无线应用
+
+pub.gszt.lss         = 零售商
+pub.gszt.fxs         = 分销商
+pub.gszt.wxc         = 维修厂
+pub.gszt.pjs         = 配件商
+pub.gszt.wl          = 物流商
+pub.scsjgys.scs      = 生产商
+pub.scsjgys.gys      = 供应商
+pub.scsjgys.pcs      = 配件商
+pub.jxsjlss.jxs      = 经销商
+pub.dsfffs.wl        = 物流
+pub.dsfffs.sh        = 安装
+pub.dsfffs.wx        = 维修
+pub.dsfffs.cc        = 仓储
+pub.jlsaas.jlscmv7   = SCM V7
+pub.jlsaas.jlamv7    = AM V7
+pub.jlsaas.jleamcv7  = EAMC V7
+pub.jlsaas.jlcrmv7   = CRM V7
+pub.wxyy.jlmobilevy  = MOBILE V7
+
+pub.dmcf             = 代码重复
+pub.mccf             = 名称重复
+
+GSLXINT_1            = 生产商及供应商
+GSLXINT_2            = 经销商及零售商
+GSLXINT_3            = 第三方服务商
+GSLXINT_4            = 公司主体
+
+##include
+include.admin.oper_zcgs                  = Oper_ZCGS.jsp
+include.admin.resultset_zcy_check        = ResultSet_CZY_check.jsp
+include.admin.ResultSet_CZY_branch_check = ResultSet_CZY_branch_check.jsp
+include.admin.Srch_ZCGSSH                = Srch_ZCGSSH.jsp
+include.admin.Audi_Download              = Audi_Download.jsp
+include.admin.Def_Role_check             = Def_Role_check.jsp
+include.admin.Def_PartnerDW              = Def_PartnerDW.jsp
+include.admin.Def_PartnerPP              = Def_PartnerPP.jsp
+include.admin.Def_PartnerSPFL            = Def_PartnerSPFL.jsp
+include.admin.Def_OperatorB2BDW          = Def_OperatorB2BDW.jsp
+include.admin.Def_Role                   = Def_Role.jsp
+include.admin.Def_Operator1              = Def_Operator1.jsp
+include.admin.Def_Operator               = Def_Operator.jsp
+include.admin.Def_OperatorCD             = Def_OperatorCD.jsp
+include.admin.Def_PartnerWD              = Def_PartnerWD.jsp
+include.admin.Def_OperatorGSCD           = Def_OperatorGSCD.jsp
+
+include.b2b.V7_Download                  = V7_Download.jsp
+include.b2b.Oper_DHD2                    = Oper_DHD2.jsp
+
+include.user.Oper_GSXX                   = Oper_GSXX.jsp
+include.user.SetPW                       = SetPW.jsp
+
+
+##申请新角色(sqnewrole)
+sqnewrole.title       = 申请新角色
+sqnewrole.qchosexxly  = 请选择信息来源
+sqnewrole.dbzl        = 数据库直连
+sqnewrole.dbdl        = 代理数据库
+sqnewrole.dbxj        = 新建数据库
+sqnewrole.qchoseztgs  = 请选择主体公司
+sqnewrole.ztgs        = 主体公司
+sqnewrole.allqx       = 你已经有所有权限
+sqnewrole.qchoselx    = 请选择类型
+sqnewrole.iperror     = 您输入的IP格式不正确
+
+##申请多主体关联(sqdztgl)
+sqdztgl.title         = 申请多公司主体关联
+sqdztgl.qxsqhbrole    = 请先申请伙伴角色
+
+##定义操作员帐号(defczyid)
+defczyid.title       = 定义操作员帐号
+defnbczyid.title     = 定义内部操作员
+defczyid.dayusesjd   = 每日使用时间段
+defczyid.noaddyh     = 已经不能再新增用户
+defczyid.sjseterror  = 启用或停用时间设置错误
+defczyid.sjdseterror = 每日使用时间段设置错误!
+defczyid.nbid        = 请输入对应内部人员代码!
+defczy.nbdm          = 内部帐号
+##审核操作员(shczy)
+shczy.dshczy         = 待审核操作员
+shczy.ssgs           = 所属公司
+shczy.alert.zsxzitjl = 至少选择一条记录
+
+##审核多主体关联(shdztgl)
+shdztgl.title        = 审核多公司主体关联
+shdztgl.gshbname     = 公司伙伴名称
+shdztgl.gsztname     = 公司主体名称
+shdztgl.hblx         = 伙伴类型
+
+##审核下载(shxz)
+shxz.title           = 审核JL SaaS金力产品服务平台下载
+shxz.khdbh           = 客户端编号
+shxz.khdname         = 客户端名称
+shxz.zt              = 状态
+
+##审核新角色(shxjs)
+shxjs.title          = 审核新角色
+shxjs.sqgsname       = 申请公司名称
+shxjs.glgsname       = 关联公司名称
+shxjs.sqlx           = 申请类型
+
+##综合数据(zhsj)
+zhsj.title           = 综合数据
+zhsj.jbxx            = 基本信息
+zhsj.glyzh           = 管理员帐号
+zhsj.gssyqx          = JL SaaS金力产品服务平台使用期限
+zhsj.jlasyqx         = “金力舟B2B-S”运营平台使用期限
+zhsj.syqxh           = 使用期序号
+zhsj.lx              = 类型
+zhsj.zhslchange      = 帐号数量变动序号
+zhsj.zhs             = 帐号数
+zhsj.czysyqx         = 操作员使用期限
+zhsj.czydm           = 操作员代码
+zhsj.qysj            = 启用时间
+zhsj.tysj            = 停用时间
+zhsj.zdkhdljs        = 最大客户端连接数
+zhsj.nbczy           = 内部操作员
+zhsj.glgs            = 关联公司
+zhsj.zt              = 主体
+zhsj.gys             = 供应商
+zhsj.jxs             = 经销商
+zhsj.hxjqtyekhd      = 核心及其它业务客户端
+zhsj.hymc            = 行业名称
+zhsj.hyms            = 行业描述
+zhsj.khdms           = 客户端描述
+zhsj.edition         = 版本
+zhsj.updaterq        = 更新日期
+zhsj.shrq            = 审核日期
+
+zt.sq                = 申请
+zt.clz               = 处理中
+zt.shtg              = 审核通过
+
+##注册公司审核查询
+zcsh.zcgssh          = 注册公司审核
+zcsh.srczcgssh       = 注册公司查询
+zcsh.userid          = 用户帐号
+zcsh.gslx            = 公司类型
+zcsh.zczt            = 注册状态
+zcsh.regdata         = 注册时间
+zcsh.gsmc            = 公司名称
+zcsh.realname        = 用户真名
+zcsh.sex             = 用户性别
+zcsh.email           = 用户邮箱
+zcsh.phone           = 固定电话
+zcsh.idcard          = 电子传真
+zcsh.mobile          = 移动电话
+zcsh.address         = 公司地址
+zcsh.pubip           = 数据地址
+zcsh.errorip         = 请输入正确的数据地址
+zcsh.vpn             = 数据来源
+zcsh.dyrs            = 可使用帐号数
+zcsh.nulldyrs        = 可使用帐号数不能为空
+zcsh.gsid            = 公司编号
+zcsh.nullgsid        = 公司编号不能为空
+zcsh.moresixgsid     = 公司编号长度不能大于6
+zcsh.nullcd          = 公司菜单不能为空
+zcsh.ksrq            = 启用日期
+zcsh.jzrq            = 停用日期
+zcsh.zcgsshxg        = 使用期限
+zcsh.lx              = 公司使用类型
+zcsh.mf              = 免费
+zcsh.ff              = 付费
+zcsh.errorrq         = 停用日期一定要大于启用日期
+zcsh.nulllx          = 公司使用类型不能为空
+zcsh.gszt            = 公司主体
+zcsh.view01          = 是否显示
+zcsh.nullview        = 请选择是否显示
+zcsh.viewtrue        = 显示
+zcsh.viewfalse       = 不显示
+zcsh.erpid           = ERP内部公司ID
+zcsh.dbsh            = 售后库名
+zcsh.dbvip           = 会员库名
+zcsh.erpid.null      = ERP内部公司ID不能为空
+zcsh.erpid.moresix   = ERP内部公司ID长度不能大于6
+zcsh.dbsh.null       = 售后库名不能为空
+zcsh.dbvip.null      = 会员库名不能为空
+order.sxh            = 顺序号
+zcshxg.sxh           = 使用期限顺序号
+zcshxg.xh            = 账号变动顺序号
+zcshxg.users         = 总定义人数
+zcshxg.errorrq       = 启用日期一定要大于上次延期停用日期
+zcshxg.errorrs       = 人数数量只能为正整数
+zcshxg.showrsmx      = 使用期限内账号变动
+zcshxg.zjrs          = 增减人数
+zcshxg.bdsl          = 变动数量
+zcshxg.nullbdsl      = 变动数量不能为空
+zcshxg.add           = 请先点新增
+zcshxg.di            = 第
+zcshxg.degree        = 次
+
+
+## 用户修改信息
+user.setinfo.title  = 用户信息修改
+regedit.email        = 电子邮箱
+regedit.nullemail    = 电子邮箱不能为空
+regedit.wrongemail   = 电子邮箱格式不正确
+regedit.phone        = 联系电话
+regedit.mobile       = 手机号码
+regedit.wrongmobile  = 请输入正确格式的手机号码
+regedit.nullphone    = 固定电话不能为空
+regedit.nullmobile   = 手机号码不能为空
+regedit.phone        = 固定电话
+regedit.idcard       = 电子传真
+regedit.mobile       = 移动电话
+regedit.wrongnum     = 固定电话只能输入数字
+regedit.gsinfo       = 公<br/>司<br/>简<br/>介
+
+VPN_1                = 数据库直连
+VPN_2                = 代理数据库
+VPN_3                = 新建数据库
+LX_0                 = 免费用户
+LX_1                 = 付费用户
+
+##admin
+lx.wcl               = 未处理
+lx.clz               = 处理中
+lx.ycl               = 已审核
+
+##菜单
+def.title           = 系统管理
+def.zhsj            = 综合数据
+def.xgzcxx          = 修改注册信息
+def.operator        = 定义操作员帐号
+def.partnerdw       = 定义公司伙伴单位
+def.partnerpp       = 定义公司伙伴品牌
+def.partnerspfl     = 定义公司伙伴品类
+def.partnershwd     = 定义公司伙伴送货网点
+def.partnerazwd     = 定义公司伙伴安装网点
+def.openzcgs        = 审核公司
+def.czycheck        = 审核操作员
+def.branchcheck     = 审核主体关联
+def.modifybranchcheck     = 修改主体关联
+def.zcgssh          = 注册公司查询
+def.downcheck       = 审核JL SaaS金力产品服务平台下载
+def.rolecheck       = 审核新角色
+def.requestrole     = 申请新角色
+def.operatornb      = 定义内部操作员
+def.operatormenu    = 定义内部操作员菜单
+def.operatorcd      = 定义操作员菜单
+der.requestztgl     =申请主体关联
+def.operatorgscd    = 定义公司菜单
+def.srchwdry        = 查询网点人员
+def.deflogo         = 设置首页LOGO
+def.defboard         = 发布信息
+srch.defboard        = 查询信息
+
+def.cxmd            = 定义销售门店
+def.cxy             = 定义门店促销员
+supplier.opercxgl   = 促销管理
+
+core.title          = 内部业务
+core.downclient     = JL SaaS金力产品服务平台
+
+supplier.title      = 供应商管理
+supplier_v5.title      = 供应商管理(V5)
+supplier.dhd        = 实物往来
+supplier.srchdhd    = 订单查询
+supplier.srchysd    = 预售单
+supplier.srchrkd    = 入库单
+supplier.srchfcd    = 返厂单
+supplier.srchbjd    = 变价单
+supplier.srchjhd    = 入库查询
+supplier.srchjhdxx    = 入库信息查询
+supplier.srchkc        = 库存查询
+supplier.srchxs        = 销售查询
+supplier.srchth        = 退货查询
+supplier.srchbj        = 变价查询
+supplier.upload        = 上传数据
+supplier.data          = 供应商数据
+supplier.srchzxqk    = 商品滞销情况查询
+supplier.srchflkcsp  = 库存商品按仓库库区查询
+supplier.srchjdkcsp  = 库存商品按分部查询
+supplier.srchzcsp    = 暂存商品查询
+supplier.srchkcspfck = 库存商品按仓库查询
+supplier.srchspxszz  = 销售汇总按分部查询
+supplier.srchspxsmdzz  =销售汇总按门店查询
+supplier.srchtcdzz    = 退货信息查询
+supplier.srchjjbjzz   = 变价信息查询
+supplier.srchspxsms  =销售汇总按门店查询(微软)
+supplier.srchdclsfh =  查询厂方样机出入库查询
+
+zt.jqmfhqr          = 发货确认
+zt.srchjqmitem      = 查询机器码
+zt.operjqmitem      = 编辑机器码
+zt.fbsp             = 发布商品
+
+supplier.uploadkcsj   = 上传厂家库存数据
+supplier.uploadxpsj   = 上传厂家新品数据
+supplier.uploadcjch   = 上传厂家出货数据
+supplier.uploadcjbj   = 上传厂家变价数据
+supplier.uploadcjpj   = 上传厂家排产计划
+
+supplier.srchkcsj     = 厂家库存数据展示
+supplier.srchxpsj     = 厂家新品信息展示
+supplier.srchcjch     = 厂家出货明细查询
+supplier.srchcjbj     = 厂家变价明细查询
+supplier.srchcjpj     = 厂家排产计划查询
+
+
+supplier.jxc        = 综合查询
+supplier.srchjxc    = 商品进销存报表
+supplier.srchspxsbb = 商品销售报表
+supplier.srchwlzmx  = 商品未达帐
+supplier.srchspjxcrtgbb  = 商品进销存日统购报表
+supplier.srchtxsspz      = 预售商品帐
+supplier.srchcksp      = 库存商品
+supplier.lsfw          = 物流售后服务
+supplier.srchywsjtqbj  = 业务数据同期比较
+
+supplier.zwwl       = 帐务往来
+supplier.srchjsd    = 结算付款单
+supplier.srchjsdzd  = 结算通知单
+supplier.srchjssrd  = 收入单
+supplier.srchfpdjd  = 结算登记单
+supplier.srchdhazhd = 带货安装核单
+supplier.srchspjjb  = 商品批次报表
+supplier.srchspsjb  = 商品售价表
+supplier.srchjxwj   = 经销未结
+supplier.srchdxlxwj = 代销联营未结
+
+franchiser.title    = 经销商往来
+franchiser.srchfxd  = 查询分销单
+franchiser.srchyfd  = 查询延付单
+franchiser.srchgyswlmxz   = 供应商往来明细帐
+franchiser.srchgyswlzz    = 供应商往来总帐
+franchiser.srchgyswlzzmx  = 供应商往来总帐明细
+franchiser.srchkhwlmxz    = 查找客户往来明细帐
+franchiser.srchlsskd      = 查询零售收款单
+franchiser.srchspxsbb     = 查询商品销售报表
+franchiser.operspxs     = 销售管理
+franchiser.srchspxs     = 查询销售
+franchiser.operywy      = 定义促销员
+franchiser.operyhd      = 要货管理
+franchiser.srchyhd      = 查询要货信息
+franchiser.dhsqd        = 调货申请单
+franchiser.opersprk     = 商品入库管理
+franchiser.srchcksp     = 查询仓库商品
+franchiser.operfxdrk    = 分销单入库
+
+scm.shazfw         = 售后服务
+scm.shazjd         = 送货安装建档
+
+scm.shfw           = 送货服务
+scm.azfw           = 安装服务
+scm.cjfw           = 厂家服务
+scm.wxfw           = 维修服务
+scm.other          = 其他服务
+scm.print          = 打印服务
+
+scm.itwx           = IT维修
+scm.wx             = 维修
+
+ZT_1               = 建档
+ZT_2               = 派服务站
+ZT_3               = 待定
+ZT_4               = 派工
+ZT_5               = 回执
+ZT_6               = 回访
+
+scmwx.gdh            = 工单号
+scmwx.khmc           = 客户名称
+scmwx.ppzx           = 品牌中心
+scmwx.djzt           = 单据状态
+scmwx.xxly           = 信息来源
+scmwx.gzxx           = 故障现象
+scmwx.hzjg           = 回执结果
+scmwx.hfjg           = 回访结果
+
+scmwx.jsdh           = 结算单号
+scmwx.cwzg           = 财务主管
+scmwx.jsrq           = 结算日期
+scmwx.jsje           = 结算金额
+scmwx.jsdx           = 结算对象
+
+scmwx.wxfw           = 维修服务
+scmwx.wxxxgl         = 维修信息
+scmwx.wxpwd          = 维修派服务站
+scmwx.wxhf           = 维修回访
+scmwx.wdwxpg         = 服务站维修派工
+scmwx.wxdy           = 打印维修单
+scmwx.wxhz           = 维修回执
+scmwx.wxdsrch        = 维修查询
+
+scmwx.pjgl           = 产品管理
+scmwx.cpzlgl         = 产品种类
+scmwx.cpxhgl         = 产品型号
+scmwx.pjppgl         = 商品品牌
+scmwx.khspgl         = 客户商品
+scmwx.ddqr           = 订单确认
+scmwx.spxx           = 商品信息
+scmwx.pjxx           = 配件信息
+scmwx.pjkccx         = 库存查询
+scmwx.pjsq           = 配件申请
+scmwx.pjzsrk         = 配件直上入库
+scmwx.pjsh           = 配件配货
+scmwx.pjjs           = 配件接收
+scmwx.ddph           = 订单配货
+scmwx.wxth           = 维修退货
+
+scmwx.jsgl           = 结算管理
+scmwx.wxjs           = 维修结算
+scmwx.srchjs         = 结算查询
+
+scmwx.khgl           = 考核管理
+scmwx.khbzgl         = 考核标准
+scmwx.wdkhgl         = 服务站考核
+scmwx.fwjfgl         = 服务奖罚
+
+scmwx.sys            = 基础信息
+scmwx.qygl           = 区域创建
+scm.wdgl             = 服务站创建
+scmwx.addczy         = 操作员创建
+scmwx.detailUser     = 在线用户
+scmwx.gzlxgl         = 故障类型
+scmwx.jsfygl         = 结算费用
+scmwx.wlgsxx         = 物流信息
+scmwx.xyed           = 信用额度
+scmwx.xxglf          = 信息管理费
+scmwx.wdrygl         = 服务站人员
+scmwx.hbdygsztgl     = 服务站对应区域中心
+scmwx.addczywd       = 操作员对应服务站
+
+scmwx.zhgl           = 用户信息
+
+scm.wxxxgl           = 维修信息
+scm.wxdsrch          = 维修查询
+scm.wxjs             = 维修结算
+
+scm.wxhz             = 维修回执
+scm.wxhf             = 维修回访
+
+wap.title          = WAP业务
+wap.srchkc         = 查询库存
+wap.srchxs         = 查询销售
+wap.srchdg         = 零售导购
+wap.srchzpxx         = 查询赠品
+wap.opercm           = 串码管理
+wap.spyh             = 商品要货
+wap.srchyhd          = 查询要货单
+wap.ckpd           = 仓库盘点
+wap.yfd           = 制定延付单
+
+userset.title          = 用户设置
+userset.modifypass     = 修改密码
+
+other.title            = 其它功能
+other.switchbranchs    = 切换公司主体
+
+srch.bmjxcbb_v7     = 查询部门进销存报表
+srch.dhd_v7         = 订货单
+srch.ghsjxcbb_v7    = 查询供货商进销存报表
+srch.jsd_v7         = 查询结算单
+
+srch.shd_v7         = 查询送货单
+srch.spjjb_v7       = 查询商品进价表
+srch.spjxcbb_v7     = 查询商品进销存报表
+srch.spjxcrtgbb_v7  = 查询商品进销存日统购报表
+srch.spsjb_v7       = 查询商品售价表
+srch.txsspz_v7      = 查询负二批次销售商品帐
+srch.wlzmx_v7       = 查询未达帐明细
+
+
+##页面转换(合作方式)
+JSSRD13_0           = 经销
+JSSRD13_1           = 代销
+JSSRD13_2           = 联营不管库存
+JSSRD13_3           = 联营管库存
+
+#(收入类型)
+JSSRD11_0           = 返利
+JSSRD11_1           = 固定
+JSSRD11_2           = 非固定
+
+#(计算基数)
+JSSRDI02_0          = 固定金额
+JSSRDI02_1          = 进货金额*扣率
+JSSRDI02_2          = 进货台返
+JSSRDI02_3          = 销售金额*扣率
+JSSRDI02_4          = 销售成本*扣率
+JSSRDI02_5          = 销售台返
+JSSRDI02_6          = AAA
+JSSRDI02_7          = 发票金额*扣率
+JSSRDI02_8          = 经代销利润补点
+
+#(商品属性)
+CGXY02_-1           = 样机
+CGXY02_0            = 普通
+CGXY02_1            = 特价
+CGXY02_2            = 包销
+CGXY02_3            = 定制
+CGXY02_4            = 工程
+CGXY02_5            = 买断
+CGXY02_6            = 家电下乡
+CGXY02_7            = 普通返利
+#(单据类型)
+YSSP02_0             = 其它单据
+YSSP02_1             = 入库单
+YSSP02_2             = 调拨单
+YSSP02_3             = 返厂单
+YSSP02_4             = 损益单
+YSSP02_5             = 发票登记单
+YSSP02_6             = 变价单
+YSSP02_7             = 转仓单
+YSSP02_8             = 分销单
+YSSP02_9             = 延付单
+YSSP02_10            = 零售单
+YSSP02_11            = 销售调整单
+YSSP02_12            = 借还回执单
+YSSP02_13            = 订金单
+YSSP02_14            = 返修单
+YSSP02_15            = 订货单
+YSSP02_16            = 预付申请单
+YSSP02_17            = 结算付款单
+YSSP02_18            = 批发收款单
+YSSP02_19            = 延付结算单
+YSSP02_20            = 零售单历史数据
+YSSP02_21            = 收入单
+YSSP02_22            = 收入收款单
+YSSP02_23            = 收入调整单
+YSSP02_24            = 返利单
+YSSP02_25            = 返利付款单
+YSSP02_26            = 返利调整单
+YSSP02_27            = 代销通知单
+YSSP02_28            = 联营通知单
+YSSP02_29            = 拉修换货单
+YSSP02_30            = 销售调整单(合并)
+YSSP02_31            = 结算付款单付款方式
+YSSP02_32            = 结算付款单明细 (收入单)
+YSSP02_33            = 结算付款单明细(发票登记单)
+YSSP02_34            = 结算付款单明细 (预付款)
+YSSP02_35            = 本日销售查询
+YSSP02_36            = 本日收款单查询
+YSSP02_37            = 零售预收订金
+YSSP02_38            = 三包换货单
+YSSP02_39            = 三包赔付单
+YSSP02_40            = 发票导出主表
+YSSP02_41            = 发票导出明细
+YSSP02_42            = 发票导出分销收款
+YSSP02_43            = 发票导出零售收款
+YSSP02_44            = 三包服务单
+YSSP02_45            = 组装单
+YSSP02_99            = 暂存单
+YSSP02_47            = 上门收款单
+YSSP02_48            = 银行转帐单
+YSSP02_49            = 银行缴款单
+YSSP02_50            = 银行存款单
+YSSP02_51            = 借还单
+
+#(账单状态)
+STATE03_0              = 未达
+STATE03_1              = 已达
+STATE04_0              = 未达
+STATE04_1              = 已达
+STATE05_0              = 未达
+STATE05_1              = 已达
+
+#(含税方式)
+BMJXC20_0              = 含税
+BMJXC20_1              = 无税
+BMJXC20_2              = 税金
+
+#(单据类型)
+PJLX_1               = 采购价格文件
+PJLX_2               = 采购协议
+PJLX_3               = 销售价格文件
+PJLX_4               = 商品优惠单
+
+#(送货状态)
+SHD04_0              = 建档
+SHD04_1              = 派工
+SHD04_2              = 回执
+SHD04_3              = 结算
+SHD04_4              = 厂家结算
+
+
+(送货单状态)
+KHZL11_0             = 正常
+KHZL11_1             = 作废
+
+(是否预约)
+AZD10_0              = 否
+AZD10_1              = 是
+
+(是否结算)
+AZD11_0              = 否
+AZD11_1              = 是
+
+#(订单状态)
+DHD23_2              = 审核通过
+DHD23_3              = 部分入库
+DHD23_4              = 全部入库
+DHD23_5              = 注销
+
+##页面转换(合作方式)
+HZFS_0           = 经销
+HZFS_1           = 代销
+HZFS_2           = 联营不管库存
+HZFS_3           = 联营管库存
+
+#(商品属性)
+SPSX_-1           = 样机
+SPSX_0            = 普通
+SPSX_1            = 特价
+SPSX_2            = 包销
+SPSX_3            = 定制
+SPSX_4            = 工程
+SPSX_5            = 买断
+SPSX_6            = 家电下乡
+SPSX_7            = 普通返利
+##(入库单单据类型)
+RKDDJLX_0         = 正常入库
+RKDDJLX_1         = 入库单冲红
+
+##(入库方式)
+RKFS_0            = 订单入库
+RKFS_1            = 直上入库
+RKFS_2            = 销售入库
+RKFS_3            = 期初货款调整
+RKFS_4            = 统购入库
+
+#机器码单据类型
+JQMDJLX_8        = 分销单
+JQMDJLX_9        = 延付单
+JQMDJLX_10       = 零售单
+
+##查询单页面名字
+srch.jsdzd          = 结算对账单
+srch.jsd            = 结算单
+srch.fpdjd          = 结算登记单
+srch.jsdjditem      = 结算登记单明细
+srch.fpdjditem      = 发票登记单明细
+srch.ywdj           = 查询业务单据
+srch.pkd            = 查询排款单
+srch.jssrd          = 收入单
+srch.jssrdmx        = 收入单明细
+srch.jsdhm          = 查询结算单号码
+srch.jssrmx         = 结算收入明细
+srch.dhazhd         = 带货安装核单
+srch.dhazhditem     = 带货安装核单明细
+srch.dhazhth        = 查询带货安装信息
+srch.dhd            = 订货单
+srch.dhditem        = 订货单明细
+srch.dhdhm          = 查找订货单号码
+srch.ysd            = 预售单
+srch.ysditem        = 预售单明细
+srch.ysdhm          = 查询预售单号码
+srch.txsspz         = 负二批次销售商品帐
+srch.txsspzspdm     = 负二次销售商品帐商品代码
+srch.spjjb          = 查询商品价格
+srch.wlzmx          = 查询往来帐明细
+srch.spjxcbb        = 商品进销存报表
+srch.sccj           = 查询生产厂家
+srch.bmjxcbb        = 查询部门进销存报表
+srch.ghsjxcbb       = 查询供货商进销存报表
+srch.ghsjxcbblbsj   = 供货商进销存列表报表
+srch.ghsjxcbbhzsj   = 供货商进销存汇总报表
+srch.spjxcrtgbb     = 商品进销存统购报表
+srch.sp             = 查找商品
+srch.spsjb          = 商品售价表
+srch.shd            = 查询送货单
+oper.azpg           = 安装派工
+def.wdry            = 定义售后人员
+srch.wdry           = 查找售后人员
+oper.azhz           = 安装回执
+prt.azd             = 打印安装单
+srch.azd            = 查询安装单
+
+##结算对帐单
+jsdzd.hsbqjse          = 本期结算额
+jsdzd.se               = 税额
+JSDZT_0                = 制单
+JSDZT_1                = 审核
+JSDZT_2                = 发票登记
+
+jstzd.jsqq             = 结算期起
+jstzd.jsqz             = 结算期止
+jssrd.zrr              = 责任人
+
+##查询结果页面名字
+result.dxjsdzd      = 代销对账单
+result.lybgkcjsdz   = 联营不管库存对账单
+result.zcfpdjd      = 正常发票登记单
+result.dzfpdjd      = 待转发票登记单
+
+##结算方式（radio的页面取值）
+jxfs.lx             = 类型
+jxfs.jx             = 经销
+jxfs.dx             = 代销
+jxfs.lygkc          = 联营（管库存）
+jxfs.lybgkc         = 联营（不管库存）
+jxfs.ly             = 联营
+
+##JKDSPITEM(代销结款单商品明细)
+jkdspitem.jkd01     = 通知单
+jkdspitem.jkdi01    = 批次号
+jkdspitem.jkdi02    = 批次序号
+jkdspitem.jkdi04    = 无税单价
+jkdspitem.jkdi05    = 应结数量
+jkdspitem.jkdi06    = 应结金额(无税)
+jkdspitem.jkdi07    = 单据号码
+jkdspitem.jkdi08    = 厂单号
+jkdspitem.jkdi10    = 合同号
+jkdspitem.jkdi11    = 协议号
+jkdspitem.jkdi12    = 销售金额
+jkdspitem.jkdi13    = 应结金额(含税)
+jkdspitem.jkdi14    = 记账日期
+jkdspitem.xsbm      = 销售部门
+jkdspitem.spxx01    = 商品代码
+
+##JKD(代销结算通知单)
+jkd.gsxx01          = 公司代码
+jkd.jkd16           = 制单人
+jkd.jkd17           = 制单日期
+jkd.jkd18           = 审核人
+jkd.jkd19           = 审核日期
+jkd.wldw01          = 供应商
+srch.dxjstzdmx      = 代销结算通知单明细
+
+##WLDW(往来单位)
+wldw.wldw02         = 供应商名称
+
+##SPXX(商品信息)
+spxx.spxx02         = 商品代码
+spxx.spxx01         = 商品内码
+spxx.spxx04         = 商品名称
+spxx.ppb01          = 品牌
+spxx.sccj01         = 生产厂家
+spxx.spfl01         = 商品分类代码
+spxx.spfl02         = 商品分类名称
+spxx.jldw01         = 计量单位
+spxx.ggb01          = 商品规格
+
+##SCCJ(生产厂家)
+sccj.sccj01         = 厂家代码
+sccj.sccj02         = 厂家名称
+sccj.sccj06         = 注册日期
+
+##SPGNSM(商品功能说明)
+spgnsm.cpfl02       = 分类名称
+
+##HYXX(会员信息)
+hyxx.hyxx02         = 行业名称
+
+##DQXX(地区信息)
+dqxx.dqxx02         = 地区名称
+
+##BM(部门)
+bm.bm02             = 部门
+bm.bm01             = 部门编码
+
+##LYJKDITEM(联营结款单商品明细)
+lyjkditem.lyjkdi01  = 经销金额
+lyjkditem.lyjkdi02  = 扣点
+lyjkditem.lyjkdi03  = 应结金额（含税）
+lyjkditem.lyjkdi04  = 应结金额（无税）
+lyjkditem.lyjkdi05  = 厂家承担金额
+lyjkditem.lyjkdi06  = 购货合同
+lyjkditem.lyjkdi07  = 未结数量
+lyjkditem.lyjkdi08  = 记账日期
+lyjkditem.hzfs01    = 合作方式
+
+##LYJKD(联营结算通知单)
+lyjkd.wldw01        = 单位
+srch.lyjstzdmx      = 联营结算通知单明细
+srch.spjxcbbsjlb    = 商品进销存报表数据列表
+
+##(查询库存商品)
+cksp.title      = 库存商品
+cksp.titleitem  = 库存商品明细
+cksp.wldw01     = 供应商
+
+cksp.bm01	= 部门代码
+cksp.ck01	= 仓库代码
+cksp.bm02	= 部门名称
+cksp.ck02	= 仓库名称
+cksp.spxx01	= 商品代码
+cksp.spxx04	= 商品名称
+cksp.jldw01	=计量单位
+cksp.spfl01	=商品分类
+cksp.spfl02	=商品分类名称
+cksp.cksp01	=包装含量
+cksp.cksp02	=三级帐数量
+cksp.cksp03	=保管帐数量
+cksp.kms	=实际可卖数量
+cksp.cksp04	=可卖数量
+cksp.cksp05	=可卖限制数量
+cksp.cksp06	=保卡数量
+cksp.cksp07	=暂存数量
+cksp.cksp10	=延付数量
+cksp.spxx14	=最后进价
+cksp.je	        =库存金额
+cksp.cksp12	=商品属性
+cksp.cksp13	=负卖标记
+cksp.cksp15	=房牌标记
+cksp.wldw01	=单位代码
+cksp.wldw02	=单位名称
+cksp.sccj01	=厂家代码
+cksp.spxx28	=机器码标记
+cksp.sccj02	=厂家名称
+cksp.cpfl02	= 分类名称
+cksp.ppb01	= 品牌代码
+cksp.ppb02	= 品牌名称
+cksp.cksp17     = 平均单价
+
+#是否已付款
+SFFK_0              = 否
+SFFK_1              = 是
+
+##JSDJD(结算登记单)
+jsdjd.crfje         = 冲预付金额
+jsdjd.yfje          = 应付金额
+jsdjd.yfje          = 应付金额
+jsdjd.qchkje        = 期初货款金额
+jsdjd.pkd           = 排款单
+jsdjd.sfyfk         = 是否已付款
+
+##FPDJD(发票登记单)
+fpdjd.fpdj01        = 发票单
+fpdjd.jpdj03        = 登记类型
+fpdjd.fpdj11        = 备注
+fpdjd.fpdj20        = 合作方式
+fpdjd.fpdj24        = 折扣无税金额
+fpdjd.fpdj25        = 实际发票金额
+fpdjd.fpdj28        = 折扣税金
+fpdjd.fpdj02        = 发票类型
+fpdjd.zhje          = 折后金额
+fpdjd.zhsj          = 折后税金
+fpdjd.wszk          = 无税折扣
+fpdjd.zksj          = 折扣税金
+
+FPDJ02_0            = 增值税发票
+FPDJ02_1            = 普通发票
+FPDJ02_2            = 无发票
+
+HZFS01_0            = 经销
+HZFS01_1            = 代销
+HZFS01_2            = 联营（不管库存）
+HZFS01_3            = 联营（管库存）
+
+DHRKI02_8           = 分销
+DHRKI02_10          = 零售
+
+##FPDJDITEM(发票登记单明细)
+fpdjditem.fpdjdi06   = 发票数量
+fpdjditem.fpdjdi07   = 发票金额（无税）
+fpdjditem.fpdjdi08   = 发票税额
+fpdjditem.fpdjdi11   = 发票单价（含税）
+fpdjditem.fpdjdi14   = 发票日期
+fpdjditem.fpdjdi05   = 发票单价
+fpdjditem.fpdjdi12   = 发票金额
+fpdjditem.fpdjdi15   = 发票号码
+fpdjditem.fpdjdi22   = 单据类型
+
+##RKD(入库单)
+rkd.rkd01            = 入库单号
+rkd.ck01             = 仓库代码
+rkd.dhd01            = 订货单
+rkd.rkd02            = 入库方式
+rkd.rkd03            = 送货单号
+rkd.rkd08            = 冲销入库单
+rkd.cxrkdh           = 冲销入库单
+rkd.rkd09            = 入库单备注
+rkd.rkd10            = 凭证编号
+rkd.rkd13            = 验收人
+rkd.rkd14            = 验收日期
+rkd.dfgsxx01         = 对应公司代码
+rkd.dfrkd01          = 对应入库单号
+rkd.tgdh01           = 统购订单
+rkd.tgdb01           = 总部调拨单号
+rkd.fhd01            = 分货单号
+rkd.cgxy02           = 商品属性
+rkd.rkje             = 入库金额
+srch.rkdmx           = 入库单明细
+
+##RKDITEM(入库单明细)
+rkditem.rkdi03       = 应收数量
+rkditem.rkdi05       = 实收数量
+rkditem.rkdi06       = 进货单价（无税）
+rkditem.rkdi07       = 进货金额（无税）
+rkditem.rkdi08       = 税金
+rkditem.rkdi09       = 保卡类型
+rkditem.rkdi10       = 保本期
+rkditem.rkdi11       = 保质期
+rkditem.rkdi12       = 保利期
+rkditem.rkdi13       = 明细备注
+rkditem.rkdi15       = 单价（含税）
+rkditem.rkdi16       = 金额（含税）
+
+##商品进价表
+srch.spjxcrtgbbsjlb    = 商品进销存日统购报表数据列表
+srch.spjjbmx           = 商品进价表明细
+spjjb.jhsl             = 进货数量
+spjjb.bjzrsl           = 变价转入数量
+spjjb.bssl             = 报损数量
+spjjb.sxsl             = 销售数量
+spjjb.brsl             = 拨入数量
+spjjb.fcsl             = 返厂数量
+spjjb.jcsl             = 结存数量
+spjjb.wsjcje           = 无税结存金额
+spjjb.zzsl             = 组装数量
+srch.spsjbmx           = 商品售价表明细
+
+##JSPKDITEM_FPDJ(结算排款单明细_发票登记)
+jspkditem.fpdj.jspkd01           = 结算排款单
+jspkditem.fpdj.fpdj06            = 发票税率
+jspkditem.fpdj.yfje              = 已付金额
+jspkditem.fpdj.pkje              = 排款金额
+
+##JSSRD(结算收入单)
+jssrd.jssrd01        = 收入单号
+jssrd.jssrd10        = 收入单备注
+jssrd.jssrd11        = 收入类型
+jssrd.jssrd12        = 到账日期
+jssrd.ghht01         = 采购合同
+jssrd.jssrd20        = 对应原单号
+jssrd.jssrd21        = 冲红标记
+jssrd.jssrd19        = 责任人代码
+
+##JSSRDITEM(结算收入单明细)
+jssrditem.jssr01     = 结算收入代码
+jssrditem.jssr02     = 收入名称
+jssrditem.jssrdi02   = 计算基数
+jssrditem.jssrdi03   = 实际完成数量
+jssrditem.jssrdi04   = 实际完成金额
+jssrditem.jssrdi05   = 采购协议号
+jssrditem.jssrdi09   = 达到规模
+jssrditem.jssrdi10   = 应结金额
+jssrditem.jssrdi11   = 实收金额
+jssrditem.jssrdi12   = 调整金额
+jssrditem.jssrdi13   = 收入单明细备注
+jssrditem.jssrdi14   = 保底金额
+jssrditem.jssrdi15   = 封顶金额
+jssrditem.srbm01     = 收入部门
+
+##RYXX(人员信息)
+ryxx.ryxx02          = 人员姓名
+
+##SRBM
+srbm.srbm02          = 收入部门名称
+
+##JSSRDMX(结算收入单明细)
+jssrdmx.cgbm01       = 部门代码
+jssrdmx.xsbm01       = 销售部门代码
+jssrdmx.jssrm07      = 发生数量
+jssrdmx.jssrm08      = 发生金额
+jssrdmx.flje         = 返利金额
+jssrdmx.jssrm15      = 计算日期
+jssrdmx.jssrm20      = 到账期限
+jssrdmx.jssrm21      = 业务员代码
+jssrdmx.jssrm22      = 业务员名称
+jssrdmx.ywy          = 业务员
+
+##JSFKD（结算付款单）
+jsfkd.jsfkd01        = 付款单号
+jsfkd.jsfkd02        = 付款金额
+jsfkd.jsfkd03        = 付款人
+jsfkd.jsfkd04        = 付款日期
+jsfkd.jsfkd05        = 排款单号
+jsfkd.jsfkd08        = 收入金额
+jsfkd.jsfkd09        = 预付款金额
+jsfkd.jsfkd10        = 财务日期
+
+##JSPKDWLDW（结算排款单往来单位）
+jspkdwldw.jspkdw01   = 应付发票金额
+jspkdwldw.jspkdw02   = 应收收入金额
+jspkdwldw.jspkdw03   = 实收发票金额
+jspkdwldw.jspkdw04   = 实收收入金额
+jspkdwldw.jspkdw07   = 预付金额
+jspkdwldw.jspkdw08   = 应付预付金额
+jspkdwldw.jspkdw09   = 实付预付金额
+jspkdwldw.pkdye      = 排款单余额
+
+##JSFKDITEM_SRD(结算付款单明细_收入单)
+jsfkditem.srd.jssrd14       = 起始日期
+jsfkditem.srd.jssrd15       = 终止日期
+jsrkditem.srd.jssrdi01      = 收入明细序号
+
+##DHRKD(带货入库单)
+dhrkd.dhrk01         = 记录编号
+dhrkd.dhrk11         = 帐期
+
+##DHRKDITEM(带货入库明细)
+dhrkditem.lsdi01     = 提货单号
+dhrkditem.dhrki01    = 销售数量
+dhrkditem.dhrki03    = 无税进价
+dhrkditme.dhrki04    = 含税进价
+dhrkditem.dhrki05    = 销售单价
+dhrkditem.dhrki07    = 写发货人标记
+dhrkditem.dhrki08    = 原含税进价
+dhrkditem.hsjd       = 含税金额
+
+##CK(仓库)
+ck.ck01              = 仓库号
+ck.ck02              = 仓库
+
+##DHFS(订货单)
+dhfs.dhfs02          = 订货方式
+
+##FKFS(付款方式)
+fkfs.fkfs02          = 付款方式名称
+
+##JSFS(结算方式)
+jsfs.jsfs02          = 结算方式名称
+
+##DHD(订货单)
+dhd.dhd03            = 交货方式
+dhd.dhd04            = 产品等级
+dhd.pfd01            = 分销单号
+dhd.tgdhd01          = 统购订货单号
+dhd.dhd08            = 交货地点
+dhd.dhd09            = 交货时限(起)
+dhd.dhd10            = 交货时限(止)
+dhd.dhd11            = 运输方式及费用
+dhd.dhd12            = 签定地点
+dhd.dhd13            = 签定日期
+dhd.dhd14            = 供方代理人
+dhd.dhd21            = 承兑日期
+dhd.dhd22            = 货到付款天数
+dhd.dhd23            = 订单状态
+dhd.dhd24            = 执行日期
+dhd.dhd29            = 终止人
+dhd.dhd37            = 处理人
+dhd.dhd38            = 处理日期
+dhd.tgpd01           = 平调单号
+dhd.dhdjsfs          =实销实结
+
+##DHDITEM(订货单明细)
+dhditem.dhdi02       = 包装含量
+dhditem.dhdi03       = 订货数量
+dhditem.dhdi04       = 出厂价(含税)
+dhditem.dhdi05       = 票扣率
+dhditem.dhdi08       = 订货金额(无税)
+dhditem.dhdi10       = 交货日期
+dhditem.dhdi12       = 注销数量
+dhditem.dhdi13       = 入库数量
+dhditem.dhdi14       = 订货件数
+dhditem.spzt         = 商品在途数量
+
+##(代销联营未结)
+DXLYWJDJLX_0      = 销售单
+DXLYWJDJLX_3      = 返厂单
+DXLYWJDJLX_6      = 变价单
+dxlywj.wjje       = 未结金额
+dxlywj.wjjehs       = 未结金额(含税)
+dxlywj.yjsl       = 已结数量
+
+##商品概况跟踪
+common.shspsl     = 送货数量
+common.azspsl     = 安装数量
+common.azzt       = 安装状态
+srch.spztgz       = 商品状态跟踪
+SFAZ_0            = 未安装
+SFAZ_1            = 已安装
+SFAZ_2            = 未送货
+SFAZ_3            = 已送货
+##返厂单
+fcd.fcd01            = 返厂单
+fcd.fcyy             = 返厂原因
+fcd.jjff             = 解决方法
+fcd.fhrq             = 发货日期
+
+fcd.fcdmx            = 返厂单明细
+fcd.fcdj             = 返厂单价
+fcd.fcsl             = 返厂数量
+fcd.fcje             = 返厂金额
+
+##变价单
+bjd.jjbb01           = 变价单
+bjd.yjhdj            = 原进货单价
+bjd.xjhdj            = 新进货单价
+bjd.tjsl             = 调价数量
+bjd.tjje             = 调价金额
+bjd.bjdmx            = 变价单明细
+
+##YSD(预售单)
+ysd.ysd01            = 预售单号
+ysd.ysd02            = 有效日期
+
+##YSDITEM(预售单明细)
+ysditem.ysdi02       = 预售数量
+
+##YSSPZ(预售商品帐)
+ysspz.ryxx01         = 营业员代码
+ysspz.ryxx02         = 营业员名称
+ysspz.yssp13         = 原单日期
+ysspz.yssp04         = 成本单价(含税)
+ysspz.yssp05         = 销售单价(含税)
+ysspz.yssp06         = 销售金额(含税)
+ysspz.yssp07         = 处理数量
+ysspz.yssp12         = 联营扣率
+ysspz.cgbm02         = 采购部门
+ysspz.wsdj           = 无税单价
+supplier.srchtxsspzitem  = 预售商品帐明细
+
+##PPB(品牌)
+ppb.ppb02            = 品牌名称
+ppb.ppb03            = ABC分类
+
+##SPPCJC()
+sppcjc.pcsxh         = 商品批次
+sppcjc.sppc01        = 批次号码
+sppcjc.sppc03        = 进货日期
+
+##V_WLZMX(往来帐明细)
+v.wlzmx.wlz03        = 可卖数
+v.wlzmx.wlz04        = 保管帐
+v.wlzmx.wlz05        = 三级帐
+v.wlzmx.sl           = 数量
+v.wlzmx.state2       = 可达
+v.wlzmx.state1       = 未达
+v.wlzmx.wdz          = 显示未达帐
+
+##SPJXCRITEM(商品经销存明细)
+v.spjxcrhz.spjg01    = 商品进价
+v.spjxcrhz.jhsl      = 进货数量
+v.spjxcrhz.jhje      = 进货金额
+v.spjxcrhz.dbsl      = 调拨数量
+v.spjxcrhz.dbje      = 调拨金额
+v.spjxcrhz.dbfy      = 调拨费用
+v.spjxcrhz.fcsl      = 返厂数量
+v.spjxcrhz.fcje      = 返厂金额
+v.spjxcrhz.fcbjcb    = 返厂变价金额
+v.spjxcrhz.sysl      = 损益数量
+v.spjxcrhz.syje      = 损益金额
+v.spjxcrhz.bjsl      = 变价数量
+v.spjxcrhz.bjje      = 变价金额
+v.spjxcrhz.bjcb      = 变价成本
+v.spjxcrhz.pfsl      = 分销数量
+v.spjxcrhz.pfje      = 分销金额
+v.spjxcrhz.pfcb      = 分销成本
+v.spjxcrhz.pfml      = 分销毛利
+v.spjxcrhz.lssl      = 零售数量
+v.spjxcrhz.lsje      = 零售金额
+v.spjxcrhz.lscb      = 零售成本
+v.spjxcrhz.lsml      = 零售毛利
+v.spjxcrhz.zhcb      = 综合成本
+v.spjxcrhz.zhml      = 综合毛利
+v.spjxcrhz.zzsl      = 组装数量
+v.spjxcrhz.zzje      = 组装金额
+v.spjxcrhz.sqjcsl    = 上期结存数量
+v.spjxcrhz.sqjcje    = 上期结存金额
+v.spjxcrhz.bqjcsl    = 本期结存数量
+v.spjxcrhz.bqjcje    = 本期结存金额
+v.spjxcrhz.slce      = 数量差额
+v.spjxcrhz.jece      = 金额差额
+v.spjxcrhz.qzrq      = 起止日期
+v.spjxcrhz.datatype  = 数据类型
+v.spjxcrhz.bxxs      = 表现形式
+v.spjxcrhz.day       = 日数据
+v.spjxcrhz.month     = 月数据
+v.spjxcrhz.list      = 一般列表
+v.spjxcrhz.count     = 期间汇总
+v.spjxcrhz.jcsl      = 结存数量
+v.spjxcrhz.jcje      = 结存金额
+
+##V_BMJXCR(部门进销存)
+v.bmjxcrhz.bmjxc20   = 含税方式
+v.bmjxcrhz.ce        = 差额
+v.bmjxcrhz.pfje      = 批发金额
+v.bmjxcrhz.pfcb      = 批发成本
+v.bmjxcrhz.pfml      = 批发毛利
+v.bmjxcrhz.bjml      = 变价毛利
+v.bmjxcrhz.fcml      = 返厂毛利
+
+##V_GHSJXCR(供货商进销存日)
+ghsjxcr.ghsjxc01     = 日期
+ghsjxcr.ghsjxc23     = 往来返厂金额
+ghsjxcr.xsml         = 销售毛利
+ghsjxcr.xscb         = 销售成本
+
+##VIEW_SPJXCRTGBB(进销存统购报表)
+v.spjxcrtgbb.drsl    = 调入数量
+v.spjxcrtgbb.drje    = 调入金额
+v.spjxcrtgbb.dcsl    = 调出数量
+v.spjxcrtgbb.dcje    = 调出金额
+v.type.bmhz          = 部门汇总
+v.type.sphz          = 商品汇总
+v.type.cjhz          = 厂家汇总
+
+##V_SPSJ(商品售价)
+v.spsj.lsdj          = 协议售价
+v.spsj.xj01          = 协议限价
+v.spsj.xj02          = 限价2
+v.spsj.xj03          = 限价3
+v.spsj.xj04          = 限价4
+v.spsj.xj05          = 限价5
+v.spsj.pfdj          = 批发单价
+v.spsj.pfxj          = 批发限价
+v.spsj.cxf           = 促销费
+v.spsj.ksrq          = 销售有效期起
+v.spsj.zzrq          = 销售有效期止
+v.spsj.fbsl          = 分配数量
+v.spsj.ftje          = 分摊金额
+
+##KHZL(客户资料)
+khzl.khzl01          = 档案编码
+khzl.khzl02          = 客户名称
+khzl.khzl03          = 联系地址
+khzl.khzl04          = 联系电话
+khzl.khzl15          = 业务类型
+khzl.khzl18          = 移动电话
+
+##KHDQ(客户地区)
+khdq.khdq02          = 服务区域
+
+##SHWD(送货网点)
+shwd.shwd01          = 送货网点
+
+##SHD（送货单）
+shd.shd00            = 派工序号
+shd.shd01            = 送货时间
+shd.shd03            = 送货人
+shd.shd04            = 送货状态
+shd.shd05            = 送货备注
+shd.shd06            = 派工人
+shd.shd07            = 派工时间
+shd.shd08            = 打印次数
+shd.shd09            = 回执备注
+shd.shd10            = 是否预约
+shd.shd11            = 是否结算
+shd.shd12            = 送货费用
+shd.shd13            = 厂家费用
+shd.shd14            = 送货汇总
+shd.shd15            = 派工备注
+shd.shd16            = 回执人
+shd.shd17            = 回执时间
+shd.shd19            = 商品数量
+shd.shd20            = 到货时间
+shd.shd21            = 奖惩金额
+shd.shd29            = 销售人员
+##是否预约
+SHD10_0              = 否
+SHD10_1              = 是
+##是否结算
+SHD11_0              = 否
+SHD11_1              = 是
+
+##查询客户往来明细帐
+button.message.srch_v7     = 查询
+srch.khwlmxz_v7       = 查找客户往来明细帐
+khwlmxz.xzrq_v7       = 选择日期
+khwlmxz.dq_v7         = 地区
+khwlmxz.gsdm_v7       = 公司代码
+khwlmxz.bmbm_v7       = 销售部门
+khwlmxz.kh            = 客户
+khwlmxz.dwbm_v7       = 单位编码
+khwlmxz.bmmc_v7       = 部门名称
+gyswlzz.qdrq_v7       = 签订日期
+khwlmxz.zwmc_v7       = 中文名称
+khwlmxz.dkye_v7       = 贷款余额
+khwlmxz.yfkye_v7      = 预付余额
+khwlmxz.cyfje_v7      = 冲应付金额
+khwlmxz.yfye_v7       = 应付余额
+khwlmxz.flye_v7       = 返利余额
+khwlmxz.fpye_v7       = 发票余额
+khwlmxz.fssr_v7       = 收入余额
+khwlmxz.pdye_v7       = 延付余额
+khwlmxz.yskye_v7      = 应收余额
+khwlmxz.ysye_v7       = 余额
+khwlmxz.xyed_v7       = 信用额度
+##khwlmxz_mx（查询客户往来明细帐_明细）
+srch.khwlmxz_p1       = 客户往来帐明细
+srch.khwlzmx          = 查询客户往来帐明细
+khwlmxz_mx_v7         = 客户往来明细帐明细
+khwlmxz_p1.yfye_v7    = 延付余额
+khwlmxz_p1.ysye_v7    = 应收余额
+khwlmxz_p1.flye_v7    = 返利余额
+khwlmxz_p2.djlx_v7    = 单据类型
+khwlmxz_p2.rq_v7      = 日期
+khwlmxz_p2.djbh_v7    = 单据编号
+khwlmxz_p2.bz_v7      = 备注
+khwlmxz_p2.zy_v7      = 摘要
+khwlmxz_p2.yszj_v7    = 应收增加
+khwlmxz_p2.ysjs_v7    = 应收减少
+khwlmxz_p2.flzj_v7    = 返利增加
+khwlmxz_p2.fljs_v7    = 返利减少
+khwlmxz_p2.fyzj_v7    = 延付增加
+khwlmxz_p2.yfjs_v7    = 延付减少
+khwlmxz_p2.gsdm_v7    = 公司代码
+##查询供应商往来总帐
+srch.gyswlzz_v7       = 供应商往来总帐
+gyswlzz.gys_v7        = 供应商
+gyswlzz.qdrq_v7       = 签订日期
+gyswlzz.gsbm_v7       = 销售部门
+gyswlzz.dq_v7         = 地区
+gyswlzz.dwbm_v7       = 单位编码
+gyswlzz.bmmc_v7       = 部门名称
+gyswlzz.dwmc_v7       = 单位名称
+gyswlzz.sqyfye_v7     = 上期预付余额
+gyswlzz.bqyfye_v7     = 本期预付余额
+gyswlzz.sqhkye_v7     = 上期货款余额
+gyswlzz.jhje          = 进货金额
+gyswlzz.bjje          = 变价金额
+gyswlzz.dbje          = 调拨金额
+gyswlzz.fcje          = 往来返厂金额
+gyswlzz.jsje          = 结算金额
+gyswlzz.sbje          = 三包赔付/索赔金额
+gyswlzz.bqhkye        = 本期货款余额
+gyswlzz.sqyfkye       = 上期预付款余额
+gyswlzz.yfzj          = 预付增加
+gyswlzz.yfjs          = 预付减少
+gyswlzz.bqyfkye       = 本期预付款余额
+gyswlzz.sqflye        = 上期返利余额
+gyswlzz.flzj          = 返利增加
+gyswlzz.fljs          = 返利减少
+gyswlzz.bqflye        = 本期返利余额
+gyswlzz.sqfpye        = 上期发票余额
+gyswlzz.fpzj          = 发票增加
+gyswlzz.fpjs          = 发票减少
+gyswlzz.bqfpye        = 本期发票余额
+###查询客户及货物公司
+khwlmxz.khjhygs.srch_v7           = 查询客户及货物公司
+khwlmxz.khjhygs.dwnumber_v7       = 单位代码
+khwlmxz.khjhygs.name_v7           = 中文名称
+khwlmxz.khjhygs.pynumber_v7       = 拼音码
+khwlmxz.khjhygs.phone_v7          = 联系电话
+khwlmxz.khjhygs.dwproperty_v7     = 单位属性
+khwlmxz.khjhygs.ybwl_v7           = 一般往来
+khwlmxz.khjhygs.nbwl_v7           = 内部往来
+khwlmxz.khjhygs.xtnwl_v7          = 系统内往来
+##fxd  查询分销单
+fxd.title_v7         = 查询分销单
+fxd.fxdh_v7          = 分销单号
+fxd.qdrq_v7          = 签订日期
+fxd.xsbm_v7          = 销售部门
+fxd.dwbm_v7          = 单位编码
+fxd.gsdm_v7          = 公司代码
+fxd.thdh_v7          = 提货单号
+fxd.djlx_v7          = 单据类型
+fxd.xhbm_v7          = 销货部门
+fxd.kh_v7            = 客户
+fxd.wldwmc_v7        = 往来单位名称
+fxd.jgshbj_v7        = 价格审核标记
+fxd.jgshr_v7         = 价格审核人
+fxd.flshbj_v7        = 返利审核标记
+fxd.flshr_v7         = 返利审核人
+fxd.hyxx02_v7        = 行业名称
+fxd.dqxx02_v7        = 地区名称
+fxd.xsfsmc_v7        = 销售方式名称
+fxd.kpsj_v7          = 开票时间
+fxd.sksj_v7          = 收款时间
+fxd.ywymc_v7         = 业务员名称
+fxd.bz_v7            = 备注
+fxd.kpy_v7           = 开票员
+fxd.skymc_v7         = 收款员名称
+fxd.pzbh_v7          = 凭证编号
+fxd.yfjsdh_v7        = 延付结算单号
+fxd.fphm_v7          = 发票号码
+fxd.fprq_v7          = 发票日期
+fxd.bdrq_v7          = 补登日期
+fxd.thdh_v7          = 提货单号
+fxd.cgbm_v7          = 采购部门
+fxd.spnm_v7          = 商品内码
+fxd.bmmc_v7          = 部门名称
+fxd.fldh_v7          = 返利单号
+fxd.tgdbdh_v7        = 统购调拨单号
+fxd.fhdh_v7          = 分货单号
+fxd.tgddh_v7         = 统购订单号
+fxd.dhdh_v7          = 订货单号
+fxd.pddh_v7          = 平调单号
+fxd.dfgsdm_v7        = 对方公司代码
+fxd.ck_v7            = 仓库
+fxd.ckmc_v7          = 仓库名称
+fxd.pfdj_v7          = 批发单价
+fxd.xssl_v7          = 销售数量
+fxd.thsl_v7          = 退货数量
+fxd.xsje_v7          = 销售金额
+fxd.bhsje_v7         = 不含税金额
+fxd.ydh_v7           = 原单号
+fxd.ffrq_v7          = 发货日期
+fxd.fhr_v7           = 发货人
+fxd.sj_v7            = 税金
+fxd.hzfs_v7          = 合作方式
+fxd.flje_v7          = 返利金额
+fxd.pfdi08_v7        = 含税成本金额
+fxd.fll_v7           = 返利率%
+fxd.spdm_v7          = 商品代码
+fxd.spmc_v7          = 商品名称
+fxd.fldm_v7          = 分类代码
+fxd.spflmc_v7        = 商品分类名称
+fxd.zkl_v7           = 折扣率%
+fxd.zkje_v           = 折扣金额
+fxd.ml_v7            = 毛利
+fxd.fphm_v7          = 发票号码
+fxd.spsx_v7          = 商品属性
+fxd.yhdh_v7          = 优惠单号
+fxd.lyspkl_v7        = 联营商品扣率
+fxd.zcfhr_v7         = 暂存发货人
+fxd.zcfhrq_v7        = 暂存发货日期
+fxd.yhzkje_v7        = 优惠折扣金额
+fxd.wsmll_v7         = 无税毛利率
+fxd.yhzkl_v7         = 优惠折扣率%
+fxd.cjmc_v7          = 厂家名称
+fxd.spflmc_v7        = 商品分类名称
+fxd.gys_v7           = 供应商
+fxd.dwmc_v7          = 单位名称
+DJLX_0               = 正常批发
+DJLX_1               = 延付转批发
+DJLX_2               = 提单冲红
+DJLX_3               = 提单退货
+DJLX_4               = 商品退货
+
+AMDJLX_0  = 第三方服务商
+AMDJLX_1  = 不明
+AMDJLX_2  = 国美家电医院
+
+##yfd 查询延付单
+yfd.yfdh_v7           = 延付单号
+yfd.fhdh_v7           = 发货单号
+yfd.yfje_v7           = 延付金额
+yfd.flkl_v7           = 返利扣率
+yfd.jssl_v7           = 结算数量
+yfd.tfje_v7           = 台返金额
+yfd.fhtzdh_v7         = 发货通知单号
+yfd.fhtzrq_v7         = 发货通知日期
+yfd.thy_v7            = 提货员
+yfd.gxhth_v7          = 购销合同号
+yfd.khddh_v7          = 客户订单号
+yfd.ywrq_v7           = 业务日期
+
+##dzd 查询对帐单
+dzd.title_v7          = 查询对帐单
+dzd.djzje             = 单据总金额
+dzd.spdj              = 商品单价
+dzd.yuszj             = 预收增加
+dzd.yusjs             = 预收减少
+dzd.yusye             = 预收余额
+dzd.yhdw              = 银行单位
+
+##fxdpcjl(分销单批次记录)
+srch.fxdpcjl         = 查询分销单批次记录
+fxdpcjl.gsdm         = 公司代码
+fxdpcjl.thdh         = 提货单号
+fxdpcjl.pch          = 批次号
+fxdpcjl.pcxh         = 批次序号
+fxdpcjl.cbdj         = 成本单价
+fxdpcjl.fxdj         = 分销单价
+fxdpcjl.sl           = 数量
+fxdpcjl.cbje         = 成本金额
+fxdpcjl.xsjepch      = 销售金额批次号
+fxdpcjl.ml           = 毛利
+fxdpcjl.xyh          = 协议号
+fxdpcjl.hth          = 合同号
+
+##gyswlmxz(供应商往来明细帐)
+srch.gys_v7          = 查询供应商
+srch.gyswlmxz_v7     = 供应商往来明细帐
+srch.gyswlmxzitem_v7 = 供应商往来明细帐明细
+gyswlmxz.cgbm_v7     = 采购部门
+gyswlmxz.dq_v7       = 地区
+gyswlmxz.hkje_v7     = 货款金额
+gyswlmxz.yfje_v7     = 预付金额
+gyswlmxz.ybwl_v7     = 一般往来
+gyswlmxz.nbwl_v7     = 内部往来
+gyswlmxz.srye_v7     = 收入金额
+gyswlmxz.fpye_v7     = 发票金额
+gyswlmxz.xsyfzk_v7   = 显示余额为零的应付帐款
+gyswlmxz.bmbm_v7     = 部门编码
+gyswlmxz.wldw01_v7   = 单位代码
+gyswlmxz.gys_v7      = 供应商
+gyswlmxz.bmmc_v7     = 部门名称
+gyswlmxz.dwmc_v7     = 单位名称
+gyswlmxz.hkye_v7     = 货款余额
+gyswlmxz.yfkye_v7    = 预付余额
+gyswlmxz.cyfje_v7    = 冲应付金额
+gyswlmxz.none_v7     = 实际应付帐款
+gyswlmxz.flye_v7     = 返利余额
+gyswlmxz.fpye_v7     = 发票余额
+gyswlmxz.fssr_v7     = 收入余额
+gyswlmxz.yfye_v7     = 延付余额
+gyswlmxz.yskye_v7    = 应收款余额
+gyswlmxz.ysye_v7     = 实际应收
+gyswlmxz.xyed_v7     = 信用额度
+
+##JXSPJSB 经销未结
+jxwj.title           = 经销未结
+jxwj.titleitem       = 经销未结明细
+jxwj.djrq            = 单据日期
+jxwj.jzrq            = 结帐日期
+jxwj.kpsl            = 开票数量
+jxwj.dj              = 单价
+jxwj.je              = 金额
+
+##gyswlmx(供应商往来明细)
+srch.sjlb             = 数据列表
+gyswlmx.ksrq          = 开始日期
+gyswlmx.gsdm          = 公司代码
+gyswlmx.djlx          = 单据类型
+gyswlmx.rq            = 日期
+gyswlmx.bh            = 编号
+gyswlmx.hkzj          = 货款增加
+gyswlmx.hkjs          = 货款减少
+gyswlmx.hkye          = 货款余额
+gyswlmx.yfzj          = 延付增加
+gyswlmx.yfjs          = 延付减少
+gyswlmx.yfkye         = 延付余额
+gyswlmx.yszj          = 应收增加
+gyswlmx.ysjs          = 应收减少
+gyswlmx.srye          = 应收余额
+gyswlmx.fpzj          = 发票增加
+gyswlmx.fpjs          = 发票减少
+gyswlmx.fpye          = 发票余额
+gyswlmx.cyfzj         = 冲应付增加
+gyswlmx.cyfye         = 冲应付余额
+gyswlmx.time01        = 时间
+
+
+##lsskd(零售收款单)
+srch.lsskd_v7        = 查询零售收款单
+lsskd.lsdh_v7        = 零售单号
+lsskd.syjh_v7        = 收银机号
+lsskd.fphm_v7        = 发票号码
+lsskd.djlx_v7        = 单据类型
+lsskd.xsfs_v7        = 销售方式
+lsskd.khmc_v7        = 客户名称
+lsskd.skje_v7        = 收款金额
+lsskd.pjhm_v7        = 票据号码
+lsskd.yyy_v7         = 营业员
+lsskd.dbr_v7         = 担保人
+lsskd.skr_v7         = 收款人
+lsskd.xsbm_v7        = 销售部门
+lsskd.skrq_v7        = 收款日期
+lsskd.dkrq_v7        = 到款日期
+lsskd.gsbm_v7        = 公司编码
+lsskd.skbmdm_v7      = 收款部门代码
+lsskd.bm_v7          = 部门
+lsskd.syh_v7         = 收银号
+lsskd.kpsj_v7        = 开票时间
+lsskd.jzrq_v7        = 记帐日期
+lsskd.yyy_v7         = 营业员
+lsskd.lsdbz_v7       = 零售单备注
+lsskd.xsfsmc_v7      = 销售方式名称
+lsskd.skfs_v7        = 收款方式
+lsskd.dbr_v7         = 担保人
+lsskd.bbje_v7        = 本币金额
+lsskd.hl_v7          = 汇率
+lsskd.lsdskbz_v7     = 零售单收款备注
+lsskd.bzlje_v7       = 不找零金额
+lsskd.ytje_v7        = 已退金额
+lsskd.ydh_v7         = 原单号
+LSSKDDJLX_0          = 现款销售
+LSSKDDJLX_1          = POS销售
+LSSKDDJLX_2          = 退货冲红
+LSSKDDJLX_3          = 收付款
+LSSKDDJLX_4          = 定金
+LSSKDDJLX_5          = 收余款
+LSSKDDJLX_6          = 预收款
+LSSKDDJLX_7          = 冲预收
+
+##ryxx(人员信息)
+srch.ryxx_v7         = 人员信息
+ryxx.rydm_v7         = 人员代码
+ryxx.rymc_v7         = 人员名称
+ryxx.bmmc_v7         = 部门名称
+
+##lsd（零售单）
+srch.lsd             = 查询零售单
+lsd.gsbm             = 公司代码
+lsd.lsdh             = 零售单号
+lsd.bmbm             = 部门编码
+lsd.xhbmmc           = 销货部门名称
+lsd.syjh             = 收银机号
+lsd.djlx             = 单据类型
+lsd.khmc             = 客户名称
+lsd.fphm             = 发票号码
+lsd.kpsj             = 开票时间
+lsd.jzrq             = 记帐日期
+lsd.yyymc            = 营业员名称
+lsd.skymc            = 收款员名称
+lsd.lsd20            = 会员用分
+lsd.djdh             = 订金单号
+lsd.bz               = 备注
+lsd.vipkh            = vip卡号
+lsd.viplx            = vip类型
+lsd.zlje             = 找零金额
+lsd.skbz             = 赎款标志
+lsd.sgfphm           = 手工发票号码
+lsd.zdr              = 制单人
+lsd.xgsj             = 修改时间
+lsd.sfwskh           = 是否未税考核
+lsd.xsfsmc           = 销售方式名称
+lsd.thdh             = 提货单号
+lsd.cgbmdm           = 采购部门代码
+lsd.dwdm             = 单位代码
+lsd.spnm             = 商品内码
+lsd.zwmc             = 中文名称
+lsd.ckmc             = 仓库名称
+lsd.cgbmmc           = 采购部门名称
+lsd.cbje             = 成本金额
+lsd.ml               = 毛利
+lsd.mll              = 毛利率
+lsd.khdj             = 考核单价
+lsd.zdxj             = 最低限价
+lsd.xssl             = 销售数量
+lsd.khje             = 考核金额
+lsd.cxje             = 促销金额
+lsd.thsl             = 退货数量
+lsd.ydh              = 原单号
+lsd.fhrq             = 发货日期
+lsd.fhrmc            = 发货人
+lsd.sj               = 税金
+lsd.spsx             = 商品属性
+lsd.yhdh             = 优惠单号
+lsd.bz               = 备注
+lsd.lykl             = 联营扣率
+lsd.sqrzh            = 授权人账号
+lsd.zhdm             = 组合代码
+lsd.ftje             = 分摊金额
+lsd.ydj              = 原单价
+lsd.hzfs             = 合作方式
+lsd.sqr              = 授权人
+lsd.tbtc             = 特别提成
+lsd.xsetc            = 销售额提成
+lsd.dpcxf            = 单品促销费
+lsd.jhdh             = 借还单号
+lsd.cm               = 串码
+lsd.spdm             = 商品代码
+lsd.spmc             = 商品名称
+lsd.spfldm           = 商品分类代码
+lsd.spflmc           = 商品分类名称
+lsd.rlje             = 让利金额
+lsd.xsdj             = 销售单价
+lsd.xsje             = 销售金额
+lsd.zcfhr            = 暂存发货人
+lsd.zcfhrq           = 暂存发货日期
+lsd.jfl              = 积分率
+lsd.flmc             = 分类名称
+lsd.mc               = 名称
+lsd.dqmc             = 地区名称
+lsd.hyxx02           = 行业名称
+lsd.dz               = 地址
+lsd.dh               = 电话
+lsd.sj               = 手机
+lsd.qtdh             = 其它电话
+LSDDJLX_0            = 现款销售
+LSDDJLX_1            = POS销售
+LSDDJLX_2            = 退货冲红
+LSDDJLX_3            = 收付款
+LSDDJLX_4            = 定金
+LSDDJLX_5            = 收余款
+LSDDJLX_6            = 预收款
+LSDDJLX_7            = 冲预收
+
+## spxsbb（商品销售报表）
+srch.kh_v7           = 客户
+srch.spxsbb_v7       = 查询商品销售报表
+spxsbb.title         = 商品销售报表
+spxsbb.titlemx       = 商品销售报表明细
+spxsbb.spdm_v7       = 商品代码
+spxsbb.syjh_v7       = 日期
+spxsbb.spmc_v7       = 商品名称
+spxsbb.sccj_v7       = 生产厂家
+spxsbb.pp_v7         = 品牌
+spxsbb.kh_v7         = 客户
+spxsbb.gys_v7        = 供应商
+spxsbb.yyy_v7        = 营业员
+spxsbb.spsx_v7       = 商品属性
+spxsbb.abcfl_v7      = ABC分类
+spxsbb.hzfs_v7       = 合作方式
+spxsbb.ys_v7         = 颜色
+spxsbb.xsbm_v7       = 销售部门
+spxsbb.cgbm_v7       = 采购部门
+spxsbb.spfl_v7       = 商品分类
+spxsbb.sycx_v7       = 适用车型
+spxsbb.xzdq_v7       = 选择地区
+spxsbb.gsdm_v7       = 公司代码
+spxsbb.gsmc_v7       = 公司名称
+spxsbb.gysdm_v7      = 供应商代码
+spxsbb.zwmc_v7       = 中文名称
+spxsbb.spys_v7       = 商品颜色
+spxsbb.spnm_v7       = 商品内码
+spxsbb.ppdm_v7       = 品牌代码
+spxsbb.spppmc_v7     = 商品品牌名称
+spxsbb.fldm_v7       = 分类代码
+spxsbb.spflmc_v7     = 商品分类名称
+spxsbb.xsbmdm_v7     = 销售部门代码
+spxsbb.xsbmmc_v7     = 销售部门名称
+spxsbb.cgbmdm_v7     = 采购部门代码
+spxsbb.cgbmmc_v7     = 采购部门名称
+spxsbb.sccj02_v7     = 生产厂家名称
+spxsbb.cpfl02_v7     = 产品分类名称
+spxsbb.rq_v7         = 日期
+spxsbb.yyydm_v7      = 营业员代码
+spxsbb.yyyxm_v7      = 营业员姓名
+spxsbb.khdm_v7       = 客户代码
+spxsbb.pfsmmc_v7     = 客户名称
+spxsbb.gysdm_v7      = 供应商代码
+spxsbb.ghsmmc_v7     = 供应商名称
+spxsbb.hyxx02_v7     = 行业名称
+spxsbb.dqxx02_v7     = 地区名称
+spxsbb.fxsl_v7       = 分销数量
+spxsbb.fxje_v7       = 分销金额
+spxsbb.fxcb_v7       = 分销成本
+spxsbb.pfhscb_v7     = 含税分销成本
+spxsbb.fxml_v7       = 分销毛利
+spxsbb.pfhsml_v7     = 含税分销毛利
+spxsbb.lssl_v7       = 零售数量
+spxsbb.lsje_v7       = 零售金额
+spxsbb.lscb_v7       = 零售成本
+spxsbb.lshscb_v7     = 零售含税成本
+spxsbb.lsml_v7       = 零售毛利
+spxsbb.lshsml_v7     = 零售含税毛利
+spxsbb.xssl_v7       = 销售数量
+spxsbb.xsje_v7       = 销售金额
+spxsbb.xscb_v7       = 销售成本
+spxsbb.xsml_v7       = 销售毛利
+spxsbb.fcml_v7       = 返厂毛利
+spxsbb.bjml_v7       = 变价毛利
+spxsbb.lkcml_v7      = 零库存毛利
+spxsbb.zhcb_v7       = 综合成本(无税)
+spxsbb.zhhscb_v7     = 综合含税成本
+spxsbb.zhml_v7       = 综合毛利
+spxsbb.zhhsml_v7     = 综合含税毛利
+spxsbb.mll_v7        = 毛利率
+
+##lsdj(零售单据)
+srch.lsdj            = 查询零售单据
+LSDJDJLX_0            = 现款销售
+LSDJDJLX_1            = POS销售
+LSDJDJLX_2            = 退货冲红
+LSDJDJLX_3            = 收付款
+LSDJDJLX_4            = 定金
+LSDJDJLX_5            = 收余款
+LSDJDJLX_6            = 预收款
+LSDJDJLX_7            = 冲预收
+
+##fxdj(分销单据)
+srch.fxdj            = 查询分销单据
+FXDJDJLX_0           = 正常批发
+FXDJDJLX_1           = 延付转批发
+FXDJDJLX_2           = 提单冲红
+FXDJDJLX_3           = 提单退货
+FXDJDJLX_4           = 商品退货
+
+##spxx（商品信息）
+spxx.srch_v7         = 查找商品信息
+spxx.spmc_v7         = 商品名称
+spxx.pp_v7           = 品牌
+spxx.spfl_v7         = 商品分类
+spxx.spdm_v7         = 商品代码
+spxx.spgg_v7         = 商品规格
+
+##ppxx(品牌信息)
+srch.ppxx_v7         = 查询品牌信息
+ppxx.ppmc_v7         = 品牌名称
+ppxx.abcfl_v7        = ABC分类
+ppxx.ppdm_v7         = 品牌代码
+
+##cjxx(厂家信息)
+srch.sccj_v7         = 查询生产厂家
+sccj.cjdm_v7         = 厂家代码
+sccj.cjmc_v7         = 厂家名称
+sccj.cjdz_v7         = 厂家地址
+
+
+##sql自定义查询
+srch.sql             = 自定义查询
+##shgl送货管理
+shgl.ryzt_v7         = 人员状态
+shgl.dyshry_v7       = 送货人员信息
+def.shry_v7          = 定义送货人员
+shgl.rybm_v7         = 人员编码
+shgl.shwd_v7         = 送货网点
+shgl.ryxm_v7         = 人员姓名
+shgl.sfzh_v7         = 身份证号
+shgl.lxdh_v7         = 联系电话
+shgl.dz_v7           = 地址
+def.byg_v7           = 定义搬运工
+shgl.bygxx_v7        = 搬运工信息
+def.ch_v7            = 定义车号
+shgl.chdh_v7         = 车号代号
+shgl.ch_v7           = 车号
+shgl.sj_v7           = 司机
+shgl.dh_v7           = 电话
+shgl.chxx_v7         = 车号信息
+shgl.shpg_v7         = 送货派工
+shgl.djecpg_v7       = 单据二次派工
+shgl.yyrq_v7         = 预约时间
+shgl.srch_shpgjd_v7  = 查询派工建档
+shgl.shhzd_v7        = 送货汇总单
+shgl.khbm_v7         = 客户编码
+shgl.pgxh_v7         = 派工序号
+shgl.qymc_v7         = 区域名称
+shgl.khmc_v7         = 客户名称
+shgl.lxdz_v7         = 联系地址
+shgl.djrq_v7         = 登记日期
+shgl.shsj_v7         = 送货时间
+shgl.shbz_v7         = 送货备注
+shgl.dycs_v7         = 打印次数
+shgl.shrmc_v7        = 送货人名称
+shgl.wdmc_v7         = 网点名称
+shgl.spmc_v7         = 商品名称
+shgl.spsl_v7         = 商品数量
+shgl.xslx_v7         = 销售类型
+shgl.thdh_v7         = 提货单号
+shgl.khlb02_v7       = 客户类别
+shgl.skje_v7         = 收款金额
+shgl.qhck_v7         = 取货仓库
+shgl.wdbm_v7         = 网点编码
+shgl.shr_v7          = 送货人
+shgl.byg_v7          = 搬运工
+shgl.fwqy_v7         = 服务区域
+shgl.wlwd_v7         = 物流网点
+shgl.pg_v7           = 派工
+shgl.hzdbz_v7        = 汇总单备注
+shgl.szpcdxx_v7      = 设定派车单信息
+shgl.alert.xzjl      = 请选择记录！
+shgl.alert.wlwdnonull = 网点不能为空！
+shgl.alert.shrnonull = 送货人不能为空！
+shgl.alert.bygnonull = 搬运工不能为空！
+shgl.alert.fwqynonull=服务区域不能为空！
+shgl.alert.chnonull  = 车号不能为空！
+srch.shry_v7         = 选择送货人员
+shgl.rybm_v7         = 人员编码
+shgl.shwd_v7         = 送货网点
+srch.ypry_v7         = 已派人员
+srch.byg_v7          = 选择搬运工
+srch.ch_v7           = 选择车号
+shgl.chdm_v7         = 车号代码
+shgl.srch_shdsl_v7   = 查询送货单数量
+shgl.shdh_v7         = 送货单号
+shgl.shhz_v7         = 送货回执
+shgl.hzdh_v7         = 汇总单号
+shgl.gsbm_v7         = 公司编码
+shgl.gsdm_v7         = 公司代码
+shgl.gsmc_v7         = 公司名称
+shgl.gzsc_v7         = 购自商场
+shgl.phxh_v7         = 配货序号
+shgl.dhsl_v7         = 到货数量
+shgl.spxx_v7         = 商品信息
+shgl.khlb_v7         = 客户类别
+shgl.shzs_v7         = 送货总数
+shgl.shddy_v7        = 送货单打印
+shgl.thsl_v7         = 退货数量
+shgl.pgrq_v7         = 派工日期
+shgl.pgr_v7          = 派工人
+shgl.hzdxx           = 汇总单信息
+shgl.cxshd_v7        = 查询送货单
+shgl.shpggp_v7       = 送货派工改派
+shgl.thzs_v7         = 退货总数
+shgl.xgpcdxx_v7      = 修改派车单信息
+shgl.jsshd_v7        = 减少送货单
+shgl.tzhzdxx_v7      = 调整汇总单信息
+shgl.js_v7           = 结算
+define.spfl.spfl     = 商品分类
+define.spfl.allspfl  = 选择商品分类
+define.all           = 全部
+define.sycx          = 适用车型
+define.sycx.allsycx  = 请选择车型
+define.xzdq.allxzdq  = 请选择地区
+define.hyxx.allhyxx  = 请选择行业信息
+define.xsbm.allxsbm  = 请选择销售部门
+define.cgbm.allcgbm  = 请选择采购部门
+define.shwd.allshwd  = 请选择送货网点
+define.wlwd.allwlwd  = 请选择物流网点
+define.fwqy.allfwqy  = 请选择服务区域
+
+#
+wxfw.wdazpg          = 网点安装派工
+wxfw.wdazhz          = 网点安装回执
+wxfw.wdazrpg         = 二次安装派工
+wxfw.wxsjsb          = 维修事件申报
+wxfw.wxpwd           = 维修派网点
+wxfw.wdwxpg          = 网点维修派工
+wxfw.wdwxhz          = 网点维修回执
+wxfw.wdwxrpg         = 二次维修派工
+wxfw.khwxjl          = 查询客户维修记录
+wxfw.wdwxjl          = 查询网点维修记录
+wxfw.defwdwxr        = 定义网点人员
+wxfw.srchwdwxr       = 查询网点人员
+wxfw.srchkhzl        = 查询客户档案
+wxfw.prtwxd          = 网点维修单打印
+wxfw.prtrwxd         = 网点维修单重打
+wxfw.prttest         = 打印测试
+##单据类型
+djlx.xs              = 销售
+djlx.POSxs           = POS销售
+djlx.thch            = 退货冲红
+djlx.sfk             = 收付款
+djlx.dj              = 订金
+djlx.syk             = 收余款
+djlx.ysk             = 预收款
+djlx.cys             = 冲预收
+SHD04_0              = 建档
+SHD04_1              = 派工
+SHD04_2              = 回执
+SHD04_3              = 结算
+SHD04_4              = 厂家结算
+
+##KHZL(客户资料)
+khzl.khzl01          = 档案编码
+khzl.khzl02          = 客户名称
+khzl.khzl03          = 联系地址
+khzl.khzl04          = 联系电话
+khzl.khzl15          = 业务类型
+khzl.khzl18          = 移动电话
+khzl.khlb02          = 客户类型
+khzl.azdh            = 安装单号
+khzl.gzsc02          = 购自商场
+
+##KHDQ(客户地区)
+khdq.khdq02          = 服务区域
+
+##SHWD(送货网点)
+shwd.shwd01          = 送货网点
+
+##SHD（送货单）
+shd.shd00            = 派工序号
+shd.shd01            = 送货时间
+shd.shd03            = 送货人
+shd.shd04            = 送货状态
+shd.shd05            = 送货备注
+shd.shd06            = 派工人
+shd.shd07            = 派工时间
+shd.shd08            = 打印次数
+shd.shd09            = 回执备注
+shd.shd10            = 是否预约
+shd.shd11            = 是否结算
+shd.shd12            = 送货费用
+shd.shd13            = 厂家费用
+shd.shd14            = 送货汇总
+shd.shd15            = 派工备注
+shd.shd16            = 回执人
+shd.shd17            = 回执时间
+shd.shd19            = 商品数量
+shd.shd20            = 到货时间
+shd.shd21            = 奖惩金额
+shd.shd29            = 销售人员
+
+##AZD(安装单)
+azd.azd01            = 预约时间
+azd.azd04            = 单据状态
+azd.azd05            = 安装备注
+azd.azd03            = 服务人员
+azd.azd02            = 服务人员号码
+azd.azd12            = 安装费用
+azd.azd18            = 拆单序号
+azd.azd21            = 完成时间
+azd.azd26            = 销售人员
+
+##AZWD(安装网点)
+azwd.azwd02          = 网点名称
+
+##KHDQ(客户区域)
+khdq.khdq02          = 服务区域
+
+##WDRY(网点人员)
+wdry.wdry01          = 人员编码
+wdry.wdry04          = 人员姓名
+wdry.wdry07          = 身份证号
+
+
+##dhd（订单汇总查询）
+dhdzz.title = 订单汇总查询
+dhdzz.detail         = 订单明细
+dhdzz.alldetail         = 全部订单明细
+dhditem.title        = 订单明细查询
+dhdzz.deptid = 分部代码
+dhdzz.dept_name = 分部名称
+dhdzz.wldw = 供应商代码
+dhdzz.dw_name = 供应商名称
+dhdzz.cgy_name = 采购员
+dhdzz.jlbh = 订单号码
+dhdzz.dhlx = 订单类型
+dhdzz.zdrq = 订单日期
+dhdzz.dhsl = 订货数量
+dhdzz.dhje = 订货金额
+dhdzz.shrq = 审核日期
+dhdzz.hsfs = 核算方式
+dhdzz.zxqk = 订单执行情况
+dhdzz.cjqk = 厂家确认情况
+dhdzzitem.jhsx_start = 预计到货日期(起)
+dhdzzitem.jhsx_end = 预计到货日期(止)
+dhdzzitem.spcode = 商品代码
+dhdzzitem.sp_name = 商品名称
+dhdzzitem.unit  = 单位
+dhdzzitem.jhsl = 入库数量
+dhdzzitem.depot_name = 仓库
+DHLX_0   = 普通
+DHLX_1   = 特价
+DHLX_2   = 包销
+DHLX_3   = 样机
+HSFS_0 = 经销
+HSFS_1 = 代销
+HSFS_2 = 专柜
+HSFS_3 = 联营
+HSFS_4 = 联营
+ZXQK_0 = 未执行
+ZXQK_1 = 全部履行
+ZXQK_2 = 部分履行
+ZXQK_3 = 注销
+CJQK_0     = 未确认
+CJQK_1     = 确认
+
+
+##入库汇总查询
+jhdzz.title  = 入库汇总查询
+jhdzz.detail = 入库单明细
+jhdzz.alldetail = 全部入库单明细
+jhdzzitem.title = 入库单明细
+jhdzz.deptid = 分部代码
+jhdzz.dept_name = 分部名称
+jhdzz.jhdw = 供应商代码
+jhdzz.name = 供应商名称
+jhdzz.dhdbh = 订单号
+jhdzz.rkrq = 入库日期
+jhdzz.jlbh = 入库单号
+jhdzz.fph = 厂家出库单号
+jhdzz.rksl = 入库数量
+jhdzz.rkje = 入库金额
+jhditem.shrmc = 审核人
+jhditem.bgymc = 收货人
+jhditem.cgymc = 采购员
+jhditem.depotarea = 库区属性
+jhditem.spcode=  商品代码
+jhditem.name = 商品名称
+jhditem.unit = 单位
+jhditem.jhdj = 入库单价
+jhditem.rkxs = 入库数量
+jhditem.rkje = 入库金额
+
+DEPOTAREA_1000    =正常
+DEPOTAREA_1001    =残次
+DEPOTAREA_1002    =其他
+DEPOTAREA_1003    =其他
+DEPOTAREA_1004    =特价
+DEPOTAREA_1005    =样机
+DEPOTAREA_1006    =赠品
+DEPOTAREA_1007    =包销
+
+#商品滞销情况查询
+zxqk.title = 商品滞销情况查询
+zxqk.deptid = 分部代码
+zxqk.dept_name = 分部名称
+zxqk.ghdw = 供应商编号
+zxqk.ghdw_name = 供应商名称
+zxqk.spcode = 商品编码
+zxqk.spname = 商品名称
+zxqk.jcsl = 滞销数量
+zxqk.jcje = 滞销金额
+
+#暂存商品查询
+zcsp.title = 暂存商品查询
+zcsp.deptid = 分部代码
+zcsp.fbname = 分部名称
+zcsp.depot_name = 仓库
+zcsp.dept_name = 部门
+zcsp.ghdw = 单位代码
+zcsp.ghdw_name = 往来单位
+zcsp.spcode = 商品代码
+zcsp.sp_name = 商品名称
+zcsp.unit = 单位
+zcsp.size = 包装含量
+zcsp.dclxs = 暂存数量
+
+#库存商品按仓库库区查询
+kcspfkq.title = 库存商品按仓库库区查询
+kcspfkq.deptid = 分部代码
+kcspfkq.dept_name = 分部名称
+kcspfkq.depot_name = 仓库
+kcspfkq.depotarea = 库区
+kcspfkq.ghdw = 供应商代码
+kcspfkq.ghdw_name = 供货商名称
+kcspfkq.spcode = 商品代码
+kcspfkq.sp_name = 商品名称
+kcspfkq.unit = 单位
+kcspfkq.sjzsl = 库存数量
+
+#库存商品按分部查询
+jdkcsp.title = 库存商品按分部查询
+jdkcsp.deptid = 分部代码
+jdkcsp.dept_name = 分部名称
+jdkcsp.ghdw = 供应商代码
+jdkcsp.ghdw_name = 供应商名称
+jdkcsp.spcode = 商品代码
+jdkcsp.sp_name = 商品名称
+jdkcsp.jcsl = 库存数量
+jdkcsp.jcje = 库存金额
+
+#库存商品按仓库查询
+kcspfck.title = 库存商品按仓库查询
+kcspfck.deptid = 分部代码
+kcspfck.dept_name = 分部名称
+kcspfck.ghdw = 供应商代码
+kcspfck.ghdw_name = 供货商名称
+kcspfck.depot_name = 仓库
+kcspfck.spcode = 商品代码
+kcspfck.sp_name = 商品名称
+kcspfck.unit = 单位
+kcspfck.sjzsl = 库存数量
+
+#销售汇总按分部查询
+spxszz.title = 销售汇总按分部查询
+spxszz.detail = 商品销售明细
+spxszz.alldetail = 全部商品销售明细
+spxszz.deptid = 分部代码
+spxszz.fbname = 分部名称
+spxszz.ghdw = 供应商代码
+spxszz.ghdw_name = 供应商名称
+spxszz.dept_name = 品类
+spxszz.spcode = 商品代码
+spxszz.sp_name = 商品名称
+spxszz.xssl = 销售数量
+spxszz.xsje = 销售金额
+#商品销售明细查询
+spxsitem.title = 商品销售明细查询
+spxsitem.deptid = 分部代码
+spxsitem.fbname = 分部名称
+spxsitem.date = 日期
+spxsitem.dept_name = 品类
+spxsitem.spgg = 商品规格
+spxsitem.xssl = 销售数量
+spxsitem.xsje = 销售金额
+
+#销售汇总按门店查询
+spxsmd.title = 销售汇总按门店查询
+spxsmd.deptid = 分部代码
+spxsmd.bm_name = 分部名称
+spxsmd.spcode = 商品代码
+spxsmd.sp_name = 商品名称
+spxsmd.dept_name = 门店
+spxsmd.xssl = 销售数量
+spxsmd.xsje = 销售金额
+Srch_WLSHFW.title = 物流售后服务
+srchwlshfw.shsl   = 送货数量
+
+#销售明细按分部查询
+spxstb.title = 销售明细按分部查询
+spxstb.branch = 分部名称
+spxstb.spcode = 商品代码
+spxstb.sp_name = 商品名称
+spxstb.ppname = 商品品牌
+spxstb.spflname = 商品分类
+spxstb.xssl = 销售数量
+spxstb.xsje = 销售金额
+#销售汇总按分部查询
+spxs_ms.tilte = 销售汇总按分部查询
+spxs_ms.branch = 分部名称
+spxs_ms.pp = 品牌
+spxs_ms.spfl = 操作系统类型
+spxs_ms.xssl = 销售数量
+
+#销售明细按分部查询
+spxsitem_ms.title = 销售明细按分部查询
+spxsitem_ms.branch = 分部名称
+spxsitem_ms.sp_id = 商品代码
+spxsitem_ms.sp_name = 商品名称
+spxsitem_ms.ppname = 商品品牌
+spxsitem_ms.spflname = 商品分类
+spxsitem_ms.xssl = 销售数量
+
+#最新变价汇总查询
+jjbjzz.title = 最新变价汇总查询
+jjbjzz.detail = 变价单明细
+jjbjzz.alldetail = 全部变价单明细
+jjbjzz.deptid = 分部代码
+jjbjzz.dept_name = 分部名称
+jjbjzz.jhdw = 供应商代码
+jjbjzz.jhdw_name = 供应商名称
+jjbjzz.djrq = 变价日期
+jjbjzz.jlbh = 变价单号
+jjbjzz.bjje = 变价金额
+jjbjitem.title = 变价单明细
+jjbjitem.deptid = 分部代码
+jjbjitem.dept_name = 分部名称
+jjbjitem.djrq = 变价日期
+jjbjitem.jhdw = 供应商代码
+jjbjitem.jhdw_name = 供应商名称
+jjbjitem.jlbh = 变价单号
+jjbjitem.spcode = 商品代码
+jjbjitem.sp_name = 商品名称
+jjbjitem.old_jhdj = 原单价
+jjbjitem.new_jhdj = 最新单价
+jjbjitem.tjsl = 变价数量
+jjbjitem.bjje = 变价金额
+
+#退货汇总查询
+tcdzz.title = 退货汇总查询
+tcdzz.detail = 退货明细
+tcdzz.alldetail = 全部退货明细
+tcdzz.deptid = 分部代码
+tcdzz.dept_name = 分部名称
+tcdzz.ghdw = 供应商代码
+tcdzz.ghdw_name = 供应商名称
+tcdzz.depot_name = 仓库
+tcdzz.date = 退货日期
+tcdzz.jlbh = 退厂单号
+tcdzz.thje_sj = 退货成本金额
+tcditem.depot_name = 仓库
+tcditem.dept_name = 门店
+tcditem.spcode = 商品代码
+tcditem.sp_name = 商品名称
+tcditem.spgg = 商品规格
+tcditem.cbdj = 成本单价
+tcditem.thxs = 退货数量
+tcditem.thje_sj = 退货成本金额
+
+#厂家库存数据展示
+srchcjkc.title = 厂家库存数据展示
+srchcjkc.detail = 库存商品明细
+srchcjkc.ghdw = 供应商代码
+srchcjkc.ghdwname = 供应商名称
+srchcjkc.fgs = 分公司
+srchcjkc.spcode = 商品编码
+srchcjkc.spname = 商品名称
+srchcjkc.spsx = 商品属性
+srchcjkc.ccsl = 库存数量
+srchcjkc.ccje = 库存金额
+srchcjkc.ccdj = 出厂单价
+srchcjkc.ztsl1 = 3天内在途数量
+srchcjkc.ztje1 = 3天内在途金额
+srchcjkc.ztsl2 = 7天内在途数量
+srchcjkc.ztje2 = 7天内在途金额
+srchcjkc.sxrq = 生效日期
+srchcjkc.signuser = 签名者
+
+#厂家出货明细
+srchcjch.title = 厂家出货明细
+srchcjch.ghdw = 供应商代码
+srchcjch.ghdwname = 供应商名称
+srchcjch.fgs = 分公司
+srchcjch.spcode = 商品编码
+srchcjch.spname = 商品名称
+srchcjch.spsx = 商品属性
+srchcjch.ccdj = 出厂单价
+srchcjch.chsl = 出货数量
+srchcjch.chje = 出货金额
+srchcjch.zckpm = 总出库排名
+srchcjch.sxrq = 生效日期
+srchcjch.signuser = 签名者
+
+#厂家变价明细
+srchcjbj.title = 厂家变价明细
+srchcjbj.ghdw = 供应商代码
+srchcjbj.ghdwname = 供应商名称
+srchcjbj.fgs = 分公司
+srchcjbj.spcode = 商品编码
+srchcjbj.spname = 商品名称
+srchcjbj.spsx = 商品属性
+srchcjbj.yccdj = 原出厂单价
+srchcjbj.xccdj = 现出厂单价
+srchcjbj.sxrq = 生效日期
+srchcjbj.signuser = 签名者
+
+#厂家新品展示
+srchcjxp.title = 厂家新品展示
+srchcjxp.ghdw = 供应商代码
+srchcjxp.ghdwname = 供应商名称
+srchcjxp.fgs = 分公司
+srchcjxp.spcode = 商品编码
+srchcjxp.spname = 商品名称
+srchcjxp.ccdj = 出厂单价
+srchcjxp.zdlsdj = 指导零售单价
+srchcjxp.gnjs = 功能介绍
+srchcjxp.zymd = 主要卖点
+srchcjxp.sssj = 上市日期
+srchcjxp.sxrq = 生效日期
+srchcjxp.signuser = 签名者
+
+#厂家排产计划明细
+srchcjpj.title = 厂家排产计划明细
+srchcjpj.ghdw = 供应商代码
+srchcjpj.ghdwname = 供应商名称
+srchcjpj.fgs = 分公司
+srchcjpj.spcode = 商品编码
+srchcjpj.spname = 商品名称
+srchcjpj.spsx = 商品属性
+srchcjpj.scsl = 生产数量
+srchcjpj.xxsj = 下线时间
+srchcjpj.ccdj = 出厂单价
+srchcjpj.bz = 备注
+srchcjpj.sxrq = 生效日期
+srchcjpj.signuser = 签名者
+
+
+#查询厂方样机出入库
+Srch_DCLSFH.title = 查询厂方样机出入库
+Srch_DCLSFH.jlbh      = 单据号
+Srch_DCLSFH.gsxx01      = 分部代码
+Srch_DCLSFH.bm_name      = 分部名称
+Srch_DCLSFH.depot_name      = 仓库
+Srch_DCLSFH.depot_area      = 库区
+Srch_DCLSFH.ghdw      = 供货商代码
+Srch_DCLSFH.ghdw_name      = 供货商名称
+Srch_DCLSFH.lrrq      = 录入日期
+Srch_DCLSFH.shrq      = 审核日期
+Srch_DCLSFH.shr      = 审核人
+Srch_DCLSFH.lrr      = 录入人
+Srch_DCLSFH.spcode      = 商品码
+Srch_DCLSFH.sp_name      = 名称规格
+Srch_DCLSFH.size01      = 包装含量
+Srch_DCLSFH.shjs      = 入库件数
+Srch_DCLSFH.shsl      = 入库细数
+Srch_DCLSFH.fhjs      = 出库件数
+Srch_DCLSFH.fhsl      = 出库数量
+Srch_DCLSFH.notes      = 备注
+
+
+##
+azhz.icheck          = 安装完成
+
+##公共
+pub.item.jcxx        = 基础信息
+pub.item.mxxx        = 明细信息
+pub.item.yj          = 意见
+pub.item.rq          = 日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期
+pub.item.pp          = 品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌
+pub.item.bm          = 部&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;门
+pub.item.ck          = 仓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;库
+
+##alert
+alert.qsrsz            = 请输入数字！
+alert.qrxgxx           = 确定修改信息？
+alert.xmbnwk           = 姓名不能为空!
+alert.qrxjxx           = 确定新建信息？
+alert.chbnwk           = 车号不能为空!
+alert.qxzmjwd          = 请选择末级网点!
+alert.qxzgszt          = 请选择公司主体！
+alert.hzdhbxxz         = 汇总单号必须选择!
+alert.shwdbxxz         = 送货网点必须选择！
+alert.xgjlhdjcan       = 请选择记录进行修改后在点击此按钮！
+alert.dhslbndyspsl     = 到货数量不能大与商品数量!
+alert.shrbnwk          = 送货人不能为空!
+alert.fwqybmwk         = 服务区域不能为空!
+alert.shwdbnwk         = 送货网点不能为空!
+alert.shdhbxtx         = 送货单号必须填写!
+alert.qsrdxywzm        = 请输入大写英文字母
+alert.znsrygzm         = 只能输入一个字母!
+##out
+out.kydydjlsw          = 可以打印的记录数为：
+
+##single
+single.dlct            = 登录冲突
+single.ts              = 另一个用户当前以同一个用户标识登录。您可以选择：
+single.introduction1   = 注销另一个使用同一用户标识的用户。
+single.introduction2   = 关闭当前窗口，使用另一用户标识登录。
+
+
+##  V5安装开始  ##
+#SEND_NOTE
+
+send.message.guest = 您所购空调已派至安装工{0}电话{1}咨询{2}请送达后电联
+send.message.worker = {0}{1}{2}{3},{4}
+
+##wap
+prompt.wap.spxx  = 商品不存在!
+prompt.wap.ryxx    = 请输入营业员!
+prompt.wap.spcode    = 请输入商品!
+prompt.wap.addsp   = 请选购商品
+prompt.wap.addhyk   = 请选择会员卡
+prompt.wap.addskfs   = 请选择支付方式
+prompt.wap.splessxs   = 改商品不能低于限价销售
+prompt.wap.sptj    = 本商品此部门没有特价!
+prompt.wap.spsj    = 该单品的销售净额不能小于下发的锁价!
+prompt.wap.gmspxz    = 一张单据只能购一件商品
+prompt.wap.spfl_hk    = 该品类商品不能使用{0}
+
+## define
+prompt.ryid       = 人员代码
+prompt.name       = 人员名称
+prompt.pass       = 人员密码
+prompt.phone      = 电话
+prompt.azrbxh     = 保 险 号
+
+
+define.wdry.az       = 网点定义安装工
+define.wdry.phone    = 电话
+define.wdry.wd       = 网点
+
+
+
+## 网点安装
+azzt.0              = 已完工
+azzt.4              = 重派工
+
+prompt.azzt0        = 已回执
+prompt.azzt1        = 已派工
+prompt.azzt4        = 未派工
+
+
+
+
+prompt.azpg.title   = 网点安装派工
+prompt.razpg.title  = 网点安装重派工
+prompt.azhz.title   = 网点安装回执
+prompt.prtazd.title = 网点安装单打印
+prompt.rprtazd.title= 网点安装单重打
+prompt.azpg_jd.title = 网点接单
+prompt.prt.null     = 没有可打印的单据!
+prompt.kfpgrq       = 客服派工日期
+prompt.clfy         = 应收材料费用
+prompt.region       = 地区
+prompt.gzsc         = 购自商场
+prompt.azzt         = 安装状态
+prompt.azjg         = 安装结果
+prompt.azdh         = 记录编号
+prompt.zxbj         = 注销
+prompt.jlbh         = 记录编号
+prompt.wd           = 网点
+prompt.azwd         = 安装网点
+prompt.notazdh      = 此安装单未派工或已回执!
+prompt.azrq         = 安装日期
+prompt.djrq         = 建档日期
+prompt.sjazrq       = 实际安装日期
+prompt.pgrq         = 派工日期
+prompt.fhrq         = 发货日期
+prompt.ghrq         = 购货日期
+prompt.azr          = 安装工
+prompt.azrmc        = 安装人名称
+prompt.azdwmc       = 安装单位名称
+prompt.shr          = 送货人
+prompt.pgr          = 派工人
+prompt.jjaz         = 网点拒单
+prompt.yyazrq       = 预约安装日期
+prompt.yyshrq       = 预约送货日期
+prompt.shpgrq       = 送货派工日期
+prompt.thdh         = 提货单号
+prompt.spcode       = 商品代码
+prompt.spname       = 商品名称
+prompt.sl           = 数量
+prompt.gkmc         = 顾客名称
+prompt.gkqm         = 顾客签名
+prompt.gkyq         = 顾客要求
+prompt.gkyj         = 顾客意见
+prompt.address      = 地址
+prompt.address1     = 顾客地址
+prompt.bz           = 备注
+prompt.bz1          = 备　注
+prompt.bz2          = 备　　注
+prompt.zzdh         = 住宅电话
+prompt.lxfs         = 联系方式
+prompt.xsbm         = 销售部门
+prompt.phone.success = 请正确输入电话号码
+
+#系统日志
+viewSystemLog.title = 系统日志
+viewSystemLog.id = 日志编号
+viewSystemLog.czsj = 操作时间
+viewSystemLog.menuid = 操作内容
+viewSystemLog.gsmc = 公司名称
+viewSystemLog.person_id = 操作账号
+
+## 查询安装工安装信息
+prompt.azqkazg.title  = 安装工安装信息
+
+## 查询安装情况
+prompt.azqkhz.title  = 网点安装查询
+prompt.cjazqk.title  = 厂家安装查询
+prompt.print.title  =  打印测试
+
+azqkhz.title       = 网点安装查询汇总
+azqkhz.azdjmx      = 安装登记明细
+azqkhz.azztmx      = 安装在途明细
+azqkhz.azwcmx      = 安装完成明细
+azqkhz.spfl        = 品类
+azqkhz.azdj        = 安装登记
+azqkhz.azzt        = 安装在途
+azqkhz.qzwc        = 安装完成
+AZZT_0             = 安装完成
+AZZT_4        = 安装登记
+AZZT_1        = 安装在途
+
+
+
+
+##网点安装查询明细
+azqkmx.title       = 网点安装查询明细
+azqkmx.jlbh        = 记录编号
+azqkmx.thdh        = 提货单号
+azqkmx.yyazrq      = 预约安装日期
+azqkmx.azsl        = 安装数量
+azqkmx.wdpgrq      = 客服派工日期
+azqkmx.pgrq        = 网点派工日期
+azqkmx.azrmc       = 主安装工
+azqkmx.azrdh       = 主安装工电话
+azqkmx.secazrmc    = 辅安装工
+azqkmx.ghrq        = 顾客购货日期
+azqkmx.sp_name     = 商品名称
+azqkmx.region      = 地区
+azqkmx.sc_name     = 购自商场
+azqkmx.hzrq     = 回执日期
+azqkmx.gkyj     = 顾客意见
+azqkmx.spfl_name     = 品类
+azqkmx.ppname     = 品牌
+azqkmx.azzt     = 安装状态
+azqkmx.wdpgr    = 派网点人
+azqkmx.pgr    = 派工人
+azqkmx.hzr    = 回执人
+azqkmx.name   = 客户姓名
+azqkmx.address   = 客户地址
+azqkmx.zzdh   = 住宅电话
+azqkmx.qtfs   =  其他联系方式
+azqkmx.djr   = 建档人
+azqkmx.djrq   = 建档时间
+azqkmx.cpgcs  = 重派工次数
+azqkmx.dycs  = 打印次数
+
+# 查询安装工安装信息
+azqkazg.title = 查询安装工安装信息
+azqkazg.jlbh  = 记录编号
+azqkazg.thdh  = 提货单号
+azqkazg.sp_name  = 商品名称
+azqkazg.azsl         = 安装数量
+azqkazg.azzt        = 安装状态
+azqkazg.hzrq   =回执日期
+azqkazg.gkqm     = 顾客意见
+azqkazg.fksj     = 短信回执时间
+azqkazg.fkzt     = 短信回执状态
+azqkazg.jdrid     = 接单人
+azqkazg.jdsj     = 接单时间
+
+##查询现场回访结果
+srchxchfqk.title    = 查询现场回访结果
+srchxchfqk.jlbh     = 销售单号
+srchxchfqk.thdh     =提单号
+srchxchfqk.fph     =发票号
+srchxchfqk.name     =顾客姓名
+srchxchfqk.zzdh     =住宅电话
+srchxchfqk.qtfs     =其它联系方式
+srchxchfqk.address     =家庭住址
+srchxchfqk.sp_id     =商品编码
+srchxchfqk.spname     =型号
+srchxchfqk.spflname     =购买产品品类
+srchxchfqk.lsdj     =销售单价
+srchxchfqk.hfzt     =回访情况
+srchxchfqk.jzrq     =开票日期
+srchxchfqk.xsbm     =销售部门
+
+HFZT_null        = 没回访
+HFZT_0        = &nbsp;
+HFZT_1        = 不满意
+HFZT_2        = 不满意
+
+HFZT_3        = 满意
+HFZT_4        = 满意
+HFZT_5        = 满意
+
+#销售管理
+Srch_SPXS.title = 销售管理
+Srch_SPXS.gsxx01 = 公司代码
+Srch_SPXS.jlbh =  编号
+Srch_SPXS.xsrq =  销售日期
+Srch_SPXS.ywy =   业务员
+Srch_SPXS.gjzc =  购机政策
+Srch_SPXS.gkname = 顾客姓名
+Srch_SPXS.phone = 顾客电话
+Srch_SPXS.spcode = 商品代码
+Srch_SPXS.spname = 商品名称
+Srch_SPXS.xssl = 销售数量
+Srch_SPXS.bz = 备注
+Srch_SPXS.xsfs = 销售方式
+
+#要货管理
+Srch_SPYHD.title = 要货管理
+Srch_SPYHD.yhrq  = 要货日期
+Srch_SPYHD.yhsl  = 要货数量
+
+XSFS_0         = &nbsp;
+XSFS_1         = 正常
+XSFS_2         = 工程
+
+
+# 厂家安装查询汇总
+
+cjazqk.title       = 厂家安装查询汇总
+cjazqk.azdjmx      = 安装登记明细
+cjazqk.azztmx      = 安装在途明细
+cjazqk.azwcmx      = 安装完成明细
+cjazqk.wdmc        = 网点名称
+
+#厂家安装查询明细
+cjazqkmx.title     = 厂家安装查询明细
+cjazqkmx.wd_name   = 网点名称
+cjazqkmx.jlbh      = 安装单号
+cjazqkmx.azsl      = 安装数量
+cjazqkmx.sp_name   = 商品名称
+cjazqkmx.name      = 顾客名称
+cjazqkmx.address   = 顾客地址
+cjazqkmx.zzdh      = 顾客电话
+cjazqkmx.yhyq      = 顾客要求
+cjazqkmx.ghrq      = 购机日期
+cjazqkmx.yyazrq    = 预约安装日期
+cjazqkmx.pgrq      = 网点派工日期
+
+# 查询网点人员
+
+wdry.title         = 查询网点人员
+wdry.dept_name     = 分部名称
+wdry.wd_id         = 网点代码
+wdry.wdname         = 网点名称
+wdry.person_id     = 人员代码
+wdry.person_name   = 人员名称
+wdry.phone         = 联系电话
+wdry.bxh           = 保险号
+wdry.idcard           = 身份证号码
+wdry.spfl         = 安装品类
+
+#查询机器码
+srchjqmitem.title = 查询机器码
+srchjqm.djhm =    单号
+srchjqm.dh =    行号
+srchjqm.jqmdjlx =    单据类型
+srchjqm.jqm_time = 扫码时间
+srchjqm.spxx01 = 套机编码
+srchjqm.spxx_name01 = 套机名称
+srchjqm.spnm = 单机编码
+srchjqm.spnm_name = 单机名称
+srchjqm.column_value = 串码
+
+
+prompt.yyazpg.title      = 预约安装派工
+prompt.yyazpg.date      = 预约安装日期
+##  V5安装结束  ##
+LSFWDJLX_1             = 送货
+LSFWDJLX_2             = 安装
+SFSHAZ_1               = 未送货
+SFSHAZ_2               = &nbsp;
+SFSHAZ_3               = 已送货
+SFSHAZ_4               = 未安装
+SFSHAZ_5               = &nbsp;
+SFSHAZ_6               = 已安装
+lsfw.fwzt              = 服务状态
+
+
+## roles
+select.all      = 全部
+select.allbm    = 全部部门
+select.allpl    = 全部品类
+select.bm       = 请选择部门
+select.jhbm     = 请选择进货部门
+select.xsbm     = 请选择销售部门
+select.spfl     = 请选择商品分类
+select.alldeptid  = 全部公司
+select.deptid     = 请选择公司
+select.allspppid  = 全部品牌
+select.spppid     = 请选择品牌
+select.allspflid  = 全部品类
+select.spflid     = 请选择品类
+select.allwdid    = 全部网点
+select.wdid       = 请选择网点
+select.khdqid     = 请选择地区
+select.allkhdqid  = 所有地区
+
+srch.WDRY         = 查询网点人员
+srch.KHWXJL       = 查询客户维修记录
+srch.WDWXJL       = 查询网点维修记录
+srch.WDSWXJL      = 查询多网点维修记录
+srch.SPXX         = 查询商品信息
+srch.SPPP         = 查询商品品牌
+srch.KHZL         = 查询客户档案
+srch.WDHT         = 查询网点合同
+srch.BYJ          = 查询备用机
+srch.SPPPID       = 品牌代码
+srch.SPPPMC       = 品牌名称
+srch.ABC          = ABC分类
+def.WDWXR         = 定义网点维修人
+operator.id       = 人员代码
+operator.name     = 人员姓名
+operator.group    = 分组
+operator.passwd   = 密码
+operator.deptid   = 公司代码
+operator.deptName = 公司名称
+operator.begin    = 开始时间
+operator.end      = 结束时间
+operator.phone    = 电话
+operator.cllx     = 车辆类型
+operator.rylx     = 人员类型
+operator.sfzh     = 身份证号
+operator.jsjb     = 技术级别
+operator.zgbj     = 是否在岗
+group.id          = 分组代码
+group.name        = 分组名称
+
+
+srch.WDWXR        = 查询网点维修人
+srch.SPXX         = 查询商品信息
+srch.KHZL         = 查询客户档案
+srch.WDHT         = 查询网点合同
+srch.BYJ          = 查询备用机
+def.WDWXR         = 定义网点维修人
+
+## declare
+declare.wxsjsb    = 维修事件申报
+declare.khbh      = 客户编号
+declare.khmc      = 客户名称
+declare.khlb      = 客户类别
+declare.lxdh      = 联系电话
+declare.khdq      = 客户地区
+declare.lxfs      = 其他电话
+declare.lxdz      = 联系地址
+declare.fphm      = 发票号码
+declare.gwrq      = 购物日期
+declare.gzsc      = 购自商场
+declare.spid      = 商品代码
+declare.spmc      = 商品名称
+declare.sppp      = 商品品牌
+declare.spfl      = 商品分类
+declare.spcd      = 商品产地
+declare.spxh      = 商品型号
+declare.hykh      = 会员卡号
+declare.ybhyjb    = 会员级别
+declare.sptm      = 商品条码
+declare.sbxx      = 申报现象
+declare.ywxm      = 业务项目
+declare.wxlx      = 维修类型
+declare.ybkh      = 延保卡号
+declare.yyrq      = 预约日期
+declare.thdh      = 提货单号
+declare.fjxx      = 附件
+declare.wgxx      = 外观
+
+## repair
+repair.wdwxpg     = 网点维修派工
+repair.wdwxrpg    = 网点维修二次派工
+repair.wxpwd      = 维修派网点
+repair.pwdmx      = 派网点明细
+repair.wxrpwd     = 维修二次派网点
+repair.cpg        = 二次派工
+repair.wdwxhz     = 网点维修回执
+repair.wxhzmx     = 维修回执明细
+repair.wxditem    = 维修单明细
+repair.content    = 备注信息
+repair.wxkhqr     = 勾选的维修单未全部确认回执,请确认完后再提交。
+repair.wxlx       = 维修类型
+repair.wxfs       = 服务方式
+repair.wxwd       = 维修网点
+repair.wxr        = 维修人
+repair.yyrq       = 预约日期
+repair.ryyrq      = 二次预约日期
+repair.khbh       = 客户编号
+repair.wxdh       = 维修单号
+repair.bxxh       = 报修序号
+repair.gsxx       = 公司
+repair.bmmc       = 部门
+repair.khmc       = 客户名称
+repair.lxdh       = 联系电话
+repair.lxdz       = 联系地址
+repair.khdq       = 客户地区
+repair.spName     = 商品名称
+repair.thdh       = 提货单号
+repair.pwdr       = 网点派工人
+repair.pwdrq      = 网点派工日期
+repair.sbr        = 申报人
+repair.sbrq       = 申报日期
+repair.gzsc       = 购自商场
+repair.gwrq       = 购物日期
+repair.pgr        = 派工人
+repair.pgrq       = 派工日期
+repair.pgbz       = 派工备注
+repair.hzr        = 回执人
+repair.hzrq       = 回执日期
+repair.cancel     = 撤销
+repair.wcrq       = 维修完成日期
+repair.djzzzt     = 单据最终状态
+repair.wxdzt      = 维修单状态
+repair.yjwxsj     = 预计维修时间
+repair.wrongsj    = 请选择正确的时间
+repair.jcwxlx     = 检测维修类型
+repair.ghpj       = 更换配件
+repair.pjlycs     = 配件领用次数
+repair.pjghcs     = 配件归还次数
+repair.sfje       = 维修费用
+repair.pjje       = 配件费用
+repair.smje       = 上门费用
+repair.wxbz       = 维修备注
+repair.smfwr      = 上门服务人
+repair.smfwrq     = 上门服务日期
+repair.smfwnr     = 上门服务内容
+repair.yjwxq      = 预计维修期
+repair.byj        = 备用机
+repair.byjbh      = 备用机编号
+repair.byjpp      = 备用机品牌
+repair.cancel     = 撤单
+repair.cancelyy   = 撤单原因
+repair.ywnrmx     = 业务内容描叙
+repair.wczt       = 完成状态
+repair.sbxx       = 申报现象
+repair.sxrq       = 送修日期
+repair.denybz       = 拒单原因
+repair.denycs       = 拒单次数
+
+## install
+install.wdazpg    = 网点安装派工
+install.wdazrpg   = 网点安装重派工
+install.wdazhz    = 网点安装回执
+install.azditem   = 安装单明细
+install.azdh      = 安装单号
+install.azdzt     = 安装单状态
+install.yyrq      = 预约日期
+install.ryyrq     = 二次预约日期
+install.khdq      = 客户地区
+install.pwdrq     = 客服派工日期
+install.xslx      = 销售类型
+install.jdrq      = 建档日期
+install.cpg       = 二次派工
+install.azr       = 安装人
+install.khmc      = 客户名称
+install.azdh      = 安装单号
+install.azxh      = 安装序号
+install.cdxh      = 拆单序号
+install.thdh      = 提货单号
+install.gsxx      = 公司
+install.yyrq      = 预约日期
+install.lxdh      = 联系电话
+install.lxdz      = 联系地址
+install.khdq      = 客户地区
+install.spName    = 商品名称
+install.spCount   = 商品数量
+install.pwdr      = 客服派工人
+install.jdr       = 建档人
+install.gzsc      = 购自商场
+install.gwrq      = 购物日期
+install.wrongsj   = 请选择正确的时间
+install.yjazsj    = 预计安装时间
+install.pgr       = 派工人
+install.pgrq      = 派工日期
+install.pgbz      = 派工备注
+install.hzr       = 回执人
+install.hzrq      = 回执日期
+install.wczt      = 是否完成
+install.cancel    = 撤销
+install.wcrq      = 安装完成日期
+
+#查询网点人员
+queryWDWXR.title        = 查询网点人员
+queryWDWXR.person_id    = 人员代码
+queryWDWXR.person_name  = 人员名称
+queryWDWXR.gsmc         = 公司名称
+queryWDWXR.phone        = 电话
+queryWDWXR.rylx         = 人员类型
+queryWDWXR.jsjb         = 技术级别
+queryWDWXR.sfzh         = 身份帐号
+queryWDWXR.cllx         = 车辆类型
+queryWDWXR.zgbj         = 在岗标记
+queryWDWXR.deptid       = 公司代码
+queryWDWXR.wdid         = 网点代码
+
+##公告栏
+queryBoard.title =    公告栏
+queryBoarditem.jlbh  =    信息内容
+queryBoard.jlbh  =    编号
+queryBoard.title  =    标题
+queryBoard.fbsj  =    发布时间
+
+#查询客户档案
+queryKHArchives.title   = 查询客户档案
+queryKHArchives.khbh = 客户编号
+queryKHArchives.khmc = 客户名称
+queryKHArchives.khdqmc = 客户地区
+queryKHArchives.khlbmc = 客户类别
+queryKHArchives.deptmc = 公司
+queryKHArchives.lxdh = 联系电话
+queryKHArchives.lxdz = 联系地址
+queryKHArchives.lxfs = 其他联系方式
+queryKHArchives.lxr = 联系人
+queryKHArchives.hykh = 会员卡号
+queryKHArchives.ybkh = 延保卡号
+queryKHArchives.ybhyjb = 延保会员级别
+queryKHArchives.djr = 登记人
+queryKHArchives.djrq = 登记日期
+queryKHArchives.v5khbh = v5会员编号
+queryKHArchives.deptid = 公司代码
+
+#查询网点维修记录
+queryWDWXJL.title      = 查询网点维修记录
+queryWDWXJL.khbh = 客户编号
+queryWDWXJL.khmc = 客户名称
+queryWDWXJL.wxdh = 维修单号
+queryWDWXJL.bxxh = 报修序号
+queryWDWXJL.spName = 商品名称
+queryWDWXJL.thdh = 提货单号
+queryWDWXJL.gzsc = 购自商场
+queryWDWXJL.gwrq = 购物日期
+queryWDWXJL.deptid = 公司代码
+queryWDWXJL.deptmc = 公司名称
+queryWDWXJL.azwd_v7 = 网点代码
+queryWDWXJL.wdmc = 网点名称
+queryWDWXJL.wdht = 网点合同编号
+queryWDWXJL.wdzc = 网点政策编号
+queryWDWXJL.djzzzt = 维修单最终状态
+queryWDWXJL.yyrq = 预约日期
+queryWDWXJL.wcrq = 维修完成日期
+queryWDWXJL.wxrmc = 维修人
+queryWDWXJL.sbr = 申报人
+queryWDWXJL.sbrq = 申报日期
+queryWDWXJL.pwdr = 派网点人
+queryWDWXJL.pwdrq = 派网点日期
+queryWDWXJL.pgr = 派工人
+queryWDWXJL.pgrq = 派工日期
+queryWDWXJL.hzr = 回执人
+queryWDWXJL.hzrq = 回执日期
+queryWDWXJL.wxdzt = 维修单状态
+queryWDWXJL.cancel = 撤单
+queryWDWXJL.yjwxq = 预计维修周期
+queryWDWXJL.wxfs = 维修方式
+queryWDWXJL.ywxm = 业务项目
+queryWDWXJL.smfwr = 上门服务人
+queryWDWXJL.smfwrq = 上门服务日期
+queryWDWXJL.smje = 上门费用
+queryWDWXJL.jcwxlx = 检测维修类型
+queryWDWXJL.ghpj = 更换配件
+queryWDWXJL.pjje = 配件费用
+queryWDWXJL.sfje = 维修费用
+queryWDWXJL.dycs = 打印次数
+queryWDWXJL.wxbh = 维修编号
+queryWDWXJL.bmid = 部门代码
+queryWDWXJL.bmmc = 部门名称
+
+#查询信用额度
+srch_xyye_v7.title = 查询信用额度
+srch_xyye.wldw01 = 单位代码
+srch_xyye.wldw02 = 单位名称
+srch_xyye.bm01 =   销售部门代码
+srch_xyye.bm02 = 销售部门
+srch_xyye.xyed = 信用额度
+srch_xyye.ysye = 应收余额
+srch_xyye.kyye = 可用余额
+srch_xyye.yfye = 延付余额
+srch_xyye.qpye = 期票余额
+
+## xslx
+XSLX_0            = 零售
+XSLX_1            = 批发
+XSLX_2            = 转仓
+XSLX_3            = 其他
+
+## khda
+khda.khzl         = 客户资料
+khda.khdq         = 客户地区代码
+khda.khlb         = 客户类别代码
+khda.khbh         = 客户编号
+khda.khmc         = 客户名称
+khda.lxdz         = 联系地址
+khda.lxdh         = 联系电话
+khda.djr          = 登记人
+khda.djrq         = 登记日期
+khda.djlx         = 档案类型
+khda.deptid       = 公司代码
+khda.mobile       = 手机
+khda.lxfs         = 其他联系方式
+khda.lxr          = 联系人
+khda.hykh         = 会员卡号
+khda.ybhyjb       = 延保会员级别
+khda.khdqmc       = 客户地区
+khda.khlbmc       = 客户类别
+khda.deptmc       = 公司
+
+## wdht
+wdht.htbh         = 合同编号
+wdht.yhtbh        = 原始合同编号
+wdht.htlx         = 合同类型
+wdht.htzt         = 合同状态
+wdht.zdrq         = 制单日期
+wdht.shrq         = 审核日期
+wdht.zzrq         = 终止日期
+wdht.wdid         = 网点代码
+wdht.wdmc         = 网点名称
+wdht.qdrq         = 签订日期
+wdht.qddd         = 签订地点
+wdht.qdr          = 签订人
+wdht.htyxq        = 合同有效期
+
+## htzc
+htzc.zcbh         = 政策编号
+htzc.zcxh         = 政策序号
+htzc.yzf          = 月租费
+htzc.djr          = 登记人
+htzc.djrq         = 登记日期
+htzc.shr          = 审核人
+htzc.shrq         = 审核日期
+
+## print
+prompt.prtwxd     = 网点维修单打印
+prompt.reprtwxd   = 网点维修单重打
+
+## ybhyjb
+YBHYJB_0          = 钻石卡
+YBHYJB_1          = 金卡
+YBHYJB_2          = 银卡
+YBHYJB_3          = 彩虹卡
+
+## djzzzt
+DJZZZT_0          = 申报建档
+DJZZZT_1          = 派网点
+DJZZZT_2          = 派工
+DJZZZT_3          = 回执
+DJZZZT_4          = 回访
+
+## wxdzt
+WXDZT_0            = 申报建档
+WXDZT_1            = 派网点
+WXDZT_2            = 派工
+WXDZT_3            = 回执
+WXDZT_4            = 回访
+
+##短信回执状态
+FKZT_0  = 未回复
+FKZT_1  = 已完工
+FKZT_2  = 重派工
+
+## jcwxlx
+JCWXLX_-1  =
+JCWXLX_0   = 其他
+JCWXLX_1   = 保内
+JCWXLX_2   = 保外
+JCWXLX_3   = 延保
+JCWXLX_4   = 检测
+JCWXLX_5   = 增值项
+
+## operator
+ZX_0     = 已注销
+ZX_1     = 未注销
+
+## zgbj
+ZGBJ_0   = 在岗
+ZGBJ_1   = 不在岗
+
+## wxlx
+WXLX_0   = 普通
+WXLX_1   = 延保
+
+## wxfs
+WXFS_0   = 待定
+WXFS_1   = 上门
+WXFS_2   = 送修
+
+## cancel
+CANCEL_0 = 否
+CANCEL_1 = 是
+
+## ghpj
+GHPJ_0   = 否
+GHPJ_1   = 是
+
+## ywxm
+YWXM_-1  =
+YWXM_0   = 其他
+YWXM_1   = 保内
+YWXM_2   = 保外
+YWXM_3   = 延保
+YWXM_4   = 检测
+YWXM_5   = 增值项
+
+## xslx
+XSLX_0   = 零售
+XSLX_1   = 批发
+XSLX_2   = 转仓
+XSLX_3   = 其他
+
+## rylx
+RYLX_0   = 送货人员
+RYLX_1   = 安装人员
+RYLX_2   = 维修人员
+RYLX_3   = 安装维修
+
+## jsjb
+JSJB_0   =
+JSJB_1   = 一级
+JSJB_2   = 二级
+JSJB_3   = 三级
+JSJB_4   = 四级
+JSJB_5   = 五级
+JSJB_6   = 六级
+JSJB_7   = 七级
+JSJB_8   = 八级
+JSJB_9   = 九级
+JSJB_10  = 十级
+
+## htlx
+HTLX_0   = 安装维修
+HTLX_1   = 安装
+HTLX_2   = 维修
+HTLX_3   = 厂家
+
+## htzt
+HTZT_0   = 制单
+HTZT_1   = 否决
+HTZT_2   = 审核
+HTZT_3   = 终止
+
+## wczt
+WCZT_0   = 未完成
+WCZT_1   = 完成
+
+## azdzt
+AZDZT_0            = 申报建档
+AZDZT_1            = 派网点
+AZDZT_2            = 派工
+AZDZT_3            = 回执
+AZDZT_4            = 回访
+
+## 维修状态
+SJWXZT_0      = 无
+SJWXZT_1      = 受理
+SJWXZT_2      = 站点分配
+SJWXZT_3      = 发货
+SJWXZT_4      = 检测完成
+SJWXZT_5      = 维修完成
+SJWXZT_6      = 收货
+SJWXZT_7      = 顾客取机
+SJWXZT_8      = 回访
+
+## 报价状态
+SJBJZT_0      = 未报价
+SJBJZT_1      = 已报价
+SJBJZT_2      = 确认
+SJBJZT_3      = 不确认
+SJBJZT_4      = 议价
+
+##数据上传
+upload.xssj    =上传销售数据
+upload.ln      =浏 览
+upload.sc      =上 传
+upload.kcsj    =上传库存数据
+upload.success =数据上传成功！
+upload.error   =数据上传失败，请重试！
+upload.tolarge =上传文件太大！
+
+##汽配
+qp.wxcgl        = 维修厂管理
+qp.ljsgl        = 配件商管理
+qp.operxjd      = 询价单业务
+qp.operdhd      = 订货单业务
+qp.defbjd       = 报价单业务
+qp.opertjdbc    = 发布调剂库存业务
+qp.opertjd      = 调剂单业务
+
+qp.opertgbjd    = 团购报价单业务
+qp.opertgfhd    = 团购发货单业务
+qp.opertgyhd    = 团购要货单业务
+qp.opertgshd    = 团购收货单业务
+
+qp.operfxd      = 分销单业务
+qp.audityhd     = 审核要货单
+qp.defineyhd    = 要货单业务
+qp.operfcd      = 返厂单业务
+qp.definezdbjd  = 征订报价单业务
+
+##汽配提示
+prompt.ddnotinht   = 该订单不在此合同中
+prompt.ddyzxnozd   = 该订单已执行，不能制单
+prompt.ddycznozd   = 该订单已终止，不能制单
+prompt.ddnocz      = 该订单不存在
+prompt.ddnosh      = 该订单没审核
+##汽配公共表字段
+qp.pjmc            = 配件名称
+qp.sycx            = 适用车型
+qp.ycbm            = 原厂编码
+qp.cccxmc          = 车厂车型
+qp.drdwdm          = 调入单位代码
+qp.drdwmc          = 调入单位名称
+qp.dcdwdm          = 调出单位代码
+qp.dcdwmc          = 调出单位名称
+qp.drgsdm          = 调入公司代码
+qp.drgsmc          = 调入公司名称
+qp.dcgsdm          = 调出公司代码
+qp.dcgsmc          = 调出公司名称
+qp.drbmdm          = 调入部门代码
+qp.drbmmc          = 调入部门名称
+qp.dcbmdm          = 调出部门代码
+qp.dcbmmc          = 调出部门名称
+qp.drckdm          = 调入仓库代码
+qp.drckmc          = 调入仓库名称
+qp.dcckdm          = 调出仓库代码
+qp.dcckmc          = 调出仓库名称
+qp.yf              = 运费
+qp.yfcdlx          = 运费承担类型
+qp.shdz            = 收货地址
+qp.fhdz            = 发货地址
+qp.kczdxl          = 库存最低限量
+qp.pcsxh           = 批次顺序号
+qp.zlts            = 滞留天数
+qp.zhxsrq          = 最后销售日期
+qp.srch_xjd        = 查询询价单
+qp.srch_bjd        = 查询报价单
+qp.srch_tjpj       = 查询调剂配件
+qp.xsdh            = 销售单号
+qp.xh              = 序号
+qp.xszt            = 销售状态
+
+XSZT_0             = 等待销售
+XSZT_1             = 销售
+XSZT_2             = 拒绝销售
+##询价状态
+XJZT_0             = 未使用
+XJZT_1             = 制单(询价)
+XJZT_2             = 审核(询价)
+XJZT_3             = 报价
+XJZT_4             = 拒绝报价
+XJZT_5             = 等待审核(订货)
+XJZT_6             = 拒绝订货
+XJZT_7             = 审核未通过(订货)
+XJZT_8             = 审核通过(订货)
+XJZT_9             = 部分入库(订货)
+XJZT_10            = 全部入库(订货)
+XJZT_11            = 注销(订货)
+
+##团购状态
+TGZT_0             = 未使用
+TGZT_1             = 等待审核(订货)
+TGZT_2             = 拒绝订货
+TGZT_3             = 审核未通过(订货)
+TGZT_4             = 审核通过(订货)
+TGZT_5             = 部分入库(订货)
+TGZT_6             = 全部入库(订货)
+TGZT_7             = 注销(订货)
+
+##调剂状态
+TJZT_0             = 未使用
+TJZT_1             = 制单
+TJZT_2             = 审核
+TJZT_3             = 平台审批
+TJZT_4             = 拒绝审批
+TJZT_5             = 等待审核(订货)
+TJZT_6             = 拒绝订货
+TJZT_7             = 审核未通过(订货)
+TJZT_8             = 审核通过(订货)
+TJZT_9             = 部分入库(订货)
+TJZT_10            = 全部入库(订货)
+TJZT_11            = 注销(订货)
+
+##运费承担类型(0:无 1:买家 2:卖家 3双方承担)
+YFCDLX_0           = 无
+YFCDLX_1           = 买家
+YFCDLX_2           = 卖家
+YFCDLX_3           = 双方承担
+##
+cxjl.cxy           = 促销员
+cxjl.cxsl          = 促销数量
+cxjl.cxdj          = 促销单价
+cxjl.mdmc          = 门店名称
+cxjl.cxcxjl        = 促销记录
+##查询备料收货单(汽配)
+qp.wxc             = 维修厂
+qp.drbmmc          = 询价部门
+qp.drckmc          = 到货仓库
+qp.dcbmmc          = 报价部门
+qp.dcckmc          = 出货仓库
+qp.pjdm            = 配件代码
+qp.xjjs            = 询价件数
+qp.xjsl            = 询价数量
+qp.bjjs            = 报价件数
+qp.bjsl            = 报价数量
+qp.dhjs            = 订货件数
+qp.fhjs            = 发货件数
+qp.fhsl            = 发货数量
+qp.shjs            = 收货件数
+qp.shsl            = 收货数量
+qp.bjdj            = 报价单价
+qp.xjdj            = 询价单价
+qp.jydj            = 交易单价
+qp.jyje            = 交易金额
+qp.yxsx            = 有效时限
+qp.xjr             = 询价人
+qp.xjrq            = 询价日期
+qp.bjr             = 报价人
+qp.bjrq            = 报价日期
+qp.dhr             = 订货人
+qp.dhrq            = 订货日期
+qp.shrq            = 收货日期
+##团购收货单(汽配)
+qp.pthzr           = 平台汇总人
+qp.pthzrq          = 平台汇总日期
+qp.ptdhr           = 平台订货人
+qp.ptdhrq          = 平台订货日期
+qp.ptfhrq          = 平台发货日期
+qp.ptshr           = 平台收货人
+qp.ptshrq          = 平台收货日期
+qp.ptspjs          = 平台审批件数
+qp.ptspsl          = 平台审批数量
+qp.zbhzjs          = 总部汇总件数
+qp.zbhzsl          = 总部汇总数量
+qp.zbdhjs          = 总部订货件数
+qp.zbdhsl          = 总部订货数量
+qp.zbshjs          = 总部收货件数
+qp.zbshsl          = 总部收货数量
+qp.zbdhjyje        = 总部订货交易金额
+qp.ptfkr           = 平台付款人
+qp.ptfkrq          = 平台付款日期
+##查询调剂配件
+qp.tjjs            = 调剂件数
+qp.tjsl            = 调剂数量
+qp.tjdj            = 调剂单价
+qp.tjbmdm          = 调剂部门代码
+qp.tjbmmc          = 调剂部门名称
+qp.tjckdm          = 调剂仓库代码
+qp.tjckmc          = 调剂仓库名称
+qp.tjr             = 调剂人
+qp.tjrq            = 调剂日期
+qp.ptshr           = 平台审核人
+qp.ptshq           = 平台审核日期
+##查询团购单
+qp.wjjj            = 文件进价
+qp.tbtcbl          = 特别提成比例
+qp.zdnr            = 征订内容
+qp.jyjg            = 建议价格
+##汽配菜单
+##基础定义
+qp.defpj           = 定义配件
+qp.importpj        = 导入配件
+##信息发布
+qp.xxfb            = 信息发布
+qp.dpxx            = 店铺信息
+qp.defzxpj         = 发布最新配件
+qp.defcxpj         = 发布促销配件
+qp.deftjpj         = 发布推荐配件
+qp.defgyxxfl       = 发布供应信息分类
+qp.deflinks        = 发布友情链接
+qp.operguestbook   = 管理留言
+##采购管理
+qp.cggl            = 采购管理
+qp.pjcgxj          = 配件采购询价
+qp.pjbj            = 配件比价
+qp.xjdh            = 询价订货
+qp.tjdh            = 调剂订货
+qp.tgdh            = 团购订货
+qp.zjdh            = 直接订货
+qp.srchxjd         = 查询询价单
+qp.srchbjd         = 查询报价单
+qp.srchtjd         = 查询调剂配件
+qp.srchtgd         = 查询团购单
+##销售管理
+qp.xsgl            = 销售管理
+qp.releasetjpj     = 发布调剂配件
+qp.costomerxjd     = 客户询价单处理
+qp.pjbjd           = 配件报价单
+qp.costomerdhd     = 客户订单处理
+qp.xssqd           = 销售申请单
+qp.xscl            = 销售处理
+qp.xsd             = 销售单
+##综合分析
+qp.zhfx            = 综合分析
+qp.djztgz          = 单据状态跟踪
+##资讯面板
+qp.zxmb            = 资讯面板
+##
+qp.srch_djztgz     = 单据状态跟踪
+##提示
+prompt.cannotDefinePFD        = 所有商品都没有库存,不能转销售单！
+prompt.xssqdToXsd_repeat      = 此销售申请单已经转销售单！不能再次转销售单！

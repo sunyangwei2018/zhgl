@@ -1,0 +1,12 @@
+[
+	{"code":"add","name":"新增"},
+	{"code":"edit","name":"修改"},
+	{"code":"save","name":"保存"},
+	{"code":"cancel","name":"取消"},
+	{"code":"del","name":"删除"},
+	{"code":"check","name":"审核"},
+	{"code":"check2","name":"复审"},
+	{"code":"query","name":"查询"},
+	{"code":"print","name":"打印"},
+	{"code":"import","name":"导入"}
+]

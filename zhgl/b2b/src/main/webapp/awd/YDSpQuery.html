@@ -1,0 +1,233 @@
+	<!DOCTYPE html>
+	<html>
+	  <head>
+	    <title>abnormalQuery.html</title>
+		
+	    <meta name="keywords" content="keyword1,keyword2,keyword3">
+	    <meta name="description" content="this is my page">
+	    <meta name="content-type"  charset="UTF-8">
+		
+	  </head>
+	  
+	  <body style="width:100%">
+  <div id="YDSp_tab" class="easyui-tabs" data-options="fit:true,border:false,plain:true" style="width:100%">
+  	<div title="查询"  style="padding:5px" style="width:100%">
+	  	<div  style="width:100%">
+	  		<table style="width:100%">
+		    		<tr>
+		    			<td align="right">运单号</td>
+		    			<td align="left" rowspan="2">
+		    				 <input class="easyui-textbox" id="billno" name="billno" style="width:190px;height:70px"  data-options="multiline:true"/>
+		    			</td>
+		    			<td align="right">录入时间</td>
+		    			<td align="left">
+		    				<input id="starttime" name="statrttime" class="easyui-datetimebox"/>
+		    				</input>
+		    			</td>
+		    			<td align="right">至</td>
+		    			<td align="left">
+		    				<input id="endtime" name="endtime" class="easyui-datetimebox"/>
+		    				</input>
+		    			</td>
+		    			<td align="right">审核标记</td>
+		    			<td align="left">
+		    				<select id="shbj" class="easyui-combobox" name="shbj" style="width:122px;">   
+							    <option value="0">未审核</option>   
+							    <option value="1">同意</option>   
+							    <option value="2">驳回</option>   
+							</select> 
+		    			</td>
+		    			<td align="right">复审标记</td>
+		    			<td align="left">
+		    				<select id="fsbj" class="easyui-combobox" name="fsbj" style="width:122px;">   
+							    <option value="0">未审核</option>   
+							    <option value="1">同意</option>   
+							    <option value="2">驳回</option>   
+							</select> 
+		    			</td>
+		    		</tr>
+		    		<tr>
+		    			<td align="right">
+		    				<a id="qk" name="qk" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">清空</a> 
+		    			</td>
+		    			<td align="right">录入网点</td>
+		    			<td align="left">
+		    				<input class="easyui-combobox" id="postnet" name="postnet" type="text">
+		    				</input>
+		    			</td>
+		    		</tr>
+		    	</table>
+		    	
+	  	</div>
+	    	 <div data-options="region:'north'" style="width:99%;height:85%;">
+	    		<div id="d_bill" style="width:100%;height:100%"></div>
+		</div>
+		<div id="ydspquery" style="display:none;">
+			<form id="ydsp" method="post" style="width:100%">
+			<table style="padding:5px" style="width:100%" >
+				<tr>
+				<th align="right" style="width:18%"></th>
+				</tr>
+				<tr>
+					<td align="right">运单号</td>
+					<td align="left" style="width:22%"><input class="easyui-textbox" id="YDSp_wbillno" name="YDSp_wbillno" type="text"  style="width:100%" readonly="readonly"></input></td>
+				</tr>
+				<tr>
+					<td align="right">审核意见</td>
+					<td align="left" style="width:22%"><input class="easyui-textbox" id="YDSp_opinion" name="YDSp_opinion" type="text"  style="width:100%;height:70px" data-options="prompt:'驳回时须填写驳回意见',multiline:true" maxlength="255"></input></td>
+				</tr>
+				<tr>
+					<td align="right">&nbsp;</td>
+					<td align="right">&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="right"></td>
+					<td align="left"><a href="#" class="easyui-linkbutton" id="ydty">同意</a><a href="#" class="easyui-linkbutton" id="ydbh" style="margin-left: 124px;">驳回</a></td>
+				</tr>
+			</table>
+			</form>
+		</div>
+				<div id="hiddendata" style="display:none;">
+		<input class="easyui-textbox" id="YDSp_id" name="YDSp_id" type="hidden" readonly="readonly"></input>
+		<input class="easyui-textbox" id="YDSp_id2" name="YDSp_id2" type="hidden" readonly="readonly"></input>
+		</div>
+		<div id="ydspquery2" style="display:none;">
+			<form id="ydsp2" method="post" style="width:100%">
+			<table style="padding:5px" style="width:100%" >
+				<tr>
+				<th align="right" style="width:18%"></th>
+				</tr>
+				<tr>
+					<td align="right">运单号</td>
+					<td align="left" style="width:22%"><input class="easyui-textbox" id="YDSp_wbillno2" name="YDSp_wbillno2" type="text"  style="width:100%" readonly="readonly"></input></td>
+				</tr>
+				<tr>
+					<td align="right">复审意见</td>
+					<td align="left" style="width:22%"><input class="easyui-textbox" id="YDSp_opinion2" name="YDSp_opinion2" type="text"  style="width:100%;height:70px" data-options="prompt:'驳回时须填写驳回意见',multiline:true" maxlength="255"></input></td>
+				</tr>
+				<tr>
+					<td align="right">&nbsp;</td>
+					<td align="right">&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="right"></td>
+					<td align="left"><a href="#" class="easyui-linkbutton" id="ydty2">同意</a><a href="#" class="easyui-linkbutton" id="ydbh2" style="margin-left: 124px;">驳回</a></td>
+				</tr>
+			</table>
+			</form>
+		</div>
+			</div>
+			<div title="详细"  style="padding:5px" style="width:100%">
+				<form id="dq" method="post">
+				<table cellpadding="6">
+				
+			<tr>
+					<td align="right">运单号</td>
+					<td align="left"><input class="easyui-textbox" id="" name="billno" style="width:135px;" readonly="readonly"/></td>
+			</tr>
+				<th>修改之前属性</th>
+			<tr>
+					<td align="right">到达网点</td>
+					<td align="left"><input class="easyui-textbox" id="old_netname" name="old_netname" style="width:135px;" readonly="readonly"/></td>
+					<td align="right">到达地</td>
+					<td align="left"><input class="easyui-textbox" id="old_areaname" name="old_areaname" style="width:135px;" readonly="readonly" /></td>
+					<td align="right">客户代码</td>
+					<td align="left"><input class="easyui-textbox" id="old_cusname" name="old_cusname" style="width:135px;" readonly="readonly" /></td>
+					<td align="right">货物类别</td>
+					<td align="left"><input class="easyui-textbox" id="old_hwlbname" name="old_hwlbname" style="width:135px;" readonly="readonly" /></td>
+			</tr>
+			<tr>
+					<td align="right">箱数</td>
+					<td align="left"><input class="easyui-textbox" id="old_boxes" name="old_boxes" style="width:135px;" readonly="readonly" /></td>
+					<td align="right">双数</td>
+					<td align="left"><input class="easyui-textbox" id="old_duals" name="old_duals" style="width:135px;" readonly="readonly" /></td>
+					<td align="right">包数</td>
+					<td align="left"><input class="easyui-textbox" id="old_package" name="old_package" style="width:135px;" readonly="readonly"  /></td>
+					<td align="right">体积</td>
+					<td align="left"><input class="easyui-textbox" id="old_volume" name="old_volume" style="width:135px;" readonly="readonly" /></td>
+			</tr>
+			<tr>
+					<td align="right">付款方式</td>
+					<td align="left"><input class="easyui-textbox" id="old_fkfsname" name="old_fkfsname" style="width:135px;" readonly="readonly" /></td>
+			</tr>
+					<th>修改之后属性</th>
+			<tr>
+					<td align="right">到达网点</td>
+					<td align="left"><input class="easyui-textbox" id="new_netname" name="new_netname" style="width:135px;" readonly="readonly" /></td>
+					<td align="right">到达地</td>
+					<td align="left"><input class="easyui-textbox" id="new_areaname" name="new_areaname" style="width:135px;" readonly="readonly" /></td>
+					<td align="right">客户代码</td>
+					<td align="left"><input class="easyui-textbox" id="new_cusname" name="new_cusname" style="width:135px;" readonly="readonly" /></td>
+					<td align="right">货物类别</td>
+					<td align="left"><input class="easyui-textbox" id="new_hwlbname" name="new_hwlbname" style="width:135px;" readonly="readonly" /></td>
+			</tr>
+			<tr>
+					<td align="right">箱数</td>
+					<td align="left"><input class="easyui-textbox" id="new_boxes" name="new_boxes" style="width:135px;" readonly="readonly" /></td>
+					<td align="right">双数</td>
+					<td align="left"><input class="easyui-textbox" id="new_duals" name="new_duals" style="width:135px;" readonly="readonly" /></td>
+					<td align="right">包数</td>
+					<td align="left"><input class="easyui-textbox" id="new_package" name="new_package" style="width:135px;" readonly="readonly"  /></td>
+					<td align="right">体积</td>
+					<td align="left"><input class="easyui-textbox" id="new_volume" name="new_volume" style="width:135px;" readonly="readonly" /></td>
+			</tr>
+			<tr>
+					<td align="right">付款方式</td>
+					<td align="left"><input class="easyui-textbox" id="new_fkfsname" name="new_fkfsname" style="width:135px;" readonly="readonly" /></td>
+			</tr>
+					<th>意见</th>
+					<TR>
+						<td align="right">审核标记</td>
+						<td align="left">
+							<input id="shbj" class="easyui-textbox" type="text" name="shbj" readonly="readonly">
+							</input>
+						</td>
+						<td align="right">审核人</td>
+						<td align="left">
+							<input id="shrname" class="easyui-textbox" type="text" name="shrname" readonly="readonly">
+							</input>
+						</td>
+						<td align="right">审核日期</td>
+						<td align="left">
+							<input id="shrq" class="easyui-textbox" type="text" name="shrq" readonly="readonly">
+							</input>
+						</td>
+					</tr>
+					<TR>
+						<td align="right">审核意见</td>
+						<td align="left" colspan="3">
+							<input id="shyj" class="easyui-textbox" type="text" name="shyj" style="width:100%;height:70px"  data-options="multiline:true" readonly="readonly">
+							</input>
+						</td>
+					</tr>
+					<TR>
+						<td align="right">复审标记</td>
+						<td align="left">
+							<input id="fsbj" class="easyui-textbox" type="text" name="fsbj" readonly="readonly">
+							</input>
+						</td>
+						<td align="right">复审人</td>
+						<td align="left">
+							<input id="fsrname" class="easyui-textbox" type="text" name="fsrname" readonly="readonly">
+							</input>
+						</td>
+						<td align="right">复审日期</td>
+						<td align="left">
+							<input id="fsrq" class="easyui-textbox" type="text" name="fsrq" readonly="readonly">
+							</input>
+						</td>
+					</tr>
+					<TR>
+						<td align="right">复审意见</td>
+						<td align="left" colspan="3">
+							<input id="fsyj" class="easyui-textbox" type="text" name="fsyj" style="width:100%;height:70px"  data-options="multiline:true" readonly="readonly">
+							</input>
+						</td>
+					</tr>
+				</table>
+			</form>
+		  	</div>
+		</div>
+	  </body>
+	</html>
+	

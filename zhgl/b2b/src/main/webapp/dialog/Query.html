@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>高级查询</title>
+    <meta charset="UTF-8">
+  </head>
+  
+  <body>
+  	<script type='text/javascript' src='/dialog/Query.js'></script>
+    <div class="w12" id="mainDiv" name="mainDiv" title="高级查询" style="width:100%;height:100%;">
+					<table  id="queryYD" class="easyui-datagrid"  style="width:100%;height:100%;"
+						data-options="fitColumns:true,singleSelect:true,border:false,
+						onClickCell: function(index, field, value){// 在用户点击一个单元格的时候触发。 
+						 var col = $(this).datagrid('getColumnOption', field);
+						 if(ui.isNull(col.editor)){
+							 return false;
+						 }
+						 if (Query.endEditing()){
+							 $('#queryYD').datagrid('selectRow', index)
+										.datagrid('editCell', {index:index,field:field});
+							 
+							 var ed = $(this).datagrid('getEditor', {index:index,field:field});
+							 if(ed){
+								 var input = ($(ed.target).data('textbox') ? $(ed.target).textbox('textbox') : $(ed.target))
+								 $(input).focus();
+								 $(input).bind('dblclick',function(){//双击编辑完成
+									 $('#queryYD').datagrid('endEdit', index);
+								 });
+								 $(input).bind('keyup',function(event){
+									 if(event.which==13){//回车编辑完成
+										 $('#queryYD').datagrid('endEdit', index);
+									 }
+								 }); 
+							 }
+							 Query.editIndex = index;
+							}
+						},
+						toolbar:[{
+									id: 'Append',
+									text: '新增',
+									iconCls: 'icon-add',
+									handler: function(){
+										$('#queryYD').datagrid('appendRow',{});
+										/*var idex = $('#queryYD').datagrid('getRows').length-1;
+										$('#queryYD').datagrid('selectRow', idex)
+												.datagrid('beginEdit', idex);
+										var fields = $('#queryYD').datagrid('getColumnFields',true).concat($('#queryYD').datagrid('getColumnFields'));
+										*/
+											 
+									}
+								},
+								{
+									id: 'Remove',
+									text: '删除',
+									iconCls: 'icon-remove',
+									handler: function(){
+										var idex = $('#queryYD').datagrid('getRowIndex',$('#queryYD').datagrid('getSelected'));
+										if(idex!=-1){
+											$('#queryYD').datagrid('cancelEdit', idex)
+											.datagrid('deleteRow', idex);
+										}
+									}
+								},
+								{
+									id: 'Save',
+									text: '提交',
+									iconCls: 'icon-save',
+									handler: function(){
+										var rows = $('#queryYD').datagrid('getRows');
+										//Query.splitSql(rows);
+										Query.windowDiaglog(Query.splitSql(rows));
+										$('#Dialog').window('close');
+									}
+								},
+								{
+									id: 'RemoveAll',
+									text: '删除全部',
+									iconCls: 'icon-undo',
+									handler: function(){
+										$('#queryYD').datagrid('loadData',[]);
+									}
+								}]">   
+					    <thead>
+					        <tr>
+					            <th data-options="field:'paramName',width:100,align:'center',editor:{type:'combobox',options:{
+					            valueField:'name',
+					            textField:'name',
+					            data:$('#Dialog').dialog('options').sqlField,
+					            required:true
+					            }}">参数名称</th>
+					            <!-- <th data-options="field:'tatus',width:60,align:'center',editor:{type:'checkbox',id:'statusId',options:{'on':'文字',off:'数字'}}">文字比较</th> -->
+					            <th data-options="field:'compareMark',width:80,align:'center',editor:{type:'combobox',options:{
+					            	valueField:'compareName',
+					            	textField:'compareName',
+					            	data:[
+					            			{    
+												'compareId':'eq',    
+												'compareName':'等于'   
+										    },
+										    {    
+												'compareId':'noteq',    
+												'compareName':'不等于'   
+										    },
+										    {    
+												'compareId':'like',    
+												'compareName':'包含'   
+										    },
+										    {    
+												'compareId':'notlike',    
+												'compareName':'不包含'   
+										    },
+										    {    
+												'compareId':'gt',    
+												'compareName':'大于'   
+										    },
+										    {    
+												'compareId':'gteq',    
+												'compareName':'大于等于'   
+										    },
+										    {    
+												'compareId':'lt',    
+												'compareName':'小于'   
+										    },
+										    {    
+												'compareId':'lteq',    
+												'compareName':'小于等于'   
+										    }
+										 ],
+					            	required:true
+					            }}">比较符</th>
+					            <th data-options="field:'compareValue',width:100,align:'center',editor:{type:'text',required:true}">比较值</th>
+					            <th data-options="field:'relation',width:80,align:'center',editor:{type:'combobox',options:{
+					            	valueField:'relationName',
+					            	textField:'relationName',
+					            	data:[
+					            		{
+					            			'relationId':'&&',
+					            			'relationName':'并且'
+					            		},
+					            		{
+					            			'relationId':'or',
+					            			'relationName':'或'
+					            		}
+					            	],
+					            	
+					            }}">关系</th>
+					            
+					            
+					        </tr>   
+					    </thead>   
+					</table> 
+				</div>
+  </body>
+</html>

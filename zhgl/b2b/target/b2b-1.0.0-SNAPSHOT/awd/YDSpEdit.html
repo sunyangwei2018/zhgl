@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>track.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    	<div id="cc" class="easyui-layout" style="width:98%;height:90%;">   
+    <div data-options="region:'north',title:'运单号'" style="height:100px;">
+        <dl class="public_form w12">
+					<dt class="w01">运单号</dt>
+					<dd class="w01"><input class="easyui-textbox" id="billno" name="billno" style="width:100%;" data-options="required:true,missingMessage:'运单号为必输项'"></input></dd>
+					<dt class="w01"></dt>
+					<dd class="w01"></dd>
+			</dl>
+    </div>   
+    <div data-options="region:'east',title:'更改之后属性'" style="width:50%;">
+     <form id="ulater">
+    		<dl class="public_form w12">
+					<dt class="w01">到达地</dt>
+					<dd><input class="easyui-textbox" id="new_acceptzone" name="new_acceptzone" style="width:135px;" /></dd>
+					<dt class="w01"></dt>
+					<dd class="w01"></dd>
+					<dt class="w01"></dt>
+					<dd class="w01"></dd>
+					<dt class="w01">到达网点</dt>
+					<dd><input class="easyui-textbox" id="new_acceptnet" name="new_acceptnet" style="width:135px;" /></dd>
+			</dl>
+
+			<dl class="public_form w12">
+					<dt class="w01">客户代码</dt>
+					<dd><input class="easyui-textbox" id="new_cus_code" name="new_cus_code" style="width:135px;" /></dd>
+					<dt class="w01"></dt>
+					<dd class="w01"></dd>
+					<dt class="w01"></dt>
+					<dd class="w01"></dd>
+					<dt class="w01">货物类别</dt>
+					<dd><input class="easyui-textbox" id="new_hwlb" name="new_hwlb" style="width:135px;" /></dd>
+			</dl>
+
+			<dl class="public_form w12">
+					<dt class="w01">箱数</dt>
+					<dd><input class="easyui-numberbox" id="new_boxes" name="new_boxes" style="width:135px;" /></dd>
+					<dt class="w01"></dt>
+					<dd class="w01"></dd>
+					<dt class="w01"></dt>
+					<dd class="w01"></dd>
+					<dt class="w01">双数</dt>
+					<dd><input class="easyui-numberbox" id="new_duals" name="new_duals" style="width:135px;" /></dd>
+			</dl>
+
+			<dl class="public_form w12">
+					<dt class="w01">包数</dt>
+					<dd><input class="easyui-numberbox" id="new_package" name="new_package" style="width:135px;"  /></dd>
+					<dt class="w01"></dt>
+					<dd class="w01"></dd>
+					<dt class="w01"></dt>
+					<dd class="w01"></dd>
+					<dt class="w01">体积</dt>
+					<dd><input class="easyui-numberbox" precision="5" id="new_volume" name="new_volume" style="width:135px;" /></dd>
+			</dl>
+			<dl class="public_form w12">
+					<dt class="w01">付款方式</dt>
+					<dd class="w01"><input class="easyui-textbox" id="new_fkfs" name="new_fkfs" style="width:135px;" /></dd>
+			</dl>
+	    </form>  
+    </div> 
+    <div data-options="region:'west',title:'更改之前属性'" style="width:50%;">
+         <form id="uqi">
+			<dl class="public_form w12">
+					<dt class="w01">到达地</dt>
+					<dd class="w01"><input class="easyui-textbox" id="acceptzone" name="acceptzone" style="width:200%;" /></dd>
+					<dt class="w01"></dt>
+					<dd class="w01"></dd>
+					<dt class="w01"></dt>
+					<dd class="w01"></dd>
+					<dt class="w01">到达网点</dt>
+					<dd class="w01"><input class="easyui-textbox" id="acceptnet" name="acceptnet" style="width:200%;" /></dd>
+			</dl>
+
+			<dl class="public_form w12">
+					<dt class="w01">客户</dt>
+					<dd class="w01"><input class="easyui-textbox" id="customer" name="customer" style="width:200%;" /></dd>
+					<dt class="w01"></dt>
+					<dd class="w01"></dd>
+					<dt class="w01"></dt>
+					<dd class="w01"></dd>
+					<dt class="w01">货物类别</dt>
+					<dd class="w01"><input class="easyui-textbox" id="hwlb" name="hwlb" style="width:200%;" /></dd>
+			</dl>
+
+			<dl class="public_form w12">
+					<dt class="w01">箱数</dt>
+					<dd class="w01"><input class="easyui-textbox" id="boxes" name="boxes" style="width:200%;" /></dd>
+					<dt class="w01"></dt>
+					<dd class="w01"></dd>
+					<dt class="w01"></dt>
+					<dd class="w01"></dd>
+					<dt class="w01">双数</dt>
+					<dd class="w01"><input class="easyui-textbox" id="duals" name="duals" style="width:200%;" /></dd>
+			</dl>
+
+			<dl class="public_form w12">
+					<dt class="w01">包数</dt>
+					<dd class="w01"><input class="easyui-textbox" id="package" name="package" style="width:200%;"  /></dd>
+					<dt class="w01"></dt>
+					<dd class="w01"></dd>
+					<dt class="w01"></dt>
+					<dd class="w01"></dd>
+					<dt class="w01">体积</dt>
+					<dd class="w01"><input class="easyui-textbox" id="volume" name="volume" style="width:200%;" /></dd>
+			</dl>
+			<dl class="public_form w12">
+					<dt class="w01">付款方式</dt>
+					<dd class="w01"><input class="easyui-textbox" id="fkfs" name="fkfs" style="width:200%;" /></dd>
+			</dl>
+			</form>
+    </div>   
+</div>  
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GCZLCX.html</title>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  </head>
+  
+  <body>
+    <div id="content-tabs" class="easyui-tabs"  data-options="border:false,plain:true,fit:true">
+    	<div class="w12" id="mainDiv" name="mainDiv" title="工程资料查询" style="padding:10px;">
+    	
+    		<div class="easyui-layout" style="width:100%;">
+    				<form id="GCZLSD">
+					<dl class="public_form w12">
+						<dt class="w02">业务编号</dt>
+						<dd class="w02"><div class="easyui-textbox" id="GCZLID" name="GCZLID" style="width:100%"></div></dd>	
+						<dt class="w02">工程编号</dt>
+						<dd class="w02"><div class="easyui-textbox" id="GC_ID" name="GC_ID" style="width:100%"></div></dd>	
+						<dt class="w02">工程名称</dt>
+						<dd class="w02"><div class="easyui-textbox" id="GC_NAME" name="GC_NAME" style="width:100%"></div></dd>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w02">销售单位名称</dt>
+						<dd class="w02"><div class="easyui-textbox" id="SELLER_NAME" name="CUSTOMER_NAME" style="width:100%"></div></dd>
+						<dt class="w02">联系人手机号</dt>
+						<dd class="w02"><div class="easyui-textbox" id="CUSTOMER_TEL" name="CUSTOMER_TEL" style="width:100%"></div></dd>
+					</dl>
+					</form>
+			</div>
+			<div class="easyui-layout" style="width:100%;height:90%;">
+	    	 	<div data-options="region:'north'" style="width:100%;height:100%;">
+	    	 		<div id="d_WORKFLOWBECH" style="height:88%;width:100%;" ></div>
+	    		</div>   
+			</div>
+		
+		</div>
+	</div>
+  </body>
+</html>

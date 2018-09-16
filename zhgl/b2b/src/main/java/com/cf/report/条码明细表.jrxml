@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="条码明细表" language="groovy" pageWidth="1300" pageHeight="300" orientation="Landscape" columnWidth="1260" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="69ac2e49-426d-49e9-82b4-fd3504e9d521">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="GCZLID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select a.gc_id,
+       b.itemid ,
+       b.gczlid ,
+       b.spwj_tm ,
+       b.spwj_id ,
+       b.spwj_name ,
+       b.spnj_tm,
+       b.spnj_id,
+       b.spnj_name ,
+       b.customer_lxr ,
+       b.customer_tel ,
+       b.customer_address
+from gczl a,gczlitem b
+where a.gczlid = b.gczlid and a.gczlid =  $P{GCZLID}
+ order by b.customer_address, b.spnj_name]]>
+	</queryString>
+	<field name="GC_ID" class="java.math.BigDecimal"/>
+	<field name="ITEMID" class="java.math.BigDecimal"/>
+	<field name="GCZLID" class="java.lang.String"/>
+	<field name="SPWJ_TM" class="java.lang.String"/>
+	<field name="SPWJ_ID" class="java.lang.String"/>
+	<field name="SPWJ_NAME" class="java.lang.String"/>
+	<field name="SPNJ_TM" class="java.lang.String"/>
+	<field name="SPNJ_ID" class="java.lang.String"/>
+	<field name="SPNJ_NAME" class="java.lang.String"/>
+	<field name="CUSTOMER_LXR" class="java.lang.String"/>
+	<field name="CUSTOMER_TEL" class="java.lang.String"/>
+	<field name="CUSTOMER_ADDRESS" class="java.lang.String"/>
+	<variable name="xuhao" class="java.lang.String"/>
+	<title>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="182" y="9" width="313" height="29" uuid="57854794-794d-414e-9411-ffd8ff3dbe29"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[格力空调工程机竣工验收明细表（表二）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="83" height="18" uuid="179179f0-7e3f-4456-abc3-2f97a1023a77"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[条码明细表]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="18" width="83" height="20" uuid="f48d3a21-1b65-4b3c-b0ab-89f54722a6e0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[工程登陆编号：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="83" y="18" width="88" height="20" uuid="9adc9dd2-e2ee-4a24-b64a-798327052f2f"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{GC_ID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="23" height="40" uuid="eb420844-e5c2-49a2-b8a7-ad4764712856"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[序号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="0" width="197" height="40" uuid="5ed6b072-b527-4c09-8f31-4188893905fe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[规格型号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="0" width="160" height="20" uuid="a8b4938f-072f-4d5a-ad00-d6ee085a011a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[条 形 码 编 号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="688" y="0" width="72" height="40" uuid="363fd0e2-48c9-4c55-b207-67a5e40cdc9c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[联系人]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="308" height="40" uuid="d12d0641-1778-4af6-a236-35ffa9cbed41"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[空调安装详细地址]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="760" y="0" width="72" height="40" uuid="38d3ebdd-3f6d-492c-8692-63d6689e35e2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[联系电话]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="20" width="80" height="20" uuid="54ed50b5-8cb7-49f3-b794-331ad296f7b0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[室 外 机]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="20" width="80" height="20" uuid="ac563e37-0708-44ba-9c83-1cb3ff0a676e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[室 外 机]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="23" y="0" width="197" height="20" uuid="1bdb109e-9b5e-4500-8985-52420066288d"/>
+				<textFieldExpression><![CDATA[$F{SPNJ_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="80" height="20" uuid="1b7eb7fb-8967-4e33-9f91-1e3a0eb170c1"/>
+				<textFieldExpression><![CDATA[$F{SPWJ_TM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="80" height="20" uuid="32737574-2fbc-43ab-9870-b226cfd7ad73"/>
+				<textFieldExpression><![CDATA[$F{SPNJ_TM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="308" height="20" uuid="275d8c4f-75a1-473e-b8ad-508de78979e6"/>
+				<textFieldExpression><![CDATA[$F{CUSTOMER_ADDRESS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="688" y="0" width="72" height="20" uuid="9ddda631-d639-44f1-b943-46ed1f5ae447"/>
+				<textFieldExpression><![CDATA[$F{CUSTOMER_LXR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="760" y="0" width="72" height="20" uuid="a58f5d9e-56fe-4e45-871d-85379284de3e"/>
+				<textFieldExpression><![CDATA[$F{CUSTOMER_TEL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="23" height="20" uuid="cf89821f-a368-4e55-a452-389768b17454"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}.toString()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AWD.html</title>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  </head>
+  
+  <body>
+    <div id="content-tabs" class="easyui-tabs"  data-options="border:false,plain:true,fit:true">
+    	<div class="w12" id="mainDiv" name="detailsDiv" title="注册审核查询" style="padding:10px">
+    		<div class="easyui-layout" style="width:100%;">
+    				<form id="ZCSHCX">
+					<dl class="public_form w12">
+						<dt class="w02">公司名称</dt>
+						<dd class="w02">
+							<input class="easyui-textbox" id="KHGSNAME_s" name="KHGSNAME_s" data-options="required:true,missingMessage:'该输入项为必输项'"></input>
+						</dd>	
+						<dt class="w02">公司类型</dt>
+						<dd class="w02">
+							<select id="rolid_s" class="easyui-combobox" name="rolid_s" style="width:150px;">   
+									<option value="">全部</option>
+									<option value="01">直供商</option>
+									<option value="02">分销商</option>
+									<option value="03">代理商</option>
+							</select>
+						</dd>
+						<dt class="w02">审批状态</dt>
+						<dd class="w02">
+							<select id="shzt_s" class="easyui-combobox" name="shzt_s" style="width:150px;">   
+									<option value="0">未审批</option>
+									<option value="1">已审批</option>
+							</select>
+						</dd>
+					</dl>
+					</form>
+			</div>
+			<div class="easyui-layout" style="width:100%;height:90%;">
+	    	 	<div data-options="region:'north'" style="width:100%;height:100%;">
+	    	 		<div id="d_ZCSHCX" style="height:88%;width:100%;" ></div>
+	    		</div>   
+			</div>
+    	</div>
+    	<div class="w12" id="detailsDiv" name="detailsDiv" title="注册审批" style="padding:10px;">
+		<form id="ZCSHCXITEM">
+    		<div class="w12" algin="left">    			
+    			<input type="hidden" id="KHGSID" name="KHGSID" value=""></input>
+    			<dl class="public_form w12">
+						<dt class="w02">公司名称</dt>
+						<dd class="w02"><input class="easyui-textbox" id="KHGSNAME" name="KHGSNAME" data-options="required:true,missingMessage:'该输入项为必输项'"></input>
+						</dd>	
+				</dl>
+					<dl class="public_form w12">
+						<dt class="w02">选择所属的格力销售公司</dt>
+						<dd class="w02">
+							<select id="xsgs" class="easyui-combobox" name="xsgs" style="width:200px;">   
+									<option value="0101">珠海盛世欣兴格力贸易有限公司</option>
+							</select>
+						</dd>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w02">企业类型</dt>
+						<dd class="w02">
+							<select id="rolid" class="easyui-combobox" name="rolid" style="width:200px;">   
+									<option value="01">直供商</option>
+									<option value="02">分销商</option>
+									<option value="03">代理商</option>
+							</select>
+						</dd>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w02">选择所属代理商</dt>
+						<dd class="w02"><select id="SJKHGSID" class="easyui-combobox" name="SJKHGSID" style="width:200px;" data-options="required:true,missingMessage:'该输入项为必输项'"></select>
+						</dd>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w02">选择省(直辖市)</dt>
+						<dd class="w02">
+							<select id="DQXX_PROV" class="easyui-combobox" name="DQXX_PROV" style="width:200px;" data-options="required:true,missingMessage:'该输入项为必输项'"></select>
+						</dd>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w02">选择市(区)</dt>
+						<dd class="w02">
+							<select id="DQXX_CITY" class="easyui-combobox" name="DQXX_CITY" style="width:200px;" data-options="required:true,missingMessage:'该输入项为必输项'"></select>
+						</dd>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w02">*地址</dt><!-- 树形结构-->
+						<dd class="w02"><input class="easyui-textbox" id="ADDRESS" name="ADDRESS" data-options="required:true,missingMessage:'该输入项为必输项'"></input></dd>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w02">*网点编号</dt>
+						<dd class="w02"><input class="easyui-textbox" id="POSTCODE" name="POSTCODE" data-options="required:true,missingMessage:'该输入项为必输项'"></input></dd>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w02">手机号码</dt>
+						<dd class="w02"><input class="easyui-textbox" type="number" id="MOBILE" name="MOBILE" maxlength="11"></input></dd>
+						<i>（请填写11位数字的手机号码！）</i>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w02">固定电话</dt>
+						<dd class="w02"><input class="easyui-textbox" id="TEL" name="TEL" ></input></dd>
+						<i>（请填写带区号的号码！如：010-8535000 ）</i>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w02">邮箱</dt>
+						<dd class="w02"><input class="easyui-textbox" id="EMAIL" name="EMAIL" ></input></dd>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w02">审核结果</dt>
+						<dd class="w02">
+							<select id="SHZT" class="easyui-combobox" style="width:200px;"  data-options="required:true,missingMessage:'该输入项为必输项'">
+									<option value="1">通过</option>
+									<option value="0">不通过</option>
+							</select>
+						</dd>
+					</dl>
+				</div>
+				<div class="easyui-layout" style="width:100%;height:10%;">
+			</form>
+		</div>
+	</div>
+  </body>
+</html>

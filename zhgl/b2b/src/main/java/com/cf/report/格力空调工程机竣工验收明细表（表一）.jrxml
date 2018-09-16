@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="格力空调工程机竣工验收明细表（表一）" language="groovy" pageWidth="1300" pageHeight="300" orientation="Landscape" columnWidth="1280" leftMargin="0" rightMargin="20" topMargin="0" bottomMargin="20" isIgnorePagination="true" uuid="69ac2e49-426d-49e9-82b4-fd3504e9d521">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="GCZLID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select gczlid, gsid, khgsid, save_date, save_userid, save_username, gc_id, gc_name,
+stores_id, stores_name, seller_id, seller_name,
+ customer_name, customer_lxr, customer_tel, customer_phone_areacode, customer_phone,
+ customer_address, customer_postcode, buy_date, to_char(install_date,'yyyy-mm-dd') as install_date, sell_type, sell_one, sell_two, year, buy_number
+ from gczl where gczlid = $P{GCZLID}]]>
+	</queryString>
+	<field name="GCZLID" class="java.lang.String"/>
+	<field name="GSID" class="java.lang.String"/>
+	<field name="KHGSID" class="java.lang.String"/>
+	<field name="SAVE_DATE" class="java.sql.Timestamp"/>
+	<field name="SAVE_USERID" class="java.lang.String"/>
+	<field name="SAVE_USERNAME" class="java.lang.String"/>
+	<field name="GC_ID" class="java.math.BigDecimal"/>
+	<field name="GC_NAME" class="java.lang.String"/>
+	<field name="STORES_ID" class="java.lang.String"/>
+	<field name="STORES_NAME" class="java.lang.String"/>
+	<field name="SELLER_ID" class="java.lang.String"/>
+	<field name="SELLER_NAME" class="java.lang.String"/>
+	<field name="CUSTOMER_NAME" class="java.lang.String"/>
+	<field name="CUSTOMER_LXR" class="java.lang.String"/>
+	<field name="CUSTOMER_TEL" class="java.lang.String"/>
+	<field name="CUSTOMER_PHONE_AREACODE" class="java.lang.String"/>
+	<field name="CUSTOMER_PHONE" class="java.lang.String"/>
+	<field name="CUSTOMER_ADDRESS" class="java.lang.String"/>
+	<field name="CUSTOMER_POSTCODE" class="java.lang.String"/>
+	<field name="BUY_DATE" class="java.sql.Timestamp"/>
+	<field name="INSTALL_DATE" class="java.lang.String"/>
+	<field name="SELL_TYPE" class="java.lang.String"/>
+	<field name="SELL_ONE" class="java.lang.String"/>
+	<field name="SELL_TWO" class="java.lang.String"/>
+	<field name="YEAR" class="java.lang.String"/>
+	<field name="BUY_NUMBER" class="java.math.BigDecimal"/>
+	<variable name="xuhao" class="java.lang.String"/>
+	<title>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="600" height="20" uuid="57854794-794d-414e-9411-ffd8ff3dbe29"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[格力空调工程机竣工验收明细表（表一）]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="128" splitType="Stretch">
+			<staticText>
+				<reportElement x="300" y="32" width="100" height="16" uuid="363fd0e2-48c9-4c55-b207-67a5e40cdc9c"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[详细地址：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="16" width="100" height="16" uuid="d12d0641-1778-4af6-a236-35ffa9cbed41"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[使用单位：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="48" width="100" height="16" uuid="38d3ebdd-3f6d-492c-8692-63d6689e35e2"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[邮编：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="64" width="200" height="16" uuid="e7e6d705-0a7b-48fb-b751-8400d8d45c7b"/>
+				<textElement>
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[代码：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="200" height="16" uuid="17c4d5e1-958a-49e8-823a-2c303c8401f8"/>
+				<textElement>
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[联系人：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="96" width="200" height="16" uuid="498a5ba1-4074-4b00-9402-360dd25f8580"/>
+				<textElement>
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[联系电话：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="112" width="200" height="16" uuid="3e9f7d35-fb99-4b93-854c-1c0a5ef911c6"/>
+				<textElement>
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[合同签订日期：________年____月____日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="64" width="100" height="16" uuid="5764471f-0a18-4315-bcef-236130a11bc2"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[联系人：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="80" width="100" height="16" uuid="6ad51a4b-ea3c-4edf-b1d8-86e019531c0f"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[手机：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="96" width="100" height="16" uuid="f9c60acc-c9d5-4eb7-9af7-9863f4a009b7"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[联系（固定）电话：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="112" width="100" height="16" uuid="9e0ead76-327d-4883-83c4-5445ee08b3d6"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[安装竣工日期：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="32" width="200" height="16" uuid="cb6ba86c-f690-46cd-b410-d9f83c1fd08c"/>
+				<textElement>
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[直接供货商名称（盖章）：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="16" uuid="ba3bce91-6114-4c1c-a1f2-057f4687be93"/>
+				<textElement>
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[工程登陆编号：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="16" width="200" height="16" uuid="95f9b2c0-5ed6-4235-8f58-2985a5800654"/>
+				<textElement>
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[一级经销商名称（盖章）：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="128" uuid="54e559cd-9c1a-4400-9076-d8813dfcbb74"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[安装单位（盖章）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="300" height="16" uuid="c4d5dfe9-b2a7-4a30-a25c-c1e5f3cf776e"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[________年____月____日      编号：]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="16" uuid="09d87473-a74c-4cc8-b4b7-855597db47a8"/>
+				<textFieldExpression><![CDATA[$F{GC_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="32" width="200" height="16" uuid="034e1282-af2c-4f7a-a359-eada453a633a"/>
+				<textFieldExpression><![CDATA[$F{CUSTOMER_ADDRESS}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="400" y="48" width="200" height="16" uuid="41c7b2fd-3580-454e-bbf4-74f428477ece"/>
+				<textFieldExpression><![CDATA[$F{CUSTOMER_PHONE_AREACODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="64" width="200" height="16" uuid="f7a507cd-02d2-4792-ac90-fea586e8496f"/>
+				<textFieldExpression><![CDATA[$F{CUSTOMER_LXR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="80" width="200" height="16" uuid="7e8a91e4-a9b1-4431-8171-a99ea3b1201c"/>
+				<textFieldExpression><![CDATA[$F{CUSTOMER_TEL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="400" y="96" width="200" height="16" uuid="fcdb184c-6346-455b-b457-74823970921d"/>
+				<textFieldExpression><![CDATA[$F{CUSTOMER_PHONE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="112" width="200" height="16" uuid="4c25b824-de47-4a8e-a052-274cff7064db"/>
+				<textFieldExpression><![CDATA[$F{INSTALL_DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="16" width="200" height="16" uuid="e04a7ce1-7d0b-4fd5-8417-3f9a17d1137e"/>
+				<textFieldExpression><![CDATA[$F{GC_NAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="600" height="20" uuid="fd539cce-fffe-4a53-b3b5-09356e4a63cd"/>
+				<subreportParameter name="GCZLID">
+					<subreportParameterExpression><![CDATA[$F{GCZLID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["biao1_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="20">
+			<subreport>
+				<reportElement x="0" y="0" width="600" height="20" uuid="20a661cc-0f01-403f-9757-44c3e84ff770"/>
+				<subreportParameter name="GCZLID">
+					<subreportParameterExpression><![CDATA[$F{GCZLID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["biao1_subreport2.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="20">
+			<subreport>
+				<reportElement x="0" y="0" width="600" height="20" uuid="890f46c2-0c4b-4743-b0b2-cb79be0657c6"/>
+				<subreportParameter name="GCZLID">
+					<subreportParameterExpression><![CDATA[$F{GCZLID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["biao1_subreport3.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="18"/>
+	</columnFooter>
+</jasperReport>

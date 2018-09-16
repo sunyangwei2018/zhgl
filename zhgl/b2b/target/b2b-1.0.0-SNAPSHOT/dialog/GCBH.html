@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>高级查询</title>
+    <meta charset="UTF-8">
+  </head>
+  
+  <body>
+    <div  class="w12" id="mainDiv" name="mainDiv" title="高级查询" style="width:100%;height:100%;">
+    <div style="width:100%;height:100%;margin-top: 10px;">
+    	<form id="gczlsql">
+	    <dl class="public_form w12">
+						<dt class="w02">工程编号</dt>
+						<dd class="w02">
+							<input class="easyui-textbox" id="GCBH" name="GCBH" style="width:100%;"></input>
+						</dd>
+						<dt class="w02">工程名称</dt>
+						<dd class="w02">
+							<input class="easyui-textbox" id="GC_NAME" name="GC_NAME" style="width:100%;"></input>
+						</dd>
+						<dt class="w02"><a id="search" href="#" class="easyui-linkbutton" iconCls="icon-search">查询</a></dt>
+		</dl>
+		<dl class="public_form w12">
+			<dt class="w02">联系人</dt>
+			<dd class="w02">
+				<input class="easyui-textbox" id="CUSTOMER_LXR" name="CUSTOMER_LXR" style="width:100%;"></input>
+			</dd>
+			<dt class="w02">手机号</dt>
+			<dd class="w02">
+				<input class="easyui-textbox" id="CUSTOMER_TEL" name="CUSTOMER_TEL" style="width:100%;"></input>
+			</dd>
+		</dl>
+		<dl class="public_form w12">
+			<dt class="w02">固定电话</dt>
+			<dd class="w02">
+				<input class="easyui-textbox" id="CUSTOMER_PHONE" name="CUSTOMER_PHONE" style="width:100%;"></input>
+			</dd>
+			<dt class="w02">地址</dt>
+			<dd class="w02">
+				<input class="easyui-textbox" id="CUSTOMER_ADDRESS" name="CUSTOMER_ADDRESS" style="width:100%;"></input>
+			</dd>
+		</dl>
+		<div  id="d_GCBHSQL" style="width:100%;height:420px;"></div>
+		</form>
+	</div>
+	</div>
+	<script type='text/javascript' src='/dialog/GCBH.js'></script>
+  </body>
+</html>

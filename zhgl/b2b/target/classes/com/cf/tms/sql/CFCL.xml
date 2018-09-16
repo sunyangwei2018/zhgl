@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CFCL" >
+	<!--查询服务套餐列表  -->
+	<select id="selectCL" parameterType="map" resultType="map">
+		select a.car_num "car_num",a.flag "flag",a.shp_code "shp_code",a.c_long "c_long",a.c_volume "c_volume",a.driver "driver",a.tel "tel",
+	    (select b.shp_name from shipper_tab b where b.shp_code=a.shp_code) "shp_name" ,
+	    (select c.name from cllx_tab c where c.code=a.flag) "flag_cn" ,
+	    a.c_width "c_width",a.c_height "c_height",a.driver "driver_name"
+	    from car_tab a
+	    where 1 = 1
+		<if test="car_num != '' and car_num != null">AND a.car_num LIKE '%'||#{car_num}||'%'</if>
+ 		<if test="driver != '' and driver != null">AND a.driver LIKE '%'||#{driver}||'%'</if>
+ 		<if test="shp_code != '' and shp_code != null">AND a.shp_code = #{shp_code}</if>
+ 		<if test="flag != '' and flag != null">AND a.flag = #{flag}</if>
+ 	</select>
+ 	<select id="selectCLLX" parameterType="map" resultType="map">
+		select code "code",name "name"
+		from cllx_tab
+		where 1=1 
+		<if test="type !=null and type !='' "> and type=#{type}</if>
+		
+ 	</select>
+ 	<select id="selectCYS" parameterType="map" resultType="map">
+		SELECT shp_code "shp_code",shp_name "shp_name"
+		from shipper_tab
+		where 1=1
+ 	</select>
+ 	<select id="selectSJ" parameterType="map" resultType="map">
+		select peop_code "peop_code",peop_name||'('||peop_code||')' "peop_name"
+        from peop_tab
+        where zz_flag=0
+ 	</select>
+ 	 	<select id="selectCarnum" parameterType="map" resultType="map">
+		select a.car_num "car_num",a.driver "driver"
+		from car_tab a
+		where 1 = 1
+		<if test="car_num != '' and car_num != null">AND a.car_num LIKE '%'||#{car_num}||'%'</if>
+ 	</select>
+</mapper>

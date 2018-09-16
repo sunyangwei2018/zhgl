@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties>  
+        <property name="dialect" value="oracle" />  
+        <property name="pageSqlId" value=".*_Page$" />  
+    </properties>
+    
+    
+    <settings>
+        <!-- <setting name="logImpl" value="LOG4J"/> -->
+        <setting name="cacheEnabled" value="false"/>
+        <setting name="localCacheScope" value="STATEMENT"/>
+    </settings>
+     <!--在执行SQL之前拦截-->
+    <plugins>  
+    	<plugin interceptor="com.cf.framework.JLSQLInterceptor"></plugin>  
+	</plugins>
+	
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="JNDI">
+                <property name="data_source" value="java:comp/env/jdbc/tms" />
+            </dataSource>            
+        </environment>
+    </environments>
+    
+    <mappers>
+    	<mapper resource="com/cf/tms/user/sql/CX.xml"/>
+		<mapper resource="com/cf/tms/sql/Pub.xml"/>
+		<mapper resource="com/cf/tms/sql/GCZL.xml"/>
+		<!-- 财务管理 
+
+		<mapper resource="com/cf/tms/cwgl/sql/PKD.xml"/>
+		<mapper resource="com/cf/tms/cwgl/sql/JSTZ.xml"/>
+		<mapper resource="com/cf/tms/cwgl/sql/CWGL.xml"/>-->
+		
+		
+    </mappers>
+     
+</configuration>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CFZYCYS" >
+	<!-- 查询服务套餐列表 --> 
+	<select id="selectZYCOMP" parameterType="map" resultType="map">
+		SELECT a.code "code",a.name "name",a.net_code "net_code",a.tel "tel",a.lxr "lxr",a.addr "addr",
+		(select b.net_name from net_tab b where b.net_code=a.net_code)  "net_name"
+		from zycomp_tab a
+		where 1 = 1
+		<if test="code != '' and code != null">AND a.code=#{code}</if>
+		<if test="name != '' and name != null">AND a.name LIKE '%'||#{name}||'%'</if>
+	</select> 
+	<select id="selectCYGSBH" parameterType="map" resultType="map">
+ 		select max(code)+1 "cygsbh"
+		from zycomp_tab
+ 	</select>
+</mapper> 

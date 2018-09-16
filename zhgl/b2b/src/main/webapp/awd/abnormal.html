@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>abnormal.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    <div id="content-tabs" class="easyui-tabs"  data-options="border:false,plain:true,fit:true">
+    	<div title="异常件录入" style="padding:10px;position:absolute;">
+    		<form id="luru">
+    		<div class="form" style="height:100%">
+    			<input type="hidden" id="bjje" name="bjje" value="0"></input>
+				<dl class="public_form w12">
+					<dt class="w01">运单号</dt>
+					<dd class="w01"><input class="easyui-textbox"  id="billno" maxlength="255" name="billno" style="width:150px;height:150px" data-options="multiline:true,required:true,missingMessage:'运单号为必输项'"/></dd>
+					<dt class="w01">&nbsp;</dt>
+					<dd class="w01"></dd>
+					<dt class="w01">运单信息</dt>
+					<dd class="w01"><textarea rows=6 id="errorbillno" name="errorbillno" width="100%" readonly="readonly" style="width:200%;resize: none;color:red;"></textarea></dd>
+				</dl>
+				<dl class="public_form w12">
+					<dt class="w01">异常类型</dt>
+					<dd class="w01"><input class="easyui-combobox" id="yclx" name="yclx" style="width:100%;" data-options="required:true,missingMessage:'异常类型为必选项'"></input></dd>
+					<dt class="w01">&nbsp;</dt>
+					<dd class="w01"></dd>
+					<dt class="w01">运单状态</dt>
+					<dd class="w01"><input class="easyui-textbox" id="state" name="state" style="width:100%" readonly="readonly"/></dd>
+				</dl>
+				<dl class="public_form w12">
+					<dt class="w01">登记内容</dt>
+					<dd class="w03">
+					<input class="easyui-textbox"  id="djnr" maxlength="255" name="djnr" style="width:690px;height:100px" data-options="multiline:true,required:true,missingMessage:'登记内容为必输项'"/>
+				</dl>
+				</div>	
+			</form>
+
+		</div>
+		<div class="w12" id="detailsDiv1" name="detailsDiv1" title="异常件跟进" style="padding:10px;position:absolute;">
+    		<form id="genjin">
+    		<div class="form" class="easyui-datagrid" style="width:99%;height:300px" >
+				<dl class="public_form w12">
+					<dt class="w01">运单号</dt>
+					<dd class="w01"><input class="easyui-textbox"  id="gbillno" maxlength="255" name="gbillno" style="width:150px;height:150px" data-options="multiline:true,required:true,missingMessage:'运单号为必输项'"/></dd>
+					<dt class="w01">异常类型</dt>
+					<dd class="w01"><textarea rows=9 id="gstate" name="gstate" width="100%" readonly="readonly" style="width:120%;resize: none;color:red;"></textarea></dd>
+					<dt class="w01">错误信息</dt>
+					<dd class="w01"><textarea rows=9 id="gerrorbillno" name="gerrorbillno" width="100%" readonly="readonly" style="width:120%;height:100%;resize: none;color:red;"></textarea></dd>
+				</dl>
+				
+				<dl class="public_form w12">
+					<dt class="w01">跟进内容</dt>
+					<dd class="w03"><input class="easyui-textbox"maxlength="255"  id="gdjnr" name="gdjnr" style="width:690px;height:100px" data-options="multiline:true,required:true,missingMessage:'跟进内容为必输项'"/></dd>
+				</dl>
+				</div>
+				<div class="w12">
+					<table  id="d_genjin" class="easyui-datagrid" style="width:99%;height:300px"    
+						data-options="fitColumns:true,singleSelect:true" title="操作记录">   
+					</table> 
+				</div>
+			</form>
+		</div>
+		<div class="w12" id="detailsDiv2" name="detailsDiv2" title="异常件结案" style="padding:10px;position:absolute;">
+    		<form id="jiean">
+    		<div class="form"  class="easyui-datagrid" style="width:99%;height:300px" >
+    			 <dl class="public_form w12">
+					<dt class="w01">运单号</dt>
+					<dd class="w01"><input class="easyui-textbox"  id="jbillno" maxlength="255" name="jbillno" style="width:150px;height:150px" data-options="multiline:true,required:true,missingMessage:'运单号为必输项'"/></dd>
+					<dt class="w01">异常类型</dt>
+					<dd class="w01"><textarea rows=9 id="jstate" name="jstate" width="100%" readonly="readonly" style="width:120%;resize: none;color:red;"></textarea></dd>
+					<dt class="w01">错误信息</dt>
+					<dd class="w01"><textarea rows=9 id="jerrorbillno" name="jerrorbillno" width="100%" readonly="readonly" style="width:120%;height:100%;resize: none;color:red;"></textarea></dd>
+				</dl>
+				
+				<dl class="public_form w12">
+					<dt class="w01">处理结果</dt>
+					<dd class="w03"><input class="easyui-textbox" maxlength="255" id="jdjnr" name="jdjnr" style="width:690px;height:100px" data-options="multiline:true,required:true,missingMessage:'处理结果为必输项'"/></dd>
+				</dl>
+				</div>
+				<div class="w12">
+					<table  id="d_jiean" class="easyui-datagrid" style="width:99%;height:300px"    
+						data-options="fitColumns:true,singleSelect:true"  title="操作记录">   
+					</table> 
+				</div>
+			</form>
+		</div>
+	</div>
+  </body>
+</html>

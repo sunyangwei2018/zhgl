@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="TASKFEEInterface" >
+	<!--查询服务套餐列表  -->
+ 	<select id="selectTaskfee" parameterType="map" resultType="map">
+       SELECT taskno "taskno",zcf "zcf",tshf "tshf",zxf "zxf",tcf "tcf",gsf "gsf",qtfy "qtfy",totalprice "totalprice",fk "fk",psf "psf",ycf "ycf",pz_volume "pz_volume",
+       (SELECT srt.shp_name from SHIPPER_TAB srt WHERE srt.SHP_CODE=tt.shp_code) "shp_name"
+        FROM TASKFEE_TAB_TEMP tt
+       where LRR=#{lrr}
+ 	</select>
+ 
+</mapper>

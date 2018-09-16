@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YlImport.html</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div id="content-tabs" class="easyui-tabs"  data-options="border:false,plain:true,fit:true">
+    	<div class="w12" id="mainDiv" name="mainDiv" title="运单导入" >
+    	<table style="width:50%">
+		    		<tr>
+		    			<td align="right">运单号</td>
+		    			<td align="left" rowspan="2">
+		    				 <input class="easyui-textbox" id="etam_billno" name="etam_billno" style="width:190px;height:65px"  data-options="multiline:true"/>
+		    			</td>
+		    			<td align="right">录入时间</td>
+		    			<td align="left">
+		    				<input id="starttime" name="starttime" class="easyui-datebox" style="width:150px;height:22px"/>
+		    				</input>
+		    			</td>
+		    			<td align="right">至</td>
+		    			<td align="left">
+		    				<input id="endtime" name="endtime" class="easyui-datebox" style="width:150px;height:22px"/>
+		    				</input>
+		    			</td>
+		    		</tr>
+		    		<tr>
+		    			<td align="right">
+		    				<a id="qk" name="qk" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">清空</a> 
+		    			</td>
+		    		</tr>
+		    	</table>
+    		<div class="easyui-panel" title="导入文件" style="width:100%;padding:10px;">
+				<dl  style="width:30%" class="public_form">
+					<dt style="width:30%">请选择运单文件</dt>
+					<dd style="width:60%"><div id="d_Z1" style="width:100%"></div></dd>
+					</dl>
+				<dl  style="width:30%" class="public_form">
+					<a href="#" class="easyui-linkbutton" id="btn">pdf下载</a>
+				</dl>
+			</div>
+			<div id="cc" class="easyui-layout" style="width:100%;height:70%;">
+			   <div data-options="region:'west'" style="overflow: auto;width:100%;height:100%">
+			   	<div id="d_YD" style="height:100%;width:100%"  title="艾格运单列表"></div>
+			   </div>   
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

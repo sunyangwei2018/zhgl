@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BILLEDITLOG.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type"  charset="UTF-8">
+  </head>
+  
+  <body>
+  <style>
+	#error {
+		color: red;
+	}
+	
+
+	</style>
+  	<div id = "billeditlog_tab" class="easyui-tabs" data-options="fit:true,border:false,plain:true">
+		<div title="运单修改日志查询" style="padding:5px">
+			<form id="xhcx" method="post" style="width:100%">
+	    	<table cellpadding="3" style="width:50%">
+	    		<tr>
+	    			<td align="right" style="width:8%">运单号</td>
+	    			<td align="left" rowspan="2" style="width:10%">
+	    				<textarea rows=4 id="billno" name="billno" width="100%" style="resize: none;"></textarea>
+	    			</td>
+	    			<td align="right">录单网点</td>
+	    			<td align="left">
+	    				<input id="net_code" name="net_code"/>
+	    				</input>
+	    			</td>
+	    			<td align="right">托运日期</td>
+	    			<td align="left">
+	    				<input class="easyui-datebox" id="rq_S" name="rq_S" type="text">
+	    				</input>
+	    			</td>
+	    			<td align="right">至</td>
+	    			<td align="left">
+	    				<input class="easyui-datebox" id="rq_E" name="rq_E" type="text">
+	    				</input>
+	    			</td>
+	    		</tr>
+	    		<tr>
+	    			<td align="right">
+	    				<a id="qk" name="qk" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">清空</a> 
+	    			</td>	    			
+	    		</tr>
+	    	</table> 	
+	    </form>
+		    <div id="d_BILLEDITLOG" style="width:99%;height:86%"></div> 
+		</div>
+	</div>
+  </body>
+</html>
+

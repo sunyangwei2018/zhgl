@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CFKH" >
+	<!--查询服务套餐列表  -->
+	<select id="selectKH" parameterType="map" resultType="map">
+	SELECT a.cus_code "cus_code",a.s_name "s_name",a.cus_name "cus_name",a.lxr "lxr",a.tel "tel",a.jswd "jswd",a.bjje "bjje",a.bjfl "bjfl",
+		a.fkfs "fkfs",a.vol "vol",to_char(a.ksrq,'yyyy-MM-dd') "ksrq",a.addr "addr",a.skgs "skgs",a.hwlb "hwlb",a.jsbm "jsbm",
+		(case when a.jsbm=1 then '结算'
+			when a.jsbm=2 then '销售'
+		END) "jsbm_cn",
+		(select b.name from fkfs_tab b where b.code=a.fkfs) "fkfs_cn",
+		(select c.name from skgs_tab c where c.code=a.skgs) "skgs_cn",
+		(select d.net_name from net_tab d where d.net_code=a.jswd) "jswd_name",
+		(select e.name from hwlb_tab e where e.code=a.hwlb) "hwlb_cn",
+		(select e.name from GG_TAB e where e.code=a.gg) "gg_cn",a.gg "gg",a.bj_flag "bj_flag",
+		a.fkl "fkl",a.gmzkbz "gmzkbz",a.gmzkl "gmzkl",a.gdzkl "gdzkl",
+		a.jjfs "jjfs",a.lrr "lrr",a.xgr "xgr",(CASE WHEN a.bj_flag=1 THEN '是' ELSE '否' end) "bj_flag_cn",
+		to_char(a.lrrq,'yyyy-MM-dd') "lrrq",to_char(a.xgrq,'yyyy-MM-dd') "xgrq",
+		(case when a.jjfs=0 then '箱'
+			when a.jjfs=1 then '包'
+			when a.jjfs=2 then '体积'
+			when a.jjfs=3 then '重量'
+		END) "jjfs_cn",
+    (case when a.dkh_flag=0 then '否'
+			when a.dkh_flag=1 then '是'
+		END) "dkh_flag_cn",
+    (case when a.qsjs_flag=0 then '否'
+			when a.qsjs_flag=1 then '是'
+		END) "qsjs_flag_cn",
+    (case when a.bkhkh=0 then '否'
+			when a.bkhkh=1 then '是'
+		END) "bkhkh_cn",
+		    (case when a.bkhkh_wd=0 then '否'
+			when a.bkhkh_wd=1 then '是'
+		END) "bkhkh_wd_cn",a.bkhkh "bkhkh",a.bkhkh_wd "bkhkh_wd",a.qsjs_flag "qsjs_flag",a.dkh_flag "dkh_flag"
+		from cust_tab a
+		where 1 = 1
+		<if test="cus_code != '' and cus_code != null">AND cus_code LIKE '%'||#{cus_code}||'%'</if>
+		<if test="s_name != '' and s_name != null">AND s_name LIKE '%'||#{s_name}||'%'</if>
+		order by cus_code desc
+ 	</select>
+ 	<select id="selectSKGS" parameterType="map" resultType="map">
+		select a.code "code",a.name "name"
+		from skgs_tab a
+		where 1 = 1
+ 	</select>
+ 	<select id="selectFKFS" parameterType="map" resultType="map">
+		select a.code "code",a.name "name"
+		from fkfs_tab a
+		where 1 = 1
+ 	</select>
+ 	<select id="selectBH" parameterType="map" resultType="map">
+ 		select nvl(max(cus_code)+1,'200001') "cusbh"
+		from cust_tab
+		where cus_code !='999999'
+ 	</select>
+ 	<select id="selectJSWD" parameterType="map" resultType="map">
+		select net_code "net_code",net_name "net_name",s_code "s_code"
+		from net_tab
+		where 1=1 and dqzt=0
+ 	</select>
+ 	<select id="selectHWLB" parameterType="map" resultType="map">
+		select code "code",name "name"
+		from hwlb_tab
+		where 1=1
+		order by code
+ 	</select>
+</mapper>

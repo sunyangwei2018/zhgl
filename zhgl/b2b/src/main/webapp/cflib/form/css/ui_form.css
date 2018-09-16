@@ -1,0 +1,50 @@
+.ui_form{ width:100%; float:left; position:relative;}
+
+.ui_form h2{ width:100%; line-height:60px; text-align:center; border-bottom:1px solid #e1e1e1;}
+.ui_form .ui_step{ float:left; width:100%; position:relative;}
+.ui_form .small_title{ width:100%; height:35px; border-bottom:1px solid #e1e1e1;float: left;}
+.ui_form .small_title h3{ color:#999; line-height:35px; font-weight:100; margin-left:20px;}
+.ui_form .small_title ul{ margin:5px 10px; font-size:12px;}
+.ui_form .small_title li{ padding:3px 20px !important;}
+.ui_form dl.form{ width:100%; margin:0px 0px -1px 0px; min-height:50px; border-bottom:1px solid #e1e1e1; border-top:1px solid #ECECEC;}
+.ui_form dl.form > dt{ border-right:1px solid #fff; min-height:50px; padding:0 10px 0 10px; background-color:#fff !important;}
+.ui_form dl.form > dt b{ width:100%; line-height:13px; float:right; text-align:right; margin:18px 0 10px 0;}
+.ui_form dl.form > dd{ min-height:50px; border-right:1px solid #EEE; padding-right:20px; position:relative;}
+.ui_form dl.form > dd:last-child{ border-right:0px;}
+.ui_form dl.form > dd span.file_span{ padding: 8px 20px;border: 1px solid #eee;margin-top: 5px;margin-right: 15px;font-size: 14px;cursor: pointer;}
+.ui_form dl.form > dd span.file_span a.fileLink { float: left; max-width: 190px;overflow: hidden;height: 22px;text-overflow: ellipsis;white-space: nowrap;}
+.ui_form dl.form > dd span.file_span i { margin-top: 2px;font-size: 17px;margin-right: -14px; }
+
+.ui_form dl.form > dd > i{ font-size: 26px; margin-top: 12px; float: left; color: #38A1A5; padding: 0px 5px; margin-left: 8px;}
+.ui_form dl.form > dd > i.fa-refresh{ -moz-transform: rotate(-90deg); -webkit-transform: rotate(-90deg);}
+.ui_form dl.form > dd input.shot{ width:30% !important;}
+.ui_form dl.form > dd input.long{ width:68% !important;}
+.ui_form dl.form > dd input[type="text"]{ width:100%; margin:10px 0;}
+.ui_form dl.form > dd div.radio{}
+.ui_form dl.form > dd div.radio input[type="radio"]{ margin:18px 0; border:0px !important;}
+.ui_form dl.form > dd div.radio label{ float:left; line-height:50px; margin:0 15px 0 5px;}
+.ui_form dl.form > dd label.font{ line-height:50px; margin-right:10px;}
+.ui_form dl.form > dd div.checkbox{}
+.ui_form dl.form > dd div.checkbox input[type="checkbox"]{ margin:18px 0; border:0px !important;}
+.ui_form dl.form > dd div.checkbox label{ float:left; line-height:50px; margin:0 15px 0 5px;}
+.ui_form dl.form > dd label.checkbox{ float:left; line-height:50px; margin:0 15px 0 5px;}
+.ui_form dl.form > dd textarea{ float:left; width:100%; max-width:100%; text-indent:5px; padding:5px 0; margin:10px 0; min-height:80px;}
+.ui_form dl.form > dd div.ui_grid{ width:100%; min-height:30px; margin:10px 0;}
+.ui_form dl.form.grid dt{ min-height:35px; border-right:1px solid #eee;}
+.ui_form dl.form.grid dt b{ text-align:left; width:100%; margin:0px; line-height:35px;}
+.ui_form dl.form.grid dd{ min-height:50px; border-right:1px solid #eee;}
+
+
+.form02{ padding:10px;}
+.form02 dl.form{ min-height:50px; margin:0px; border:0px !important;}
+.form02 dl.form dt{ text-align:right; line-height:50px !important; font-size:14px; color:#999; background-color:#fff !important; padding-right:10px; border:0px !important;}
+.form02 dl.form dd i.selectRight{ height:30px; line-height:30px; margin:10px 0 10px -1px; font-size:20px; border:1px solid #666; padding:0 10px;}
+.form02 dl.form dd .divInput{ margin-top:10px;}
+.form02 dl.form dd .divInput ul{ background-color:#f9f9f9; border:1px solid #e1e1e1; padding:5px;}
+.form02 dl.form dd .divInput ul li{ padding:2px 10px; margin-right:10px;}
+.form02 dl.form dd .divInput ul li input[type="checkbox"]{ margin-right:5px;}
+.form02 dl.form dd .divInput ul li.title{ height:30px; font-size:16px;}
+.form02 dl.form dd .divInput ul li.title input[type="checkbox"]{ margin-top:5px;}
+.form02 dl.form dd .divInput ul li i{ margin-left:5px;}
+
+

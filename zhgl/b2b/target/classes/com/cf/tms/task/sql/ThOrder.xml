@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="order" >
+	
+	<select id="selectpeop" parameterType="map" resultType="map">
+		select PEOP_CODE "peop_code",PEOP_NAME "peop_name" from PEOP_TAB pt
+		 WHERE NET_CODE=#{net_code}
+		 <if test="peop_code !=null and peop_code !=''">
+		  and
+	 		<foreach item="item" index="index" collection="peop_code"   
+	                         open="(" separator="or" close=")">  
+	                        peop_code= #{item}  
+	         </foreach>
+         </if>
+		  AND YXBJ=1  AND ZZ_FLAG=0
+    </select>
+    
+    <select id="selectOrder" parameterType="map" resultType="map">
+		SELECT ORDERNO "orderno",POSTMAN "postman",POSTADDRESS "postaddress",POSTTEL "posttel",BOXES "boxes",VOL "vol",STATE "state",(SELECT ITEM_NAME from DICTIONARY_TAB WHERE parent_code='ORDER_STATE' AND ITEM_CODE=state) "statename",PEOP_CODE "peop_code" from ORDER_TAB WHERE ORDERNO =#{orderno}
+    </select>
+    
+
+    <select id="selectOrderlist" parameterType="map" resultType="map">
+		SELECT ORDERNO "orderno",POSTMAN "postman",POSTADDRESS "postaddress",POSTTEL "posttel",BOXES "boxes",VOL "vol",STATE "state",(SELECT ITEM_NAME from DICTIONARY_TAB WHERE parent_code='ORDER_STATE' AND ITEM_CODE=state) "statename",PEOP_CODE "peop_code" from ORDER_TAB WHERE
+		<if test="orderno !=null and orderno !=''">
+		<foreach item="item" index="index" collection="orderno"   
+                         open="(" separator="or" close=")">  
+                        orderno= #{item}  
+         </foreach>
+         </if>
+    </select>
+    
+        <select id="selectOrderInfo" parameterType="map" resultType="map">
+		SELECT ORDERNO "orderno",POSTMAN "postman",POSTADDRESS "postaddress",POSTTEL "posttel",BOXES "boxes",VOL "vol",STATE "state",(SELECT ITEM_NAME from DICTIONARY_TAB WHERE parent_code='ORDER_STATE' AND ITEM_CODE=state) "statename",PEOP_CODE "peop_code",(select peop_name from peop_tab where peop_code=ord.peop_code) "peop_name",thnet "thnet",(select net_name from net_tab where net_code=thnet) "net_name",case when jjbj=1 then '是' else '否' end "jjbj" from ORDER_TAB ord
+		where 1=1 
+		<if test="orderno !=null and orderno !=''">
+			and 
+		<foreach item="item" index="index" collection="orderno"   
+                         open="(" separator="or" close=")">  
+                        orderno= #{item}  
+         </foreach>
+		</if>
+		<if test="starttime != '' and starttime != null">AND lrrq&gt;=TO_DATE(#{starttime},'yyyy-MM-dd HH24:mi:ss') </if>
+	    <if test="endtime != '' and endtime != null">AND lrrq&lt;=TO_DATE(#{endtime},'yyyy-MM-dd HH24:mi:ss') </if> 
+   		<if test="state != '' and state != null">AND state=#{state}</if>
+ 		<if test="thnet != '' and thnet != null">AND thnet=#{thnet}</if>
+ 		<if test="thnet2 != '' and thnet2 != null">AND thnet=#{thnet2}</if>
+ 		<if test="lrr != '' and lrr != null">AND peop_code=#{state}</if>
+		 order by lrrq desc
+    </select>
+    
+     <select id="selectDictionary" parameterType="map" resultType="map">
+		SELECT item_code "item_code",item_name "item_name" from dictionary_tab where parent_code=#{parent_code}
+    </select>
+    
+    
+     <select id="selectOrderInfoState" parameterType="map" resultType="map">
+		SELECT to_char(lrrq,'yyyy-mm-dd hh24:mi:ss') "czrq",STATE "state",(SELECT case when state=3 then ITEM_NAME || ',报废原因：' || reason else ITEM_NAME end from DICTIONARY_TAB WHERE parent_code='ORDER_STATE' AND ITEM_CODE=state) "statename",PEOP_CODE "peop_code",(select peop_name from peop_tab where peop_code=ord.peop_code) "peop_name",(select peop_name from peop_tab where peop_code=ord.lrr) "lrr",case when ord.cancel=1 then '已取消'  end "cancel_name"  from ORDERSTATE_TAB ord
+		where   orderno= #{orderno} order by lrrq asc
+    </select>
+         <select id="selectOrderInfoScan" parameterType="map" resultType="map">
+		SELECT taskno "taskno",BILLNO "billno",ORD.PDA_CODE "pda_code",to_char(scantime,'yyyy-mm-dd hh24:mi:ss') "czrq",PEOP_CODE "peop_code",(select peop_name from peop_tab where peop_code=ord.peop_code) "peop_name" from ORDERSCAN_TAB ord
+		where   orderno= #{orderno}
+		<if test="scantype !=null and scantype !=''">
+			 and scantype=#{scantype} 
+		</if>
+		 and flag=1 order by id asc
+    </select>
+     <!-- 订单导入查询 -->
+     <select id="selectDDCX" parameterType="map" resultType="map">
+     	SELECT ORDERNO "orderno",POSTMAN "postman",POSTADDRESS "postaddress",POSTTEL "posttel",BOXES "boxes",VOL "vol",STATE "state",
+		(SELECT ITEM_NAME from DICTIONARY_TAB WHERE parent_code='ORDER_STATE' AND ITEM_CODE=state) "statename",PEOP_CODE "peop_code",
+		(select peop_name from peop_tab where peop_code=ord.peop_code) "peop_name",thnet "thnet",
+		(select net_name from net_tab where net_code=thnet) "net_name",
+		case when jjbj=1 then '是' else '否' end "jjbj" 
+			from ORDER_TAB ord
+		where 1=1
+		 <if test="CFRY01 != '' and CFRY01 != null">AND ord.lrr=#{CFRY01}</if>	
+     </select>
+     
+          <select id="selectDDCX_Current" parameterType="map" resultType="map">
+     	SELECT ORDERNO "orderno",POSTMAN "postman",POSTADDRESS "postaddress",POSTTEL "posttel",BOXES "boxes",VOL "vol",STATE "state",
+		(SELECT ITEM_NAME from DICTIONARY_TAB WHERE parent_code='ORDER_STATE' AND ITEM_CODE=state) "statename",
+		thnet "thnet",
+		(select net_name from net_tab where net_code=thnet) "net_name",
+		case when jjbj=1 then '是' else '否' end "jjbj" 
+			from ORDER_current_TAB ord
+		where 1=1
+		 <if test="CFRY01 != '' and CFRY01 != null">AND ord.lrr=#{CFRY01}</if>	
+     </select>
+       <select id="selectThnet" parameterType="map" resultType="map">
+     		select * from net_tab where net_code=#{thnet} and net_lv=3
+     </select>
+     
+     <select id="selectDDWD" parameterType="map" resultType="map">
+		select net_code AS "code", net_name "name",s_code AS "s_code"
+		from  net_tab
+		where sjwd = 0 and dqzt=0
+		<if test="net_code !='' and net_code!='' and net_code!='9000'">
+		  and  net_code=#{net_code}
+		 </if>
+ 	</select>
+    <select id="selectTaskno" parameterType="map" resultType="map">
+		select taskno "taskno","NVL"(CAR_NUM,LSCAR_NUM) "car_num",DRIVER "driver",TSH_PEOP "tsh_peop",tsh_peop_code "tsh_peop_code"  from task_tab where
+		line_code=#{line_code} AND LRRQ>to_date(concat(to_char(SYSDATE,'YYYY-mm-dd'),' 00:00:00'),'yyyy-mm-dd hh24:mi:ss')
+    </select>
+    
+       <select id="selectCzyqx" parameterType="map" resultType="map">
+		SELECT * FROM CZYMENU WHERE PERSON_ID=#{peop_code} AND CD=#{cd}
+    </select>
+</mapper>

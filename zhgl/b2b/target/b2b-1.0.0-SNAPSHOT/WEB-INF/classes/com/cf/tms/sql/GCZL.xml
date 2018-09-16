@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="GCZL" >
+ 	
+ 	<select id="selectGREEBH" parameterType="map" resultType="map">
+		select t.greebh from khgs_greebh t where  1=1 and t.khgsid = ?
+ 	</select>
+	
+ 	<select id="selectGCZL_sqlserver_sum" parameterType="map" resultType="map">
+ 		select count(1) "count" from tbsqlinst 
+		<where>
+			<if test="GCBH !='' and GCBH != null">
+				AND	工程编号 = #{GCBH}
+			</if>
+			<if test="GC_NAME !='' and GC_NAME != null">
+				AND	工程名称 like '%'+#{GC_NAME}+'%'
+			</if>
+			<if test="CUSTOMER_LXR !='' and CUSTOMER_LXR != null">
+				AND	联系人 like '%'+#{CUSTOMER_LXR}+'%'
+			</if>
+			<if test="CUSTOMER_TEL !='' and CUSTOMER_TEL != null">
+				AND	移动电话 like '%'+#{CUSTOMER_TEL}+'%'
+			</if>
+			<if test="CUSTOMER_PHONE !='' and CUSTOMER_PHONE != null">
+				AND	电话号码 like '%'+#{CUSTOMER_PHONE}+'%'
+			</if>
+			<if test="CUSTOMER_ADDRESS !='' and CUSTOMER_ADDRESS != null">
+				AND	用户地址 like '%'+#{CUSTOMER_ADDRESS}+'%'
+			</if>
+			<if test="wdList != null &amp;&amp; wdList.size() &gt; 0">
+				 AND 结算单位号 in
+				<foreach item="wd" index="index" collection="wdList"
+						 open="(" separator="," close=")">
+				  #{wd}
+				</foreach>
+			</if>
+		</where>
+ 	</select>
+ 	
+ 	<select id="selectGCZL_sqlserver" parameterType="map" resultType="map">	
+		select distinct(工程编号),工程名称,网点编号,网点名称,联系人,移动电话,CONVERT(VARCHAR,安装日期,120) 安装日期,邮政编码,用户地址,
+ 		区号,电话号码,CONVERT(VARCHAR,购买日期,120) 购买日期,销售单位号,商店简称,销售类型,销售区域代码,内销售区域代码,年份
+ 		from tbsqlinst 
+		<where>
+			<if test="GCBH !='' and GCBH != null">
+				AND	工程编号 = #{GCBH}
+			</if>
+			<if test="GC_NAME !='' and GC_NAME != null">
+				AND	工程名称 like '%'+#{GC_NAME}+'%'
+			</if>
+			<if test="CUSTOMER_LXR !='' and CUSTOMER_LXR != null">
+				AND	联系人 like '%'+#{CUSTOMER_LXR}+'%'
+			</if>
+			<if test="CUSTOMER_TEL !='' and CUSTOMER_TEL != null">
+				AND	移动电话 like '%'+#{CUSTOMER_TEL}+'%'
+			</if>
+			<if test="CUSTOMER_PHONE !='' and CUSTOMER_PHONE != null">
+				AND	电话号码 like '%'+#{CUSTOMER_PHONE}+'%'
+			</if>
+			<if test="CUSTOMER_ADDRESS !='' and CUSTOMER_ADDRESS != null">
+				AND	用户地址 like '%'+#{CUSTOMER_ADDRESS}+'%'
+			</if>
+			<if test="wdList != null &amp;&amp; wdList.size() &gt; 0">
+				 AND 结算单位号 in
+				<foreach item="wd" index="index" collection="wdList"
+						 open="(" separator="," close=")">
+				  #{wd}
+				</foreach>
+			</if>
+		</where>
+ 	</select>
+ 	
+ 	<!-- <select id="selectGCZL_sqlserver_sum" parameterType="map" resultType="map">
+ 		select count(1)"count" from(select distinct(工程编号),工程名称,网点编号,网点名称,联系人,移动电话,to_char(安装日期,'yyyy-MM-dd') 安装日期,邮政编码,用户地址,
+ 		区号,电话号码,to_char(购买日期,'yyyy-MM-dd'),销售单位号,商店简称,销售类型,销售区域代码,内销售区域代码,年份
+ 		from tbsqlinst) 
+		<where>
+			<if test="GCBH !='' and GCBH != null">
+				AND	工程编号 = #{GCBH}
+			</if>
+			<if test="GC_NAME !='' and GC_NAME != null">
+				AND	工程名称 like '%'||#{GC_NAME}||'%'
+			</if>
+			<if test="wdList != null &amp;&amp; wdList.size() &gt; 0">
+				 AND 结算单位号 in
+				<foreach item="wd" index="index" collection="wdList"
+						 open="(" separator="," close=")">
+				  #{wd}
+				</foreach>
+			</if>
+		</where>
+ 	</select>
+ 	<select id="selectGCZL_sqlserver" parameterType="map" resultType="map">
+ 		select * from(select distinct(工程编号),工程名称,网点编号,网点名称,联系人,移动电话,to_char(安装日期,'yyyy-MM-dd') 安装日期,邮政编码,用户地址,
+ 		区号,电话号码,to_char(购买日期,'yyyy-MM-dd'),销售单位号,商店简称,销售类型,销售区域代码,内销售区域代码,年份
+ 		from tbsqlinst) 
+		<where>
+			<if test="GCBH !='' and GCBH != null">
+				AND	工程编号 = #{GCBH}
+			</if>
+			<if test="GC_NAME !='' and GC_NAME != null">
+				AND	工程名称 like '%'||#{GC_NAME}||'%'
+			</if>
+			<if test="wdList != null &amp;&amp; wdList.size() &gt; 0">
+				 AND 结算单位号 in
+				<foreach item="wd" index="index" collection="wdList"
+						 open="(" separator="," close=")">
+				  #{wd}
+				</foreach>
+			</if>
+		</where>
+ 	</select> --> 
+ 	
+ 	
+ 	<select id="selectGCZLITMEGROUPJX" parameterType="map" resultType="map">
+ 		select  机型 SPWJ_ID,机型描述 SPWJ_NAME,内机型 SPNJ_ID,内机型描述 SPNJ_NAME,count(机型)NUMBERS from tbsqlinst
+ 		<where>
+			<if test="GCBH !='' and GCBH != null">
+				AND	工程编号 = #{GCBH}
+			</if>
+			<if test="GC_NAME !='' and GC_NAME != null">
+				AND	工程名称 = #{GC_NAME}
+			</if>
+			<if test="INSTALL_DATE !='' and INSTALL_DATE != null">
+				AND	安装日期 = CONVERT(datetime,#{INSTALL_DATE},120)
+			</if>
+		</where>
+		group by  机型,机型描述,内机型,内机型描述
+ 	</select>
+ 	
+ 	<select id="selectGCZLITEM" parameterType="map" resultType="map">
+ 		select  SPWJ_ID,SPWJ_NAME,SPNJ_ID,SPNJ_NAME,count(1) NUMBERS from gczlitem
+ 		<where>
+			<if test="GCZLID !='' and GCZLID != null">
+				AND	GCZLID = #{GCZLID}
+			</if>
+		</where>
+		group by spwj_id,spwj_name,spnj_id,spnj_name
+ 	</select>
+
+ 	<select id="selectGCZL" parameterType="map" resultType="map">
+ 		 select gczlid,gsid,khgsid,gc_id,gc_name,customer_name,customer_lxr,customer_tel,CUSTOMER_ADDRESS,customer_postcode,
+		 to_char(INSTALL_DATE,'yyyy-MM-dd')INSTALL_DATE from gczl where gczlid=#{GCZLID}
+ 	</select>
+	
+	<select id="selectGCZLHIT_Page_sum" parameterType="map" resultType="map">
+		select count(1)"count" from gczl
+	   <where>
+			<if test="GCZLID !='' and GCZLID != null">
+				and GCZLID = #{GCZLID}
+			</if>
+			<if test="GC_ID !='' and GC_ID != null">
+				and GC_ID = #{GC_ID}
+			</if>
+			<if test="GC_NAME !='' and GC_NAME != null">
+				and GC_NAME like '%'||#{GC_NAME}||'%'
+			</if>
+			<if test="CUSTOMER_NAME !='' and CUSTOMER_NAME != null">
+				and CUSTOMER_NAME like '%'||#{CUSTOMER_NAME}||'%'
+			</if>
+			<if test="CUSTOMER_TEL !='' and CUSTOMER_TEL != null">
+				and CUSTOMER_TEL = #{CUSTOMER_TEL}
+			</if>
+			<if test="SAVE_DATE_S !='' and SAVE_DATE_S != null">
+				and SAVE_DATE &gt;= to_date(#{SAVE_DATE_S},'yyyy-MM-dd hh24:mi:ss')
+			</if>
+			<if test="SAVE_DATE_E !='' and SAVE_DATE_E != null">
+				and SAVE_DATE &lt;= to_date(#{SAVE_DATE_E},'yyyy-MM-dd hh24:mi:ss')+1
+			</if>
+			<if test="UPDATE_DATE_S !='' and UPDATE_DATE_S != null">
+				and UPDATE_DATE &gt;= to_date(#{UPDATE_DATE_S},'yyyy-MM-dd hh24:mi:ss')
+			</if>
+			<if test="UPDATE_DATE_E !='' and UPDATE_DATE_E != null">
+				and UPDATE_DATE &lt;= to_date(#{UPDATE_DATE_E},'yyyy-MM-dd hh24:mi:ss')+1
+			</if>
+			<if test="CREATE_DATE_S !='' and CREATE_DATE_S != null">
+				and CREATE_DATE &gt;= to_date(#{CREATE_DATE_S},'yyyy-MM-dd hh24:mi:ss')
+			</if>
+			<if test="CREATE_DATE_E !='' and CREATE_DATE_E != null">
+				and CREATE_DATE &lt;= to_date(#{CREATE_DATE_E},'yyyy-MM-dd hh24:mi:ss')+1
+			</if>
+			<if test="bizUser !='' and bizUser != null">
+				and KHGSID = #{bizUser}
+			</if>
+			<if test="bizGsid !='' and bizGsid != null">
+				and KHGSID in (select KHGSID from khgs where khgs.sjkhgsid = #{bizGsid})
+			</if>
+	   </where>
+	</select>
+
+	<select id="selectGCZLHIT_Page" parameterType="map" resultType="map">
+		select GCZLID,GSID,KHGSID,TO_CHAR(SAVE_DATE,'yyyy-MM-dd hh24:mi:ss')SAVE_DATE,
+		TO_CHAR(UPDATE_DATE,'yyyy-MM-dd hh24:mi:ss ')UPDATE_DATE,
+		TO_CHAR(CREATE_DATE,'yyyy-MM-dd hh24:mi:ss ')CREATE_DATE,
+       SAVE_USERID,SAVE_USERNAME,GC_ID,GC_NAME,STORES_ID,STORES_NAME,SELLER_ID,SELLER_NAME,
+       CUSTOMER_NAME,CUSTOMER_TEL,CUSTOMER_PHONE_AREACODE,CUSTOMER_PHONE,CUSTOMER_ADDRESS,CUSTOMER_POSTCODE,
+       TO_CHAR(BUY_DATE,'yyyy-MM-dd')BUY_DATE,TO_CHAR(INSTALL_DATE,'yyyy-MM-dd')INSTALL_DATE,SELL_TYPE
+       SELL_ONE,SELL_TWO,YEAR YEARS,BUY_NUMBER,PROCESS_INSTANCE_ID,TO_CHAR(SDRQ,'yyyy-MM-dd')SDRQ,FENSHU from gczl
+	   <where>
+			<if test="GCZLID !='' and GCZLID != null">
+				and GCZLID = #{GCZLID}
+			</if>
+			<if test="GC_ID !='' and GC_ID != null">
+				and GC_ID = #{GC_ID}
+			</if>
+			<if test="GC_NAME !='' and GC_NAME != null">
+				and GC_NAME like '%'||#{GC_NAME}||'%'
+			</if>
+			<if test="CUSTOMER_NAME !='' and CUSTOMER_NAME != null">
+				and CUSTOMER_NAME like '%'||#{CUSTOMER_NAME}||'%'
+			</if>
+			<if test="CUSTOMER_TEL !='' and CUSTOMER_TEL != null">
+				and CUSTOMER_TEL = #{CUSTOMER_TEL}
+			</if>
+			<if test="SAVE_DATE_S !='' and SAVE_DATE_S != null">
+				and SAVE_DATE &gt;= to_date(#{SAVE_DATE_S},'yyyy-MM-dd hh24:mi:ss')
+			</if>
+			<if test="SAVE_DATE_E !='' and SAVE_DATE_E != null">
+				and SAVE_DATE &lt;= to_date(#{SAVE_DATE_E},'yyyy-MM-dd hh24:mi:ss')+1
+			</if>
+			<if test="UPDATE_DATE_S !='' and UPDATE_DATE_S != null">
+				and UPDATE_DATE &gt;= to_date(#{UPDATE_DATE_S},'yyyy-MM-dd hh24:mi:ss')
+			</if>
+			<if test="UPDATE_DATE_E !='' and UPDATE_DATE_E != null">
+				and UPDATE_DATE &lt;= to_date(#{UPDATE_DATE_E},'yyyy-MM-dd hh24:mi:ss')+1
+			</if>
+			<if test="CREATE_DATE_S !='' and CREATE_DATE_S != null">
+				and CREATE_DATE &gt;= to_date(#{CREATE_DATE_S},'yyyy-MM-dd hh24:mi:ss')
+			</if>
+			<if test="CREATE_DATE_E !='' and CREATE_DATE_E != null">
+				and CREATE_DATE &lt;= to_date(#{CREATE_DATE_E},'yyyy-MM-dd hh24:mi:ss')+1
+			</if>
+			<if test="bizUser !='' and bizUser != null">
+				and KHGSID = #{bizUser}
+			</if>
+			<if test="bizGsid !='' and bizGsid != null">
+				and KHGSID in (select KHGSID from khgs where khgs.sjkhgsid = #{bizGsid})
+			</if>
+	   </where>	  
+	</select>
+
+	<select id="selectGCZLBATCHDOWN_Page_sum" parameterType="map" resultType="map">
+		select count(1)"count" from gczl
+	   <where>
+			<if test="GCZLID !='' and GCZLID != null">
+				and GCZLID = #{GCZLID}
+			</if>
+			<if test="GC_ID !='' and GC_ID != null">
+				and GC_ID = #{GC_ID}
+			</if>
+			<if test="GC_NAME !='' and GC_NAME != null">
+				and GC_NAME like '%'||#{GC_NAME}||'%'
+			</if>
+			<if test="CUSTOMER_NAME !='' and CUSTOMER_NAME != null">
+				and CUSTOMER_NAME like '%'||#{CUSTOMER_NAME}||'%'
+			</if>
+			<if test="CUSTOMER_TEL !='' and CUSTOMER_TEL != null">
+				and CUSTOMER_TEL = #{CUSTOMER_TEL}
+			</if>
+			<if test="UPDATE_DATE_S !='' and UPDATE_DATE_S != null">
+				and UPDATE_DATE &gt;= to_date(#{UPDATE_DATE_S},'yyyy-MM-dd hh24:mi:ss')
+			</if>
+			<if test="UPDATE_DATE_E !='' and UPDATE_DATE_E != null">
+				and UPDATE_DATE &lt;= to_date(#{UPDATE_DATE_E},'yyyy-MM-dd hh24:mi:ss')+1
+			</if>
+	   </where>
+	</select>
+
+	<select id="selectGCZLBATCHDOWN_Page" parameterType="map" resultType="map">
+		select GCZLID,GSID,KHGSID,TO_CHAR(SAVE_DATE,'yyyy-MM-dd hh24:mi:ss ')SAVE_DATE,
+       SAVE_USERID,SAVE_USERNAME,GC_ID,GC_NAME,STORES_ID,STORES_NAME,SELLER_ID,SELLER_NAME,
+       CUSTOMER_NAME,CUSTOMER_TEL,CUSTOMER_PHONE_AREACODE,CUSTOMER_PHONE,CUSTOMER_ADDRESS,CUSTOMER_POSTCODE,
+       TO_CHAR(BUY_DATE,'yyyy-MM-dd')BUY_DATE,TO_CHAR(INSTALL_DATE,'yyyy-MM-dd')INSTALL_DATE,SELL_TYPE
+       SELL_ONE,SELL_TWO,YEAR YEARS,BUY_NUMBER,PROCESS_INSTANCE_ID from gczl
+	   <where>
+			<if test="GCZLID !='' and GCZLID != null">
+				and GCZLID = #{GCZLID}
+			</if>
+			<if test="GC_ID !='' and GC_ID != null">
+				and GC_ID = #{GC_ID}
+			</if>
+			<if test="GC_NAME !='' and GC_NAME != null">
+				and GC_NAME like '%'||#{GC_NAME}||'%'
+			</if>
+			<if test="CUSTOMER_NAME !='' and CUSTOMER_NAME != null">
+				and CUSTOMER_NAME like '%'||#{CUSTOMER_NAME}||'%'
+			</if>
+			<if test="CUSTOMER_TEL !='' and CUSTOMER_TEL != null">
+				and CUSTOMER_TEL = #{CUSTOMER_TEL}
+			</if>
+			<if test="UPDATE_DATE_S !='' and UPDATE_DATE_S != null">
+				and UPDATE_DATE &gt;= to_date(#{UPDATE_DATE_S},'yyyy-MM-dd hh24:mi:ss')
+			</if>
+			<if test="UPDATE_DATE_E !='' and UPDATE_DATE_E != null">
+				and UPDATE_DATE &lt;= to_date(#{UPDATE_DATE_E},'yyyy-MM-dd hh24:mi:ss')+1
+			</if>
+	   </where>	  
+	   order by GC_ID
+	</select>
+	
+	<select id="selectGCZLFILES" parameterType="map" resultType="map">
+ 		 select GCZLID,b.TYPE as "TYPE",b.FILEID,c.FILE_SIZE,c.FILE_DESC,c.HD_HOME,c.HD_DATE,c.HD_SIZE,c.HD_HOST,
+          'http://'||a.vd_host||'/'||a.vd_home||'/'||c.hd_date||'/'||c.hd_size||'/'||c.file_name||substr(c.file_desc,instr(c.file_desc ,'.')) as "FILE_URL",
+          b.RETURN_FLAG from fs_hosts a,gczl_file b,fs_files c where a.host=c.hd_host and b.fileid=c.FILE_NAME 
+		<if test="GCZLID !='' and GCZLID != null">
+				and b.GCZLID = #{GCZLID}
+		</if>
+		<if test="TYPE !='' and TYPE != null">
+				and b.TYPE = #{TYPE}
+		</if>
+ 	</select>
+ 	<select id="selectGCZLFILES_sum" parameterType="map" resultType="map">
+ 			select count(1) "COUNT" from gczl_file
+ 		 <where>
+			<if test="GCZLID !='' and GCZLID != null">
+				and GCZLID = #{GCZLID}
+			</if>
+			<if test="RETURN_FLAG !='' and RETURN_FLAG != null">
+				and RETURN_FLAG = #{RETURN_FLAG}
+			</if>
+		</where>
+ 	</select>
+
+	<select id="selectGCZLSDCX_Page_sum" parameterType="map" resultType="map">
+		select count(1)"count" from gczl
+	   <where>
+			<if test="GCZLID !='' and GCZLID != null">
+				and GCZLID = #{GCZLID}
+			</if>
+			<if test="GC_ID !='' and GC_ID != null">
+				and GC_ID = #{GC_ID}
+			</if>
+			<if test="GC_NAME !='' and GC_NAME != null">
+				and GC_NAME like '%'||#{GC_NAME}||'%'
+			</if>
+			<if test="CUSTOMER_NAME !='' and CUSTOMER_NAME != null">
+				and CUSTOMER_NAME like '%'||#{CUSTOMER_NAME}||'%'
+			</if>
+			<if test="CUSTOMER_TEL !='' and CUSTOMER_TEL != null">
+				and CUSTOMER_TEL = #{CUSTOMER_TEL}
+			</if>
+			<if test="IS_SD !='' and IS_SD != null">
+				${IS_SD}
+			</if>
+			<if test="SDRQ_S !='' and SDRQ_S != null">
+				and SDRQ &gt;= to_date(#{SDRQ_S},'yyyy-MM-dd hh24:mi:ss')
+			</if>
+			<if test="SDRQ_E !='' and SDRQ_E != null">
+				and SDRQ &lt;= to_date(#{SDRQ_E},'yyyy-MM-dd hh24:mi:ss')+1
+			</if>
+	   </where>
+	</select>
+
+	<select id="selectGCZLSDCX_Page" parameterType="map" resultType="map">
+		select GCZLID,GSID,KHGSID,TO_CHAR(SAVE_DATE,'yyyy-MM-dd hh24:mi:ss ')SAVE_DATE,
+       SAVE_USERID,SAVE_USERNAME,GC_ID,GC_NAME,STORES_ID,STORES_NAME,SELLER_ID,SELLER_NAME,
+       CUSTOMER_NAME,CUSTOMER_TEL,CUSTOMER_PHONE_AREACODE,CUSTOMER_PHONE,CUSTOMER_ADDRESS,CUSTOMER_POSTCODE,
+       TO_CHAR(BUY_DATE,'yyyy-MM-dd')BUY_DATE,TO_CHAR(INSTALL_DATE,'yyyy-MM-dd')INSTALL_DATE,SELL_TYPE
+       SELL_ONE,SELL_TWO,YEAR YEARS,BUY_NUMBER,PROCESS_INSTANCE_ID,TO_CHAR(SDRQ,'yyyy-MM-dd')SDRQ,FENSHU from gczl
+	   <where>
+			<if test="GCZLID !='' and GCZLID != null">
+				and GCZLID = #{GCZLID}
+			</if>
+			<if test="GC_ID !='' and GC_ID != null">
+				and GC_ID = #{GC_ID}
+			</if>
+			<if test="GC_NAME !='' and GC_NAME != null">
+				and GC_NAME like '%'||#{GC_NAME}||'%'
+			</if>
+			<if test="CUSTOMER_NAME !='' and CUSTOMER_NAME != null">
+				and CUSTOMER_NAME like '%'||#{CUSTOMER_NAME}||'%'
+			</if>
+			<if test="CUSTOMER_TEL !='' and CUSTOMER_TEL != null">
+				and CUSTOMER_TEL = #{CUSTOMER_TEL}
+			</if>
+			<if test="IS_SD !='' and IS_SD != null">
+				${IS_SD}
+			</if>
+			<if test="SDRQ_S !='' and SDRQ_S != null">
+				and SDRQ &gt;= to_date(#{SDRQ_S},'yyyy-MM-dd hh24:mi:ss')
+			</if>
+			<if test="SDRQ_E !='' and SDRQ_E != null">
+				and SDRQ &lt;= to_date(#{SDRQ_E},'yyyy-MM-dd hh24:mi:ss')+1
+			</if>
+	   </where>	  
+	</select>
+	
+	
+	<select id="selectKHGSZCINFO_Page_sum" parameterType="map" resultType="map">
+		SELECT count(1)"count" 
+		  FROM KHGS K, USER_INFO U
+		 WHERE K.GSID = U.GSID
+		   AND K.KHGSID = U.KHGSID
+		   <if test="USERID !='' and USERID != null">
+				and U.USERID = #{USERID}
+		   </if>
+		   <if test="USERNAME !='' and USERNAME != null">
+				and U.USERNAME like '%'||#{USERNAME}||'%'
+		   </if>
+		   <if test="ROLEID !='' and ROLEID != null">
+				and U.ROLEID = #{ROLEID}
+		   </if>
+	</select>
+	<select id="selectKHGSZCINFO_Page" parameterType="map" resultType="map">
+		SELECT U.USERID,U.USERNAME,U.KHGSID,
+		       U.ROLEID,       
+		       (SELECT R.ROLENAME FROM DY_ROLE R WHERE R.ROLEID = U.ROLEID) AS ROLENAME,
+		       U.FLAG,
+		       TO_CHAR(U.LAST_LOGIN_TIME,'yyyy-MM-dd hh24:mi:ss ') LAST_LOGIN_TIME, 
+		       TO_CHAR(U.REGIST_TIME,'yyyy-MM-dd hh24:mi:ss ') REGIST_TIME,
+		       K.SJKHGSID,       
+		       (SELECT KHGSNAME FROM KHGS WHERE KHGSID = K.SJKHGSID) AS SJNAME,
+		       K.GSID,       
+		       (SELECT GSNAME FROM GS WHERE GSID = K.GSID) AS GLNAME
+		  FROM KHGS K, USER_INFO U
+		 WHERE K.GSID = U.GSID
+		   AND K.KHGSID = U.KHGSID
+		   <if test="USERID !='' and USERID != null">
+				and U.USERID = #{USERID}
+		   </if>
+		   <if test="USERNAME !='' and USERNAME != null">
+				and U.USERNAME like '%'||#{USERNAME}||'%'
+		   </if>
+		   <if test="ROLEID !='' and ROLEID != null">
+				and U.ROLEID = #{ROLEID}
+		   </if>
+	</select>
+
+</mapper>

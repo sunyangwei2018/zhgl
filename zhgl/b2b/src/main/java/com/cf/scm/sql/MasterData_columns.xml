@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<JLConfig id="MasterData.Pub_PP">
+	    <FIELD attrname="PPB01" fieldtype="string" width="6" />
+		<FIELD attrname="PPB_PPB01" fieldtype="string" width="6" />
+		<FIELD attrname="PPB02" fieldtype="string" width="20" />
+		<FIELD attrname="PPB05" fieldtype="fixed" decimals="4" width="20" />
+		<FIELD attrname="PPB06" fieldtype="fixed" decimals="4" width="20" />
+	</JLConfig>
+	
+	<JLConfig id="MasterData.PubRoles_PPFL">
+	  <FIELD attrname="QX01"  fieldtype="string"  width="8"/>
+	  <FIELD attrname="QX02"  fieldtype="string"  width="50"/>
+	  <FIELD attrname="PPB01"  fieldtype="string"  width="4096"/>
+	  <FIELD attrname="SPFL01"  fieldtype="string"  width="4096"/>
+	  <FIELD attrname="GSXX01"  fieldtype="string"  width="4"/>
+	</JLConfig>
+	
+	<JLConfig id="MasterData.PubRoles_PPFLQX_CZY">
+	  <FIELD attrname="CZY01"  fieldtype="string"  width="32"/>
+	  <FIELD attrname="QX01"  fieldtype="string"  width="8"/>
+	  <FIELD attrname="GSXX01"  fieldtype="string"  width="4"/>
+	</JLConfig>
+</root>

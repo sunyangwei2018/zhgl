@@ -1,0 +1,44 @@
+function getColumns(){
+		var column_header= [
+		                	{"id":"selectWORKBENCH","name":"我的待处理",
+		                		"columns":[
+		                		           	{"field":"checkId","title":"复选","width":"100","checkbox":true},
+		                		        	{"field":"processDefinitionName","title":"流程名","width":"150"},
+		                		        	{"field":"bizKey","title":"业务编号","width":"100","sortable":true},
+		                		        	{"field":"bizType","title":"业务类型","width":"100"},
+		                		        	{"field":"bizGcbh","title":"工程编号","width":"100","sortable":true},
+	                		           		{"field":"taskId","title":"任务编号","width":"100","hidden":true},
+	                		           		{"field":"digestCust","title":"客户摘要","width":"100"},
+	                		           		{"field":"taskName","title":"任务名称","width":"100"},
+	                		           		{"field":"lastAssignee","title":"上次处理人","width":"100"},
+	                		           		{"field":"asignee","title":"当前处理人","width":"100"},
+	                		           		{"field":"createTimeStr","title":"录入日期","width":"100"},
+	                		           		{"field":"bizUploadFirstDate","title":"初次上传日期","width":"100"},
+	                		           		{"field":"bizUploadLastDate","title":"最新上传日期","width":"100"},
+	                		           		{"field":"procInstId","title":"流程实例编号","width":"100","hidden":true},
+	                		           		{"field":"formKey","title":"表单","width":"100","hidden":true},
+	                		           		{"field":"bizDqxx02","title":"地区","width":"100"}
+	                		           	]
+		                	},
+		                	{"id":"selectWORKHIT","name":"工程资料历史查询",
+		                		"columns":[
+		                		        	{"field":"processDefinitionName","title":"流程名","width":"150"},
+		                		        	{"field":"bizKey","title":"业务编号","width":"100","sortable":true},
+		                		        	{"field":"bizType","title":"业务类型","width":"100"},
+		                		        	{"field":"bizGcbh","title":"工程编号","width":"100","sortable":true},
+	                		           		{"field":"taskId","title":"任务编号","width":"100","hidden":true},
+	                		           		{"field":"digestCust","title":"客户摘要","width":"100"},
+	                		           		{"field":"taskName","title":"任务名称","width":"100"},
+	                		           		{"field":"lastAssignee","title":"上次处理人","width":"100"},
+	                		           		{"field":"asignee","title":"当前处理人","width":"100"},
+	                		           		{"field":"createTimeStr","title":"创建日期","width":"100"},
+	                		           		{"field":"bizUploadFirstDate","title":"初次上传日期","width":"100"},
+	                		           		{"field":"bizUploadLastDate","title":"最新上传日期","width":"100"},
+	                		           		{"field":"procInstId","title":"流程实例编号","width":"100","hidden":true},
+	                		           		{"field":"formKey","title":"表单","width":"100","hidden":true},
+	                		           		{"field":"bizDqxx02","title":"地区","width":"100"}
+	                		           	]
+		                	}
+		                ];
+		return column_header;
+}

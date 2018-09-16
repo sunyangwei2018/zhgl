@@ -1,0 +1,21 @@
+/***
+grid列表ui_list
+***/
+.ui_list{}
+.ui_list dt{ text-align:left; padding-left:10px; font-size:20px;}
+
+.ui_list > .ui_list_title{ float:left; height:35px; background:#eee; width:100%; position:relative; color:#333; color:#000; font-weight:bold;}
+.ui_list > .ui_list_title > dl{ float:left; width:100%; height:35px; line-height:35px;}
+.ui_list_01{ width:100%; float:left;}
+.ui_list_01 > dl{ width:100%; padding:20px 0 10px 0; border-bottom:1px solid #e1e1e1;}
+.ui_list_01 > dl.xuan{ background:#f7fcfd;}
+.ui_list_01 > dl > dd{ padding-right:10px;}
+.ui_list_01 > dl > dd > ul{ float:left; width:100%;}
+.ui_list_01 > dl > dd > ul > li.ui_list_btn{ text-align:right;}
+.ui_list_01 > dl > dd > ul > li{ float:left; width:100%;}
+.ui_list_01 > dl > dd > ul > li > h3{ margin:0 20px 10px 0;}
+.ui_list_01 > dl > dd > ul > li > img{ width:80%;}
+.ui_list_01 > dl > dd > ul > li > span{ margin:0 20px 10px 0; color:#666;}
+.ui_list_01 > dl > dd > ul > li > b{ margin:0 20px 10px 0; color:#666;}
+.ui_list_01 > dl > dd > ul > li > input{ margin:0 20px 10px 0;}
+.ui_list_01 > dl > dd.more{ border-top:1px solid #eee; margin-top:10px; padding-top:10px;}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="biaoyi_subreport1" language="groovy" pageWidth="600" pageHeight="555" orientation="Landscape" columnWidth="600" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4ea9027e-2e48-419f-92ba-d245466df966">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="GCZLID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select spnj_name,count(1)
+from gczlitem
+where gczlid = $P{GCZLID}
+group by spnj_name]]>
+	</queryString>
+	<field name="SPNJ_NAME" class="java.lang.String"/>
+	<field name="COUNT(1)" class="java.math.BigDecimal"/>
+	<variable name="xuhao" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="50" y="0" width="300" height="20" uuid="0aa1548c-ab59-4252-b66e-cf2a3e5f7d1b"/>
+				<textElement>
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[规格型号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="20" uuid="4cb7a3d3-cc8a-434b-9245-36daf29a39fe"/>
+				<textElement>
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[序号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="250" height="20" uuid="bba3bd63-95f8-497b-b3f3-f8142ffb80c6"/>
+				<text><![CDATA[数量]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="50" y="0" width="300" height="20" uuid="bcbb36fe-72f8-4568-912c-f9e2b17746ad"/>
+				<textElement>
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SPNJ_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="50" height="20" uuid="47df4f01-ef27-4237-9756-910542913fa7"/>
+				<textElement>
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}.toString()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="0" width="250" height="20" uuid="6e50d5b6-0ba4-4dcf-bf04-476e8c0de012"/>
+				<textFieldExpression><![CDATA[$F{COUNT(1)}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="LZQDSC" >
+	<!--查询服务套餐列表  -->
+ 	<select id="selectLZQDHZ" parameterType="map" resultType="map">
+        select a.dpdm "dpdm",a.dpmc "dpmc",a.cfqdh "cfqdh",
+		(select to_char(b.postdate,'YYYY-MM-DD Hh24-mi-ss') from lzthbill_tab b where b.cfqdh = a.cfqdh and b.dpdm= a.dpdm and rownum = 1 ) "postdate",
+		(select b.peop_name from peop_tab b where b.peop_code = a.scr) "scr",
+		to_char(a.scrq,'YYYY-MM-DD Hh24-mi-ss') "scrq",
+		(select count(*) from lzthbill_tab b where b.cfqdh = a.cfqdh and b.dpdm= a.dpdm) "ydsl"
+		FROM lzthbill_tab a
+		where 1=1      
+		<if test="billno != '' and billno != null">${billno}</if>
+		<if test="scrq_S != '' and scrq_S != null">AND a.lrrq&gt;= to_date(#{scrq_S},'YYYY-MM-DD Hh24-mi-ss') </if>
+		<if test="scrq_E != '' and scrq_E != null">AND a.lrrq&lt;= to_date(#{scrq_E},'YYYY-MM-DD Hh24-mi-ss') </if>
+		<if test="cfqdh != '' and cfqdh != null">AND a.cfqdh LIKE CONCAT(CONCAT('%',#{cfqdh}), '%')</if>
+		<if test="ysc == 1"> 
+ 			and a.cfqdh is not null
+ 		</if>
+ 		<if test="ysc == 2"> 
+ 			and a.cfqdh is null
+ 		</if>
+		group by a.dpdm,a.dpmc,a.cfqdh,a.scr,a.scrq
+ 	</select>
+ 	<select id="selectLZQDMX" parameterType="map" resultType="map">
+		SELECT a.billno "billno",to_char(a.postdate,'YYYY-MM-DD Hh24-mi-ss') "postdate",a.dpdm "dpdm",a.dpmc "dpmc",a.cfqdh "cfqdh",
+		(select b.peop_name from peop_tab b where b.peop_code = a.lrr) "lrr",to_char(a.lrrq,'YYYY-MM-DD Hh24-mi-ss') "lrrq",
+		(select b.peop_name from peop_tab b where b.peop_code = a.scr) "scr",to_char(a.scrq,'YYYY-MM-DD Hh24-mi-ss') "scrq"
+		from lzthbill_tab a
+		where 1=1 
+		AND a.cfqdh=#{cfqdh} and a.dpdm=#{dpdm} 
+ 	</select> 
+ 	<select id="selectLZBILL" parameterType="map" resultType="map">
+		SELECT a.cfqdh "cfqdh"
+		from lzthbill_tab a
+		where 1=1 
+		AND a.billno=#{billno}
+ 	</select> 
+</mapper>

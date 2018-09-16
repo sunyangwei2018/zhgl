@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HDFH.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type"  charset="UTF-8">
+	
+  </head>
+  
+  <body style="width:100%">
+  	<div id = "hdfh_tab" class="easyui-tabs" data-options="fit:true,border:false,plain:true">
+		<div title="回单返回" style="padding:5px">
+			<form id="hdfh" method="post" style="width:84%">
+	    	<table cellpadding="5" style="width:84%">
+	    		<tr>
+	    			<td align="right" ><font color="red">快递单号</td>
+	    			<td align="left" >
+	    				<input class="easyui-textbox" id="kddh" name="kddh" type="text" >
+	    				</input>
+	    			</td>
+	    			<td align="right" >回单到达网点</td>
+	    			<td align="left">
+	    				<input class="easyui-combobox" type="text" id="fhwd" name="fhwd" >
+	    				</input>
+	    			</td>
+	    			<td align="right"><font color="red">运单号</td>
+	    			<td align="left">
+	    				<textarea rows=4 id="billno" name="billno" width="100%" style="resize: none;"></textarea>
+	    			</td>
+	    			<td align="right">错误信息</td>
+	    			<td align="left" rowspan="2">
+	    				<textarea rows=4 id="errorbillno" name="errorbillno" readonly="readonly" style="width:100%;resize: none;color:red;"></textarea>
+	    			</td>
+	    		</tr>
+	    	</table> 
+	    </form>
+		<div id="d_SHDFH" style="width:99%;height:86%"></div> 
+		</div>
+	</div>
+  </body>
+</html>
+

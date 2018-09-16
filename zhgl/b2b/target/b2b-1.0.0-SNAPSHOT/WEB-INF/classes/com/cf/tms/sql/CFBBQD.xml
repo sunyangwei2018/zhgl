@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CFBBQD" >
+	<!--查询部门列表  -->
+	<select id="selectBBQD" parameterType="map" resultType="map">
+		select a.taskno "taskno",a.billno "billno",a.boxno "boxno",a.pda_code "pda_code",to_char(a.scantime,'yyyy-MM-dd HH24:mi:ss') "scantime",
+		to_char(a.updatetime,'yyyy-MM-dd HH24:mi:ss') "updatetime",
+		(select b.peop_name from peop_tab b where a.peop_code=b.peop_code) "czr",
+		(select c.net_name from net_tab c where a.net_code=c.net_code) "czwd",
+		(select d.name from boxzt_tab d where a.scantype=d.code) "scantype",
+		(case when a.flag=1 then '是'
+		when a.flag!=1 then '否'
+		END) "flag_cn", 
+		(select c.DEPOTNAME FROM DEPOT_TAB c WHERE c.DEPOTCODE = a.KWBH) "kwbh"
+		from scan_tab a 
+		where a.flag=1 
+		<if test="taskno != '' and taskno != null">
+		and 
+		<foreach item="item" index="index" collection="taskno"   
+                         open="(" separator="or" close=")">  
+                        a.taskno= #{item}  
+         </foreach>
+		</if>
+		<if test="billno != '' and billno != null">and 
+		<foreach item="item" index="index" collection="billno"   
+                         open="(" separator="or" close=")">  
+                        a.billno= #{item}  
+         </foreach></if>
+		<if test="boxno != '' and boxno != null">
+		and 
+		<foreach item="item" index="index" collection="boxno"   
+                         open="(" separator="or" close=")">  
+                        a.boxno= #{item}  
+         </foreach>
+	</if>
+		<if test="peop_code != '' and peop_code != null">AND a.peop_code=#{peop_code} </if>
+		<if test="net_code != '' and net_code != null">AND a.net_code=#{net_code} </if>
+		<if test="scantype != '' and scantype != null">AND a.scantype=#{scantype} </if>
+		<if test="pda_code != '' and pda_code != null">AND a.pda_code=#{pda_code} </if>
+		<if test="lrrq_S != '' and lrrq_S != null">AND a.scantime&gt;=to_date(#{lrrq_S},'yyyy-MM-dd HH24:mi:ss') </if>
+		<if test="lrrq_E != '' and lrrq_E != null">AND a.scantime&lt;=to_date(#{lrrq_E},'yyyy-MM-dd HH24:mi:ss') </if>
+ 	</select>
+ 	<select id="selectBBQD_sum" parameterType="map" resultType="map">
+		select count(1) "count"
+		from scan_tab a 
+		where a.flag=1 
+		<if test="taskno != '' and taskno != null">
+		and 
+		<foreach item="item" index="index" collection="taskno"   
+                         open="(" separator="or" close=")">  
+                        a.taskno= #{item}  
+         </foreach>
+		</if>
+		<if test="billno != '' and billno != null">and 
+		<foreach item="item" index="index" collection="billno"   
+                         open="(" separator="or" close=")">  
+                        a.billno= #{item}  
+         </foreach></if>
+		<if test="boxno != '' and boxno != null">
+		and 
+		<foreach item="item" index="index" collection="boxno"   
+                         open="(" separator="or" close=")">  
+                       a.boxno= #{item}  
+         </foreach>
+	</if>
+		<if test="peop_code != '' and peop_code != null">AND a.peop_code=#{peop_code} </if>
+		<if test="net_code != '' and net_code != null">AND a.net_code=#{net_code} </if>
+		<if test="scantype != '' and scantype != null">AND a.scantype=#{scantype} </if>
+		<if test="pda_code != '' and pda_code != null">AND a.pda_code=#{pda_code} </if>
+		<if test="lrrq_S != '' and lrrq_S != null">AND a.scantime&gt;=to_date(#{lrrq_S},'yyyy-MM-dd HH24:mi:ss') </if>
+		<if test="lrrq_E != '' and lrrq_E != null">AND a.scantime&lt;=to_date(#{lrrq_E},'yyyy-MM-dd HH24:mi:ss') </if>
+ 	</select>
+ 	<select id="selectSMLX" parameterType="map" resultType="map">
+			select a.code "code",a.name "name" from boxzt_tab a
+ 	</select>
+ 	<select id="selectSMRY" parameterType="map" resultType="map">
+			select a.peop_code "peop_code",a.peop_name "peop_name" from peop_tab a
+ 	</select>
+ 	
+ 	<select id="selectXLKH_sum" parameterType="map" resultType="map">
+ 		select sum(yxcs) "yxcs",sum(jd)"jd",sum(pzwd) "pzwd",sum(fcwd) "fcwd",sum(dcwd)"dcwd",sum(pzzd)"pzzd",sum(fczd)"fczd",sum(dczd)"dczd",sum(yxsj)"yxsj" 
+ 		from (
+ 		select count(line_code)yxcs,sum(jd)jd,
+			sum(case when pzrq &lt; to_date(pzsjbz,'yyyy-MM-dd HH24:mi:ss') THEN 0 else 1 end)pzwd,
+			sum(case when fcrq &lt; to_date(fcsjbz,'yyyy-MM-dd HH24:mi:ss') THEN 0 else 1 end)fcwd,
+			sum(case when dcrq &lt; dcsjbz THEN 0 else 1 end)dcwd,
+			sum(case when dcrq &lt; dcsjbz THEN 1 else 0 end)pzzd,
+			sum(case when fcrq &lt; to_date(fcsjbz,'yyyy-MM-dd HH24:mi:ss') THEN 1 else 0 end)fczd,
+			sum(case when dcrq &lt; dcsjbz THEN 1 else 0 end)dczd,
+			round(sum(yxsj)/count(line_code))yxsj
+				from (SELECT a.taskno,c.line_name,a.line_code,b.czrq,
+		                (case
+		                 when b.czrq &lt; to_date(to_char(b.czrq, 'yyyy-MM-dd ') || '18:00', 'yyyy-MM-dd HH24:mi:ss') then
+		                    CONCAT(to_char(b.czrq, 'yyyy-MM-dd '), d.pzsj)
+		                 else
+		                  to_char(b.czrq+1,'yyyy-mm-dd ')||d.pzsj
+		               END) pzsjbz,
+					b.czrq pzrq,
+                        (case when b.czrq &lt; to_date(to_char(b.czrq, 'yyyy-MM-dd ') || '18:00','yyyy-MM-dd HH24:mi:ss') then
+		                	to_char(to_date(to_char(b.czrq, 'yyyy-MM-dd ')||d.pzsj,'yyyy-MM-dd HH24:mi:ss')+20/(24*60),'yyyy-MM-dd HH24:mi:ss')
+		                 else
+		                	to_char(to_date(to_char(b.czrq, 'yyyy-MM-dd ')||d.pzsj,'yyyy-MM-dd HH24:mi:ss')+(1440+20)/(24*60),'yyyy-MM-dd HH24:mi:ss')<!--超过当天18:00算第二天20分钟-->
+		               END) fcsjbz,
+					(select czrq from taskstate_tab where taskno=a.taskno and state=3 and cancel=0)fcrq,
+					to_date(
+                            (case when b.czrq&lt;to_date(to_char(b.czrq,'yyyy-MM-dd ')||'18:00', 'yyyy-MM-dd HH24:mi:ss') then
+                                  to_char(to_date(CONCAT(to_char(b.czrq, 'yyyy-MM-dd '), d.pzsj),'yyyy-MM-dd HH24:mi:ss')+20/(24*60),'yyyy-MM-dd HH24:mi:ss')<!--20分钟-->
+                                  else
+                                  to_char(to_date(CONCAT(to_char(b.czrq, 'yyyy-MM-dd '), d.pzsj),'yyyy-MM-dd HH24:mi:ss')+(1440+20)/(24*60),'yyyy-MM-dd HH24:mi:ss')<!--超过当天18:00算第二天20分钟-->
+                                  END),'yyyy-MM-dd HH24:mi:ss')+(d.yxsj + 20+(select (count(DISTINCT(acceptnet)) - 1) * 60 from billstate_tab where taskno = a.taskno and state = 5and cancel = 0))/(24*60) dcsjbz,
+					(select MAX(czrq) from taskstate_tab where taskno=a.taskno and state=4 and cancel=0)dcrq,
+					(select count(DISTINCT(acceptnet)) from billstate_tab where taskno=a.taskno and state =5 and cancel=0)jd,
+					ceil((
+	                  (SELECT MAX(czrq) FROM taskstate_tab WHERE taskno = a.taskno AND state = 4 AND cancel = 0) - 
+	                  (SELECT czrq  FROM taskstate_tab WHERE taskno = a.taskno AND state = 3 AND cancel = 0)
+	                    ) * 24 * 60)yxsj
+				FROM
+					task_tab a,
+					taskstate_tab b,
+					line_tab c,
+					xlkhsj_tab d
+				WHERE
+				b.state = 2 AND b.cancel = 0
+				AND a.taskno = b.taskno AND a.line_code = c.line_code
+				AND c.line_code = d.line_code
+				AND b.czrq&gt;=to_date(#{pzrq_s},'yyyy-MM-dd HH24:mi:ss') 
+				AND b.czrq&lt;=to_date(#{pzrq_e},'yyyy-MM-dd HH24:mi:ss') 
+				<if test="line_code != '' and line_code != null">AND a.line_code=#{line_code} </if>
+				AND (select count(DISTINCT(acceptnet)) from billstate_tab where taskno=a.taskno and state =5 and cancel=0)=
+				(SELECT COUNT(czwd) FROM taskstate_tab where taskno=a.taskno and state=4 and cancel =0))tab
+				where EXISTS(select taskno from billstate_tab where taskno=tab.taskno and state =5 and cancel=0)
+				GROUP BY tab.line_code,tab.line_name
+				)
+ 	</select>
+ 	<select id="selectXLKH" parameterType="map" resultType="map">
+		 select line_name "line_name",count(line_code)"yxcs",line_code "line_code",sum(jd)"jd",
+			sum(case when pzrq &lt; to_date(pzsjbz,'yyyy-MM-dd HH24:mi:ss') THEN 0 else 1 end)"pzwd",
+			sum(case when fcrq &lt; to_date(fcsjbz,'yyyy-MM-dd HH24:mi:ss') THEN 0 else 1 end)"fcwd",
+			sum(case when dcrq &lt; dcsjbz THEN 0 else 1 end)"dcwd",
+			sum(case when dcrq &lt; dcsjbz THEN 1 else 0 end)"pzzd",
+			sum(case when fcrq &lt; to_date(fcsjbz,'yyyy-MM-dd HH24:mi:ss') THEN 1 else 0 end)"fczd",
+			sum(case when dcrq &lt; dcsjbz THEN 1 else 0 end)"dczd",
+		  	round((sum(case when pzrq &lt; to_date(pzsjbz,'yyyy-MM-dd HH24:mi:ss') THEN 1 else 0 end)/sum(jd)*100),2)"pzbl",
+			round((sum(case when fcrq &lt; to_date(fcsjbz,'yyyy-MM-dd HH24:mi:ss') THEN 1 else 0 end)/sum(jd)*100),2)"fcbl",
+			round((sum(case when dcrq &lt; dcsjbz THEN 1 else 0 end)/sum(jd)*100),2)"dcbl",
+			round(sum(yxsj)/count(line_code))"yxsj"
+				from (SELECT a.taskno,c.line_name,a.line_code,b.czrq,
+		                (case
+		                 when b.czrq &lt; to_date(to_char(b.czrq, 'yyyy-MM-dd ') || '18:00', 'yyyy-MM-dd HH24:mi:ss') then
+		                    CONCAT(to_char(b.czrq, 'yyyy-MM-dd '), d.pzsj)
+		                 else
+		                  to_char(b.czrq+1,'yyyy-mm-dd ')||d.pzsj
+		               END) pzsjbz,
+					b.czrq pzrq,
+                        (case when b.czrq &lt; to_date(to_char(b.czrq, 'yyyy-MM-dd ') || '18:00','yyyy-MM-dd HH24:mi:ss') then
+		                	to_char(to_date(to_char(b.czrq, 'yyyy-MM-dd ')||d.pzsj,'yyyy-MM-dd HH24:mi:ss')+20/(24*60),'yyyy-MM-dd HH24:mi:ss')
+		                 else
+		                	to_char(to_date(to_char(b.czrq, 'yyyy-MM-dd ')||d.pzsj,'yyyy-MM-dd HH24:mi:ss')+(1440+20)/(24*60),'yyyy-MM-dd HH24:mi:ss')<!--超过当天18:00算第二天20分钟-->
+		               END) fcsjbz,
+					(select czrq from taskstate_tab where taskno=a.taskno and state=3 and cancel=0)fcrq,
+					to_date(
+                            (case when b.czrq&lt;to_date(to_char(b.czrq,'yyyy-MM-dd ')||'18:00', 'yyyy-MM-dd HH24:mi:ss') then
+                                  to_char(to_date(CONCAT(to_char(b.czrq, 'yyyy-MM-dd '), d.pzsj),'yyyy-MM-dd HH24:mi:ss')+20/(24*60),'yyyy-MM-dd HH24:mi:ss')<!--20分钟-->
+                                  else
+                                  to_char(to_date(CONCAT(to_char(b.czrq, 'yyyy-MM-dd '), d.pzsj),'yyyy-MM-dd HH24:mi:ss')+(1440+20)/(24*60),'yyyy-MM-dd HH24:mi:ss')<!--超过当天18:00算第二天20分钟-->
+                                  END),'yyyy-MM-dd HH24:mi:ss')+(d.yxsj + 20+(select (count(DISTINCT(acceptnet)) - 1) * 60 from billstate_tab where taskno = a.taskno and state = 5and cancel = 0))/(24*60) dcsjbz,
+					(select MAX(czrq) from taskstate_tab where taskno=a.taskno and state=4 and cancel=0)dcrq,
+					(select count(DISTINCT(acceptnet)) from billstate_tab where taskno=a.taskno and state =5 and cancel=0)jd,
+					ceil((
+	                  (SELECT MAX(czrq) FROM taskstate_tab WHERE taskno = a.taskno AND state = 4 AND cancel = 0) - 
+	                  (SELECT czrq  FROM taskstate_tab WHERE taskno = a.taskno AND state = 3 AND cancel = 0)
+	                    ) * 24 * 60)yxsj
+				FROM
+					task_tab a,
+					taskstate_tab b,
+					line_tab c,
+					xlkhsj_tab d
+				WHERE
+				b.state = 2 AND b.cancel = 0
+				AND a.taskno = b.taskno AND a.line_code = c.line_code
+				AND c.line_code = d.line_code
+				AND b.czrq&gt;=to_date(#{pzrq_s},'yyyy-MM-dd HH24:mi:ss') 
+				AND b.czrq&lt;=to_date(#{pzrq_e},'yyyy-MM-dd HH24:mi:ss') 
+				<if test="line_code != '' and line_code != null">AND a.line_code=#{line_code} </if>
+				AND (select count(DISTINCT(acceptnet)) from billstate_tab where taskno=a.taskno and state =5 and cancel=0)=
+				(SELECT COUNT(czwd) FROM taskstate_tab where taskno=a.taskno and state=4 and cancel =0))tab
+				where EXISTS(select taskno from billstate_tab where taskno=tab.taskno and state =5 and cancel=0)
+				GROUP BY tab.line_code,tab.line_name				
+ 	</select>
+ 	
+ 	<select id="selectXLITEM_sum" parameterType="map" resultType="map">
+ 		select count(1) "count"
+				from (SELECT a.taskno,c.line_name,a.line_code,b.czrq,
+					(case when b.czrq&lt;to_date(to_char(b.czrq,'yyyy-MM-dd ')||'18:00', 'yyyy-MM-dd HH24:mi:ss') then
+		                  to_char(b.czrq, 'yyyy-MM-dd ')||d.pzsj
+		                 else
+		                  to_char(b.czrq+1,'yyyy-mm-dd ')||d.pzsj
+		                END) pzsjbz,
+					b.czrq pzrq,
+					(case when b.czrq&lt;to_date(to_char(b.czrq,'yyyy-MM-dd ')||'18:00', 'yyyy-MM-dd HH24:mi:ss') then
+                          to_char(to_date(to_char(b.czrq, 'yyyy-MM-dd ')||d.pzsj,'yyyy-MM-dd HH24:mi:ss')+20/(24*60),'yyyy-MM-dd HH24:mi:ss')
+                        else
+                          to_char(to_date(to_char(b.czrq, 'yyyy-MM-dd ')||d.pzsj,'yyyy-MM-dd HH24:mi:ss')+(1440+20)/(24*60),'yyyy-MM-dd HH24:mi:ss')<!--超过当天18:00算第二天20分钟-->
+                        END)fcsjbz,
+					(select czrq from taskstate_tab where taskno=a.taskno and state=3 and cancel=0)fcrq,
+					to_date(
+                            (case when b.czrq&lt;to_date(to_char(b.czrq,'yyyy-MM-dd ')||'18:00', 'yyyy-MM-dd HH24:mi:ss') then
+                                  to_char(to_date(CONCAT(to_char(b.czrq, 'yyyy-MM-dd '), d.pzsj),'yyyy-MM-dd HH24:mi:ss')+20/(24*60),'yyyy-MM-dd HH24:mi:ss')<!--20分钟-->
+                                  else
+                                  to_char(to_date(CONCAT(to_char(b.czrq, 'yyyy-MM-dd '), d.pzsj),'yyyy-MM-dd HH24:mi:ss')+(1440+20)/(24*60),'yyyy-MM-dd HH24:mi:ss')<!--超过当天18:00算第二天20分钟-->
+                                  END),'yyyy-MM-dd HH24:mi:ss')+(d.yxsj + 20+(select (count(DISTINCT(acceptnet)) - 1) * 60 from billstate_tab where taskno = a.taskno and state = 5and cancel = 0))/(24*60) dcsjbz,
+					(select MAX(czrq) from taskstate_tab where taskno=a.taskno and state=4 and cancel=0)dcrq,
+					(select count(DISTINCT(acceptnet)) from billstate_tab where taskno=a.taskno and state =5 and cancel=0)jd
+				FROM
+					task_tab a,
+					taskstate_tab b,
+					line_tab c,
+					xlkhsj_tab d
+				WHERE
+				a.line_code=#{line_code} and 
+				b.state = 2 AND b.cancel = 0
+				AND a.taskno = b.taskno AND a.line_code = c.line_code
+				AND c.line_code = d.line_code
+				AND d.kh_flag=1
+				AND (select count(DISTINCT(acceptnet)) from billstate_tab where taskno=a.taskno and state =5 and cancel=0)=
+				(SELECT COUNT(czwd) FROM taskstate_tab where taskno=a.taskno and state=4 and cancel =0))tab
+				where EXISTS(select taskno from billstate_tab where taskno=tab.taskno and state =5 and cancel=0)
+ 	</select>
+ 	<select id="selectXLITEM" parameterType="map" resultType="map">
+		select taskno "taskno",line_name "line_name",line_code "line_code",
+			  pzsjbz "pzsjbz",
+		      to_char(pzrq,'yyyy-MM-dd HH24:mi:ss')"pzrq",
+		      fcsjbz "fcsjbz",
+		      to_char(fcrq,'yyyy-MM-dd HH24:mi:ss')"fcrq",
+		      to_char(dcsjbz,'yyyy-MM-dd HH24:mi:ss')"dcsjbz",
+		      to_char(dcrq,'yyyy-MM-dd HH24:mi:ss')"dcrq",jd "jd",
+			<!-- sec_to_time(time_to_sec(timediff(STR_TO_DATE(dcrq, '%Y-%m-%d %H:%i:%s'), STR_TO_DATE(fcrq, '%Y-%m-%d %H:%i:%s'))))yxsj, 
+			sec_to_time(time_to_sec(timediff(dcrq,fcrq)))yxsj,-->
+			ceil((dcrq - fcrq) * 24 * 60)"yxsj",
+			(case when pzrq&lt;to_date(pzsjbz,'yyyy-MM-dd HH24:mi:ss') THEN '准点' else '晚点' end)"pzwd",
+			(case when fcrq&lt;to_date(fcsjbz,'yyyy-MM-dd HH24:mi:ss') THEN '准点' else '晚点' end)"fcwd",
+			(case when dcrq&lt;dcsjbz THEN '准点' else '晚点' end)"dcwd"
+				from (SELECT a.taskno,c.line_name,a.line_code,b.czrq,
+					(case when b.czrq&lt;to_date(to_char(b.czrq,'yyyy-MM-dd ')||'18:00', 'yyyy-MM-dd HH24:mi:ss') then
+		                  to_char(b.czrq, 'yyyy-MM-dd ')||d.pzsj
+		                 else
+		                  to_char(b.czrq+1,'yyyy-mm-dd ')||d.pzsj
+		                END) pzsjbz,
+					b.czrq pzrq,
+					(case when b.czrq&lt;to_date(to_char(b.czrq,'yyyy-MM-dd ')||'18:00', 'yyyy-MM-dd HH24:mi:ss') then
+                          to_char(to_date(to_char(b.czrq, 'yyyy-MM-dd ')||d.pzsj,'yyyy-MM-dd HH24:mi:ss')+20/(24*60),'yyyy-MM-dd HH24:mi:ss')
+                        else
+                          to_char(to_date(to_char(b.czrq, 'yyyy-MM-dd ')||d.pzsj,'yyyy-MM-dd HH24:mi:ss')+(1440+20)/(24*60),'yyyy-MM-dd HH24:mi:ss')<!--超过当天18:00算第二天20分钟-->
+                        END)fcsjbz,
+					(select czrq from taskstate_tab where taskno=a.taskno and state=3 and cancel=0)fcrq,
+					to_date(
+                            (case when b.czrq&lt;to_date(to_char(b.czrq,'yyyy-MM-dd ')||'18:00', 'yyyy-MM-dd HH24:mi:ss') then
+                                  to_char(to_date(CONCAT(to_char(b.czrq, 'yyyy-MM-dd '), d.pzsj),'yyyy-MM-dd HH24:mi:ss')+20/(24*60),'yyyy-MM-dd HH24:mi:ss')<!--20分钟-->
+                                  else
+                                  to_char(to_date(CONCAT(to_char(b.czrq, 'yyyy-MM-dd '), d.pzsj),'yyyy-MM-dd HH24:mi:ss')+(1440+20)/(24*60),'yyyy-MM-dd HH24:mi:ss')<!--超过当天18:00算第二天20分钟-->
+                                  END),'yyyy-MM-dd HH24:mi:ss')+(d.yxsj + 20+(select (count(DISTINCT(acceptnet)) - 1) * 60 from billstate_tab where taskno = a.taskno and state = 5and cancel = 0))/(24*60) dcsjbz,
+					(select MAX(czrq) from taskstate_tab where taskno=a.taskno and state=4 and cancel=0)dcrq,
+					(select count(DISTINCT(acceptnet)) from billstate_tab where taskno=a.taskno and state =5 and cancel=0)jd
+				FROM
+					task_tab a,
+					taskstate_tab b,
+					line_tab c,
+					xlkhsj_tab d
+				WHERE
+				a.line_code=#{line_code} and 
+				b.state = 2 AND b.cancel = 0
+				AND a.taskno = b.taskno AND a.line_code = c.line_code
+				AND c.line_code = d.line_code
+				AND d.kh_flag=1
+				AND b.czrq&gt;=to_date(#{pzrq_s},'yyyy-MM-dd HH24:mi:ss') 
+				AND b.czrq&lt;=to_date(#{pzrq_e},'yyyy-MM-dd HH24:mi:ss') 
+				AND (select count(DISTINCT(acceptnet)) from billstate_tab where taskno=a.taskno and state =5 and cancel=0)=
+				(SELECT COUNT(czwd) FROM taskstate_tab where taskno=a.taskno and state=4 and cancel =0))tab
+				where EXISTS(select taskno from billstate_tab where taskno=tab.taskno and state =5 and cancel=0)
+ 	</select>
+</mapper>

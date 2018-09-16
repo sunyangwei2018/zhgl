@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>注册</title>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="edge" />
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<link href="/easyuinew/themes/insdep/easyui.css?v=2018" rel="stylesheet" type="text/css">
+	<link href="/easyuinew/themes/insdep/easyui_animation.css" rel="stylesheet" type="text/css">
+	<link href="/easyuinew/themes/insdep/easyui_plus.css" rel="stylesheet" type="text/css">
+<!--<link href="/easyuinew/themes/insdep/insdep_theme_default.css" rel="stylesheet" type="text/css">-->
+	<link href="/cflib/form/css/insdep_theme_new.css" rel="stylesheet" type="text/css">
+	<link href="/easyuinew/themes/insdep/icon.css" rel="stylesheet" type="text/css">
+	<link href="/easyuinew/plugin/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="/cflib/form/css/index.css">
+	<link rel='stylesheet' type='text/css' href="lib/JQuery/css/smartMenu.css" />
+	<link rel="stylesheet"  type='text/css'  href="lib/layui/css/layui.css"/>
+	<script type="text/javascript" src="/easyuinew/jquery.min.js"></script>
+	<!-- layui初始化 -->
+	<script type="text/javascript" src="/lib/layui/layui.js"></script>
+	<script type="text/javascript" src="/lib/JQuery/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/lib/JQuery/js/jquery.md5.js"></script>
+	<script type="text/javascript" src="/lib/JQuery/js/ajaxfileupload.js"></script>
+	<script type="text/javascript" src="/lib/JQuery/js/json2.js"></script>
+	<script type='text/javascript' src='/cflib/form/js/pubJson.js'></script>
+	<script type='text/javascript' src='/cflib/form/js/commons.js'></script>
+	<script type="text/javascript" src="/cflib/form/js/uiUpload.js"></script>
+	<script type="text/javascript" src="/cflib/grid/js/easyui-format.js"></script>
+	<script type="text/javascript" src="/cflib/grid/js/easyuiGrid.js"></script>
+	<script type="text/javascript" src="/cflib/grid/js/easyuiGridNow.js"></script>
+	<script type="text/javascript" src="/cflib/grid/js/easyuiGridTree.js"></script>
+	<script type="text/javascript" src="/cflib/grid/js/easyuiComboGrid.js"></script>
+	<script type="text/javascript" src="/cflib/form/js/ui-basic.js"></script>
+	<script type="text/javascript" src="/cflib/form/js/ui-all.js"></script>
+	<script type="text/javascript" src="/cflib/form/js/uiForm.js"></script>
+  </head>
+  
+  <body>
+	<div id="content-tabs" class="easyui-tabs"  data-options="border:false,plain:true,fit:true">
+    	<div class="w12" id="mainDiv" name="detailsDiv" title="注册" style="padding:10px">
+			<form id="formZC">
+				<input type="reset" name="reset" style="display: none;" />
+				<div class="w12">
+					<dl class="public_form w12">
+						<dt class="w04">公司名称</dt><!-- 必填-->
+						<dd><input class="easyui-textbox" id="KHGSNAME" name="KHGSNAME" style="width:400px;" data-options="required:true,missingMessage:'该输入项为必输项'"></input></dd>
+					</dl>				
+					<dl class="public_form w12">
+						<dt class="w04">*选择所属的格力销售公司</dt><!-- 必填-->
+						<dd class="w08">
+							<select id="xsgs" class="easyui-combobox" name="xsgs" style="width:200px;">   
+								<option value="01">直供商</option>
+								<option value="02">分销商</option>
+								<option value="03">代理商</option>
+							</select>
+						</dd>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w04">选择所属代理商</dt>
+						<dd ><select id="SJKHGSID" class="easyui-combobox" name="SJKHGSID" style="width:400px;" data-options="required:true,missingMessage:'该输入项为必输项'"></select></dd>
+						<i id="SJKHGSID_I"></i>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w04">*选择省(直辖市)</dt><!-- 必填-->
+						<dd class="w08"><select id="DQXX_PROV" class="easyui-combobox" name="DQXX_PROV" style="width:200px;" data-options="required:true,missingMessage:'该输入项为必输项'"></select></dd>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w04">*选择市(区)</dt><!-- 必填-->
+						<dd class="w08"><select id="DQXX_CITY" class="easyui-combobox" name="DQXX_CITY" style="width:200px;" data-options="required:true,missingMessage:'该输入项为必输项'"></select></dd>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w04">*地址</dt><!-- 树形结构-->
+						<dd class="w08"><input class="easyui-textbox" id="ADDRESS" name="ADDRESS" data-options="required:true,missingMessage:'该输入项为必输项'"></input></dd>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w04">*网点编号</dt>
+						<dd><input class="easyui-textbox" id="GREEBH" name="GREEBH" data-options="required:true,missingMessage:'该输入项为必输项'"></input></dd>
+						<i>（请填写格力售后网点编号，如：S2100062）</i>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w04">手机号码</dt>
+						<dd><input class="easyui-textbox" id="MOBILE" name="MOBILE" ></input></dd>
+						<i>（请填写11位数字的手机号码！）</i>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w04">固定电话</dt>
+						<dd><input class="easyui-textbox" id="TEL" name="TEL" ></input></dd>
+						<i>（请填写带区号的号码！如：010-8535000 ）</i>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w04">邮箱</dt>
+						<dd><input class="easyui-textbox" id="EMAIL" name="EMAIL" ></input></dd>
+					</dl>
+					<dl class="public_form w12">
+						<dt class="w04">&nbsp;</dt>
+						<dd><a href='#' id='register' class="easyui-linkbutton" data-options="iconCls:'icon-save'">立即注册</a></dd>
+					</dl>
+				</div>
+			</form>
+    	</div>
+    </div>
+  </body>
+<script type="text/javascript" src="/easyuinew/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="/easyuinew/themes/insdep/jquery.insdep-extend.min.js"></script>
+<script type="text/javascript" src="/ZC.js"></script>
+</html>
+

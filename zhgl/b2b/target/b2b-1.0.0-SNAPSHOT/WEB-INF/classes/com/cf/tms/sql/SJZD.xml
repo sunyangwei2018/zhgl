@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="SJZD" >
+	<!-- 查询服务套餐列表 --> 
+
+ 	<select id="selectSJZD" parameterType="map" resultType="map">
+		select tab_name "tab_name",name "name"
+		from sjzd_tab
+ 	</select>  
+ 	<select id="selectSJZDITEM" parameterType="map" resultType="map">
+		select code "code",name "name"
+		from <if test="tab_name != '' and tab_name != null">${tab_name}</if>
+		order by code
+ 	</select> 
+</mapper> 
