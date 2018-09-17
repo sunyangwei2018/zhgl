@@ -1,8 +1,0 @@
-#写文件远程地址
-REMOTE_ADD_PHP=http://192.13.4.224/upload_stream.php
-#连接超时
-CON_TIMOUT=300000
-#读超时
-READ_TIMOUT=300000
-#分页行数
-PAGESIZE=1000

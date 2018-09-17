@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<qxConf>
-   
-	<id sqlId = "Pub_PP" PPB01="A.PPB01" />
-	<id sqlId = "Pub_SPXX_LXCX" PPB01="A.PPB01" SPFL01="A.SPFL01" />
-	
-</qxConf>

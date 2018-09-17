@@ -1,5 +1,0 @@
-@media print {
-  .print_div{
-  	page-break-before: always;
-  }
-}
